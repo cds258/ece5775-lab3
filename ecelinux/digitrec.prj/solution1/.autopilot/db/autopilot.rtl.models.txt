@@ -1,0 +1,4 @@
+digitrec_trainingbkb
+digitrec_knn_set_V
+digitrec
+dut
