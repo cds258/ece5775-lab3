@@ -105,14 +105,14 @@ int main(int argc, char** argv)
     //--------------------------------------------------------------------
     for (int i = 0; i < N; ++i ) {
 
-      int64_t digit_out;
+      int4_t digit_out;
       nbytes = read (fdr, (void*)&digit_out, sizeof(digit_out));
       assert (nbytes == sizeof(digit_out));
 
       // Convert int64 to fixed point 
 
-      bit64_t digit_i = digit_out;
-      bit64_t result;
+      bit4_t digit_i = digit_out;
+      bit4_t result;
       result(result.length()-1,0) = digit_i(result.length()-1,0);
 
       num_test_insts++;
