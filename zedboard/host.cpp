@@ -109,7 +109,7 @@ int main(int argc, char** argv)
       bit64_t digit_i;
       bit4_t result;
       nbytes = read (fdr, (void*)&digit_out, sizeof(digit_out));
-      assert (nbytes == sizeof(result));
+      //assert (nbytes == sizeof(result));
 
       // Convert int64 to fixed point 
       digit_i = digit_out;
