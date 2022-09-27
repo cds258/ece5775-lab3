@@ -83,11 +83,47 @@ int main(int argc, char** argv)
     timer.start();
 
     //--------------------------------------------------------------------
-    // Add your code here to communicate with the hardware module
+    // Send data digitrec
     //--------------------------------------------------------------------
+    for (int i = 0; i < N; ++i ) {
+
+      digit digit_input = inputs[i];
+
+      // Convert fixed-point to int64
+      bit64_t input_i;
+      input_i(digit_input.length()-1,0) = digit_input(digit_input.length()-1,0);
+      int64_t input = input_i;
+
+      // Send bytes through the write channel
+      // and assert that the right number of bytes were sent
+      nbytes = write (fdw, (void*)&input, sizeof(input));
+      assert (nbytes == sizeof(input));
+    }
+
+    //--------------------------------------------------------------------
+    // Execute the digitrec sim and receive data
+    //--------------------------------------------------------------------
+    for (int i = 0; i < N; ++i ) {
+      // Call design under test (DUT)
+      dut( digitrec_in, digitrec_out );
+
+      int64_t digit_out;
+      nbytes = read (fdr, (void*)&digit_out, sizeof(digit_out));
+      assert (nbytes == sizeof(digit_out));
+
+      // Convert int64 to fixed point 
+
+      bit64_t digit_i = digit_out;
+      bit64_t result;
+      result(result.length()-1,0) = digit_i(result.length()-1,0);
+
+      num_test_insts++;
       
-
-
+      // Check for any difference between k-NN interpreted digit vs. expected digit
+      if ( result != expecteds[i] ) {
+        error++;
+      }
+    }   
     timer.stop();
     
     // Report overall error out of all testing instances
