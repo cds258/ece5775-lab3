@@ -104,8 +104,6 @@ int main(int argc, char** argv)
     // Execute the digitrec sim and receive data
     //--------------------------------------------------------------------
     for (int i = 0; i < N; ++i ) {
-      // Call design under test (DUT)
-      dut( digitrec_in, digitrec_out );
 
       int64_t digit_out;
       nbytes = read (fdr, (void*)&digit_out, sizeof(digit_out));
