@@ -58,6 +58,9 @@ int main(int argc, char** argv)
   int error = 0;
   int num_test_insts = 0;
   bit32_t interpreted_digit;
+  bit4_t results[N];
+
+
 
 
   if ( myfile.is_open() ) {
@@ -105,24 +108,29 @@ int main(int argc, char** argv)
     //--------------------------------------------------------------------
     for (int i = 0; i < N; ++i ) {
 
-      int64_t digit_out;
-      bit64_t digit_i;
-      bit4_t result;
+      int32_t digit_out;
       nbytes = read (fdr, (void*)&digit_out, sizeof(digit_out));
-      //assert (nbytes == sizeof(result));
+      assert (nbytes == sizeof(digit_out));
 
       // Convert int64 to fixed point 
-      digit_i = digit_out;
-      result(result.length()-1,0) = digit_i(result.length()-1,0);
+      bit32_t result = digit_out;
+      //bit32_t result;
 
-      num_test_insts++;
+      //result(result.length()-1,0) = digit_i(result.length()-1,0);
+      results[i] = result;
       
-      // Check for any difference between k-NN interpreted digit vs. expected digit
-      if ( result != expecteds[i] ) {
-        error++;
-      }
     }   
     timer.stop();
+
+    for(int i = 0; i < N; i++){
+      num_test_insts++;
+      
+      // FIXME: CHANGE THIS TO BATCH STYLE
+      // Check for any difference between k-NN interpreted digit vs. expected digit
+      if ( results[i] != expecteds[i] ) {
+        error++;
+      }
+    }
     
     // Report overall error out of all testing instances
     std::cout << "Number of test instances = " << num_test_insts << std::endl;

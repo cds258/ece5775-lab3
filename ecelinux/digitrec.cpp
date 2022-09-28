@@ -16,7 +16,7 @@ void dut(
 {
 
   digit input;
-  bit4_t  output;
+  bit32_t  output;
 
   // ------------------------------------------------------
   // Input processing
@@ -25,7 +25,6 @@ void dut(
   bit32_t input_hi = strm_in.read();
 
   // Digit is 49 bits wide, but stream in is only 32
-  // Achieve via bitslicing???
 
   input(31, 0) = input_lo;
   input(input.length()-1, 32) = input_hi;
@@ -38,9 +37,8 @@ void dut(
   // ------------------------------------------------------
   // Output processing
   // ------------------------------------------------------
-  // Write out 4bit digit classification
-  strm_out.write( output(3,0) );
-
+  // Write out 32bit digit classification
+  strm_out.write( output(31,0) );
 }
 
 //----------------------------------------------------------
