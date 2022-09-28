@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut'" level="0">
-<item name = "Date">Tue Sep 27 22:39:18 2022
+<item name = "Date">Tue Sep 27 22:54:21 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">digitrec.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.900 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 7.918 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">102735, 102735, 1.027 ms, 1.027 ms, 102735, 102735, none</column>
+<column name="">1938, 1938, 19.380 us, 19.380 us, 1938, 1938, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_digitrec_fu_63">digitrec, 102733, 102733, 1.027 ms, 1.027 ms, 102733, 102733, none</column>
+<column name="grp_digitrec_fu_63">digitrec, 1936, 1936, 19.360 us, 19.360 us, 1936, 1936, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,19 +50,19 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">56, -, 1861, 12390, -</column>
+<column name="Instance">56, -, 705, 5549, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 39, -</column>
 <column name="Register">-, -, 85, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">20, 0, 1, 23, 0</specialColumn>
+<specialColumn name="Utilization (%)">20, 0, ~0, 10, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_digitrec_fu_63">digitrec, 56, 0, 1861, 12390, 0</column>
+<column name="grp_digitrec_fu_63">digitrec, 56, 0, 705, 5549, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">

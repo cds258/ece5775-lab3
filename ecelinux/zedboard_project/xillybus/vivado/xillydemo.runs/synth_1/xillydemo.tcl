@@ -62,11 +62,7 @@ read_verilog -library xil_defaultlib {
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/system.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/smbus.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/i2s_audio.v
-  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/update_knn.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut.v
-  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_42_6_1_1_x.v
-  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_42_6_1_1.v
-  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_32_6_1_1.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_305_6_1_1.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingkbM.v

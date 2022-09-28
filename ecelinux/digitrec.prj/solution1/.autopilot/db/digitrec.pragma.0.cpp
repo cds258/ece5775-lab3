@@ -24731,10 +24731,10 @@ bit4_t digitrec( digit input )
       knn_set[i][k] = 50;
 
   L1800: for ( int i = 0; i < 1800; ++i ) {
-    L10: for ( int j = 0; j < 10; j++ ) {
-#pragma HLS UNROLL
-# 64 "digitrec.cpp"
+#pragma HLS PIPELINE
+# 63 "digitrec.cpp"
 
+    L10: for ( int j = 0; j < 10; j++ ) {
 
       digit training_instance = training_data[j][i];
 
@@ -24748,7 +24748,7 @@ bit4_t digitrec( digit input )
 # 89 "digitrec.cpp"
 void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[3] )
 {_ssdm_SpecArrayDimSize(min_distances, 3);
-#pragma HLS INLINE off
+#pragma HLS INLINE
 # 90 "digitrec.cpp"
 
 

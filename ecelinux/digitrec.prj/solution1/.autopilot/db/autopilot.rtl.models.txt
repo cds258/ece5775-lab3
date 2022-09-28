@@ -1,8 +1,3 @@
-dut_mux_32_6_1_1
-dut_mux_42_6_1_1
-dut_mux_42_6_1_1_x
-dut_mux_42_6_1_1_x
-dut_mux_42_6_1_1_x
 dut_mux_305_6_1_1
 digitrec_trainingbkb
 digitrec_trainingcud
@@ -14,6 +9,5 @@ digitrec_traininghbi
 digitrec_trainingibs
 digitrec_trainingjbC
 digitrec_trainingkbM
-update_knn
 digitrec
 dut

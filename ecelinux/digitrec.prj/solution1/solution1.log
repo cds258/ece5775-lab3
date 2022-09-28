@@ -102,4 +102,92 @@ INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_1' to 'digitre
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_2' to 'digitrec_trainingdEe' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_3' to 'digitrec_trainingeOg' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_4' to 'digitrec_trainingfYi' due to the length limit 20
-INFO: [SYN 201-210]
+INFO: [SYN 201-210]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'digitrec.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5250 ; free virtual = 28414
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5251 ; free virtual = 28415
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'update_knn' into 'digitrec' (digitrec.cpp:68).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5233 ; free virtual = 28398
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
+WARNING: [SYNCHK 200-23] digitrec.cpp:97: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5225 ; free virtual = 28390
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L1800' (digitrec.cpp:63) in function 'digitrec' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'L10' (digitrec.cpp:64) in function 'digitrec' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (digitrec.cpp:96) in function 'digitrec' completely with a factor of 49.
+INFO: [HLS 200-489] Unrolling loop 'INSERT_LOOP' (digitrec.cpp:106) in function 'digitrec' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'training_data.V' in dimension 1 automatically.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.0' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.1' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.2' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.3' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.4' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.5' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.6' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.7' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.8' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.9' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.0' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.1' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.2' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.3' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.4' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.5' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.6' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.7' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.8' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.9' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (digitrec.cpp:63:44) to (digitrec.cpp:63:37) in function 'digitrec'... converting 61 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'digitrec' (digitrec.cpp:58:7)...950 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:01:02 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5191 ; free virtual = 28358
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:51 ; elapsed = 00:01:08 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5174 ; free virtual = 28341
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'digitrec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L1800'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 69.53 seconds; current allocated memory: 181.678 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 4.91 seconds; current allocated memory: 188.265 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 188.753 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 188.905 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'digitrec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_0' to 'digitrec_trainingbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_1' to 'digitrec_trainingcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_2' to 'digitrec_trainingdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_3' to 'digitrec_trainingeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_4' to 'digitrec_trainingfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_5' to 'digitrec_trainingg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_6' to 'digitrec_traininghbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_7' to 'digitrec_trainingibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_8' to 'digitrec_trainingjbC' due to the length limit 20

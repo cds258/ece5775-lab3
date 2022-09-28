@@ -5,14 +5,7 @@
           "functionName": "update_knn",
           "label": "",
           "functionLabel": "",
-          "pragma": {
-            "name": "INLINE",
-            "option": [{
-                "name": "off",
-                "value": "",
-                "positionalBoolean": "1"
-              }]
-          }
+          "pragma": {"name": "INLINE"}
         },
         {
           "functionName": "digitrec",
@@ -40,9 +33,9 @@
         },
         {
           "functionName": "digitrec",
-          "label": "L10",
+          "label": "L1800",
           "functionLabel": "",
-          "pragma": {"name": "UNROLL"}
+          "pragma": {"name": "PIPELINE"}
         }
       ]
     }]}

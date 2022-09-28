@@ -14,14 +14,14 @@
   },
   "HlsSolution": {
     "DirectiveTcl": [
-      "set_directive_inline update_knn -off",
+      "set_directive_inline update_knn ",
       "set_directive_array_partition digitrec ",
-      "set_directive_unroll digitrec\/L10 "
+      "set_directive_pipeline digitrec\/L1800 "
     ],
     "DirectiveInfo": [
-      "inline update_knn {{off positionBoolean1}} {}",
+      "inline update_knn {} {}",
       "array_partition digitrec {{partition positionBooleanCmd} {variable positionBooleanTextRequiredknn_set} {complete positionBoolean0type} {dim 1}} {}",
-      "unroll digitrec\/L10 {} {}"
+      "pipeline digitrec\/L1800 {} {}"
     ]
   },
   "Args": {
@@ -42,7 +42,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "102735",
+    "Latency": "1938",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -71,11 +71,7 @@
       "impl\/vhdl\/digitrec_trainingibs.vhd",
       "impl\/vhdl\/digitrec_trainingjbC.vhd",
       "impl\/vhdl\/digitrec_trainingkbM.vhd",
-      "impl\/vhdl\/dut_mux_32_6_1_1.vhd",
-      "impl\/vhdl\/dut_mux_42_6_1_1.vhd",
-      "impl\/vhdl\/dut_mux_42_6_1_1_x.vhd",
       "impl\/vhdl\/dut_mux_305_6_1_1.vhd",
-      "impl\/vhdl\/update_knn.vhd",
       "impl\/vhdl\/dut.vhd"
     ],
     "Verilog": [
@@ -100,11 +96,7 @@
       "impl\/verilog\/digitrec_trainingjbC_rom.dat",
       "impl\/verilog\/digitrec_trainingkbM.v",
       "impl\/verilog\/digitrec_trainingkbM_rom.dat",
-      "impl\/verilog\/dut_mux_32_6_1_1.v",
-      "impl\/verilog\/dut_mux_42_6_1_1.v",
-      "impl\/verilog\/dut_mux_42_6_1_1_x.v",
       "impl\/verilog\/dut_mux_305_6_1_1.v",
-      "impl\/verilog\/update_knn.v",
       "impl\/verilog\/dut.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -224,59 +216,10 @@
       "ModuleName": "dut",
       "Instances": [{
           "ModuleName": "digitrec",
-          "InstanceName": "grp_digitrec_fu_63",
-          "Instances": [
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_743"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_755"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_767"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_779"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_791"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_803"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_815"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_828"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_840"
-            },
-            {
-              "ModuleName": "update_knn",
-              "InstanceName": "grp_update_knn_fu_852"
-            }
-          ]
+          "InstanceName": "grp_digitrec_fu_63"
         }]
     },
     "Info": {
-      "update_knn": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "digitrec": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -293,57 +236,19 @@
       }
     },
     "Metrics": {
-      "update_knn": {
-        "Latency": {
-          "LatencyBest": "54",
-          "LatencyAvg": "54",
-          "LatencyWorst": "54",
-          "PipelineII": "54",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "3.727"
-        },
-        "Loops": [
-          {
-            "Name": "Loop 1",
-            "TripCount": "49",
-            "Latency": "49",
-            "PipelineII": "",
-            "PipelineDepth": "1"
-          },
-          {
-            "Name": "INSERT_LOOP",
-            "TripCount": "3",
-            "Latency": "3",
-            "PipelineII": "",
-            "PipelineDepth": "1"
-          }
-        ],
-        "Area": {
-          "FF": "90",
-          "LUT": "751",
-          "BRAM_18K": "0",
-          "DSP48E": "0",
-          "URAM": "0"
-        }
-      },
       "digitrec": {
         "Latency": {
-          "LatencyBest": "102733",
-          "LatencyAvg": "102733",
-          "LatencyWorst": "102733",
-          "PipelineII": "102733",
+          "LatencyBest": "1936",
+          "LatencyAvg": "1936",
+          "LatencyWorst": "1936",
+          "PipelineII": "1936",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.900"
+          "Estimate": "7.918"
         },
         "Loops": [
           {
@@ -363,9 +268,9 @@
           {
             "Name": "L1800",
             "TripCount": "1800",
-            "Latency": "102600",
-            "PipelineII": "",
-            "PipelineDepth": "57"
+            "Latency": "1802",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
           },
           {
             "Name": "DIGIT_LOOP",
@@ -384,30 +289,30 @@
         ],
         "Area": {
           "BRAM_18K": "56",
-          "FF": "1861",
-          "LUT": "12390",
+          "FF": "705",
+          "LUT": "5549",
           "DSP48E": "0",
           "URAM": "0"
         }
       },
       "dut": {
         "Latency": {
-          "LatencyBest": "102735",
-          "LatencyAvg": "102735",
-          "LatencyWorst": "102735",
-          "PipelineII": "102736",
+          "LatencyBest": "1938",
+          "LatencyAvg": "1938",
+          "LatencyWorst": "1938",
+          "PipelineII": "1939",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.900"
+          "Estimate": "7.918"
         },
         "Area": {
           "BRAM_18K": "56",
-          "FF": "1946",
-          "LUT": "12431",
+          "FF": "790",
+          "LUT": "5590",
           "DSP48E": "0",
           "URAM": "0"
         }
@@ -424,7 +329,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-09-27 22:39:26 EDT",
+    "Time": "2022-09-27 22:54:30 EDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }

@@ -57,7 +57,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "102735", "EstimateLatencyMax" : "102735",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1938", "EstimateLatencyMax" : "1938",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -103,30 +103,19 @@ set RtlHierarchyInfo {[
 			{"Name" : "training_data_V_9", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_digitrec_fu_63", "Port" : "training_data_V_9"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "17", "22", "27", "32", "37", "42", "47", "52", "57", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92"],
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
 		"CDFG" : "digitrec",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "102733", "EstimateLatencyMax" : "102733",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1936", "EstimateLatencyMax" : "1936",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
-		"WaitState" : [
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_743"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_755"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_767"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_779"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_791"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_803"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_815"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_828"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_840"},
-			{"State" : "ap_ST_fsm_state7", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_update_knn_fu_852"}],
 		"Port" : [
 			{"Name" : "input_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "training_data_V_0", "Type" : "Memory", "Direction" : "I"},
@@ -149,267 +138,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.training_data_V_7_U", "Parent" : "1"},
 	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.training_data_V_8_U", "Parent" : "1"},
 	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.training_data_V_9_U", "Parent" : "1"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_743", "Parent" : "1", "Child" : ["13", "14", "15", "16"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_743.dut_mux_32_6_1_1_U1", "Parent" : "12"},
-	{"ID" : "14", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_743.dut_mux_42_6_1_1_U2", "Parent" : "12"},
-	{"ID" : "15", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_743.dut_mux_42_6_1_1_U3", "Parent" : "12"},
-	{"ID" : "16", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_743.dut_mux_42_6_1_1_U4", "Parent" : "12"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_755", "Parent" : "1", "Child" : ["18", "19", "20", "21"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "18", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_755.dut_mux_32_6_1_1_U1", "Parent" : "17"},
-	{"ID" : "19", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_755.dut_mux_42_6_1_1_U2", "Parent" : "17"},
-	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_755.dut_mux_42_6_1_1_U3", "Parent" : "17"},
-	{"ID" : "21", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_755.dut_mux_42_6_1_1_U4", "Parent" : "17"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_767", "Parent" : "1", "Child" : ["23", "24", "25", "26"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "23", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_767.dut_mux_32_6_1_1_U1", "Parent" : "22"},
-	{"ID" : "24", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_767.dut_mux_42_6_1_1_U2", "Parent" : "22"},
-	{"ID" : "25", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_767.dut_mux_42_6_1_1_U3", "Parent" : "22"},
-	{"ID" : "26", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_767.dut_mux_42_6_1_1_U4", "Parent" : "22"},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_779", "Parent" : "1", "Child" : ["28", "29", "30", "31"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "28", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_779.dut_mux_32_6_1_1_U1", "Parent" : "27"},
-	{"ID" : "29", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_779.dut_mux_42_6_1_1_U2", "Parent" : "27"},
-	{"ID" : "30", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_779.dut_mux_42_6_1_1_U3", "Parent" : "27"},
-	{"ID" : "31", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_779.dut_mux_42_6_1_1_U4", "Parent" : "27"},
-	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_791", "Parent" : "1", "Child" : ["33", "34", "35", "36"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "33", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_791.dut_mux_32_6_1_1_U1", "Parent" : "32"},
-	{"ID" : "34", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_791.dut_mux_42_6_1_1_U2", "Parent" : "32"},
-	{"ID" : "35", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_791.dut_mux_42_6_1_1_U3", "Parent" : "32"},
-	{"ID" : "36", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_791.dut_mux_42_6_1_1_U4", "Parent" : "32"},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_803", "Parent" : "1", "Child" : ["38", "39", "40", "41"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "38", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_803.dut_mux_32_6_1_1_U1", "Parent" : "37"},
-	{"ID" : "39", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_803.dut_mux_42_6_1_1_U2", "Parent" : "37"},
-	{"ID" : "40", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_803.dut_mux_42_6_1_1_U3", "Parent" : "37"},
-	{"ID" : "41", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_803.dut_mux_42_6_1_1_U4", "Parent" : "37"},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_815", "Parent" : "1", "Child" : ["43", "44", "45", "46"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "43", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_815.dut_mux_32_6_1_1_U1", "Parent" : "42"},
-	{"ID" : "44", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_815.dut_mux_42_6_1_1_U2", "Parent" : "42"},
-	{"ID" : "45", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_815.dut_mux_42_6_1_1_U3", "Parent" : "42"},
-	{"ID" : "46", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_815.dut_mux_42_6_1_1_U4", "Parent" : "42"},
-	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_828", "Parent" : "1", "Child" : ["48", "49", "50", "51"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "48", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_828.dut_mux_32_6_1_1_U1", "Parent" : "47"},
-	{"ID" : "49", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_828.dut_mux_42_6_1_1_U2", "Parent" : "47"},
-	{"ID" : "50", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_828.dut_mux_42_6_1_1_U3", "Parent" : "47"},
-	{"ID" : "51", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_828.dut_mux_42_6_1_1_U4", "Parent" : "47"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_840", "Parent" : "1", "Child" : ["53", "54", "55", "56"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "53", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_840.dut_mux_32_6_1_1_U1", "Parent" : "52"},
-	{"ID" : "54", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_840.dut_mux_42_6_1_1_U2", "Parent" : "52"},
-	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_840.dut_mux_42_6_1_1_U3", "Parent" : "52"},
-	{"ID" : "56", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_840.dut_mux_42_6_1_1_U4", "Parent" : "52"},
-	{"ID" : "57", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_852", "Parent" : "1", "Child" : ["58", "59", "60", "61"],
-		"CDFG" : "update_knn",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "54", "EstimateLatencyMax" : "54",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"Port" : [
-			{"Name" : "test_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "train_inst_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_0_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_1_V_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "min_distances_2_V_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_852.dut_mux_32_6_1_1_U1", "Parent" : "57"},
-	{"ID" : "59", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_852.dut_mux_42_6_1_1_U2", "Parent" : "57"},
-	{"ID" : "60", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_852.dut_mux_42_6_1_1_U3", "Parent" : "57"},
-	{"ID" : "61", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.grp_update_knn_fu_852.dut_mux_42_6_1_1_U4", "Parent" : "57"},
-	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U12", "Parent" : "1"},
-	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U13", "Parent" : "1"},
-	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U14", "Parent" : "1"},
-	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U15", "Parent" : "1"},
-	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U16", "Parent" : "1"},
-	{"ID" : "67", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U17", "Parent" : "1"},
-	{"ID" : "68", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U18", "Parent" : "1"},
-	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U19", "Parent" : "1"},
-	{"ID" : "70", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U20", "Parent" : "1"},
-	{"ID" : "71", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U21", "Parent" : "1"},
-	{"ID" : "72", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U22", "Parent" : "1"},
-	{"ID" : "73", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U23", "Parent" : "1"},
-	{"ID" : "74", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U24", "Parent" : "1"},
-	{"ID" : "75", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U25", "Parent" : "1"},
-	{"ID" : "76", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U26", "Parent" : "1"},
-	{"ID" : "77", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U27", "Parent" : "1"},
-	{"ID" : "78", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U28", "Parent" : "1"},
-	{"ID" : "79", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U29", "Parent" : "1"},
-	{"ID" : "80", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U30", "Parent" : "1"},
-	{"ID" : "81", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U31", "Parent" : "1"},
-	{"ID" : "82", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U32", "Parent" : "1"},
-	{"ID" : "83", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U33", "Parent" : "1"},
-	{"ID" : "84", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U34", "Parent" : "1"},
-	{"ID" : "85", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U35", "Parent" : "1"},
-	{"ID" : "86", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U36", "Parent" : "1"},
-	{"ID" : "87", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U37", "Parent" : "1"},
-	{"ID" : "88", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U38", "Parent" : "1"},
-	{"ID" : "89", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U39", "Parent" : "1"},
-	{"ID" : "90", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U40", "Parent" : "1"},
-	{"ID" : "91", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_42_6_1_1_x_U41", "Parent" : "1"},
-	{"ID" : "92", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_305_6_1_1_U42", "Parent" : "1"}]}
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_digitrec_fu_63.dut_mux_305_6_1_1_U1", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -437,73 +166,13 @@ set ArgLastReadFirstWriteLatency {
 		training_data_V_6 {Type I LastRead -1 FirstWrite -1}
 		training_data_V_7 {Type I LastRead -1 FirstWrite -1}
 		training_data_V_8 {Type I LastRead -1 FirstWrite -1}
-		training_data_V_9 {Type I LastRead -1 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}
-	update_knn {
-		test_inst_V {Type I LastRead 0 FirstWrite -1}
-		train_inst_V {Type I LastRead 0 FirstWrite -1}
-		min_distances_0_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_1_V_r {Type I LastRead 0 FirstWrite -1}
-		min_distances_2_V_r {Type I LastRead 0 FirstWrite -1}}}
+		training_data_V_9 {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "102735", "Max" : "102735"}
-	, {"Name" : "Interval", "Min" : "102736", "Max" : "102736"}
+	{"Name" : "Latency", "Min" : "1938", "Max" : "1938"}
+	, {"Name" : "Interval", "Min" : "1939", "Max" : "1939"}
 ]}
 
 set PipelineEnableSignalInfo {[

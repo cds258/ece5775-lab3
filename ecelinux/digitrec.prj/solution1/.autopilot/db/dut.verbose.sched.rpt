@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Tue Sep 27 22:39:15 2022
+* Date:           Tue Sep 27 22:54:11 2022
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        digitrec.prj
@@ -20,17 +20,17 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  | 10.00 ns | 6.900 ns |   1.25 ns  |
+    |ap_clk  | 10.00 ns | 7.918 ns |   1.25 ns  |
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+--------+--------+---------+
-    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
-    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
-    +---------+---------+----------+----------+--------+--------+---------+
-    |   102735|   102735| 1.027 ms | 1.027 ms |  102735|  102735|   none  |
-    +---------+---------+----------+----------+--------+--------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1938|     1938| 19.380 us | 19.380 us |  1938|  1938|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
@@ -87,7 +87,7 @@ ST_2 : Operation 8 [2/2] (0.00ns)   --->   "%op_V_assign = call fastcc i4 @digit
 
 State 3 <SV = 2> <Delay = 3.63>
 ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 9 'specinterface' 'empty' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' 'empty_3' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !87"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_out_V_V), !map !91"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dut_str) nounwind"   --->   Operation 13 'spectopmodule' <Predicate = true> <Delay = 0.00>

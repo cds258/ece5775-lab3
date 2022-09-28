@@ -24731,10 +24731,10 @@ _ssdm_SpecArrayPartition( knn_set, 1, "COMPLETE", 0, "");
       knn_set[i][k] = 50;
 
   L1800: for ( int i = 0; i < 1800; ++i ) {
-    L10: for ( int j = 0; j < 10; j++ ) {
-_ssdm_Unroll(0,0,0, "");
-# 64 "digitrec.cpp"
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 63 "digitrec.cpp"
 
+    L10: for ( int j = 0; j < 10; j++ ) {
 
       digit training_instance = training_data[j][i];
 
@@ -24748,7 +24748,7 @@ _ssdm_Unroll(0,0,0, "");
 # 89 "digitrec.cpp"
 void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[3] )
 {_ssdm_SpecArrayDimSize(min_distances, 3);
-_ssdm_InlineSelf(2, "");
+_ssdm_InlineSelf(0, "");
 # 90 "digitrec.cpp"
 
 

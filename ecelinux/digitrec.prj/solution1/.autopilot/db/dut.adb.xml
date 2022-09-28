@@ -127,10 +127,10 @@
 
 <Node id="24" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  %empty_5 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+:1  %empty_3 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
 ]]></Node>
-<StgValue><ssdm name="empty_5"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </operation>
 
 <operation id="11" st_id="3" stage="1" lat="1">
@@ -366,39 +366,39 @@
 </dataflow>
 <dataflow id="77" from="p_str" to="empty" fromId="63" toId="9">
 </dataflow>
-<dataflow id="78" from="_ssdm_op_SpecInterface" to="empty_5" fromId="55" toId="10">
+<dataflow id="78" from="_ssdm_op_SpecInterface" to="empty_3" fromId="55" toId="10">
 </dataflow>
-<dataflow id="79" from="strm_in_V_V" to="empty_5" fromId="20" toId="10">
+<dataflow id="79" from="strm_in_V_V" to="empty_3" fromId="20" toId="10">
 </dataflow>
-<dataflow id="80" from="ap_fifo_str" to="empty_5" fromId="58" toId="10">
+<dataflow id="80" from="ap_fifo_str" to="empty_3" fromId="58" toId="10">
 </dataflow>
-<dataflow id="81" from="StgValue_60" to="empty_5" fromId="60" toId="10">
+<dataflow id="81" from="StgValue_60" to="empty_3" fromId="60" toId="10">
 </dataflow>
-<dataflow id="82" from="StgValue_60" to="empty_5" fromId="60" toId="10">
+<dataflow id="82" from="StgValue_60" to="empty_3" fromId="60" toId="10">
 </dataflow>
-<dataflow id="83" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="83" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
-<dataflow id="84" from="StgValue_60" to="empty_5" fromId="60" toId="10">
+<dataflow id="84" from="StgValue_60" to="empty_3" fromId="60" toId="10">
 </dataflow>
-<dataflow id="85" from="StgValue_60" to="empty_5" fromId="60" toId="10">
+<dataflow id="85" from="StgValue_60" to="empty_3" fromId="60" toId="10">
 </dataflow>
-<dataflow id="86" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="86" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
-<dataflow id="87" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="87" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
-<dataflow id="88" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="88" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
-<dataflow id="89" from="StgValue_70" to="empty_5" fromId="70" toId="10">
+<dataflow id="89" from="StgValue_70" to="empty_3" fromId="70" toId="10">
 </dataflow>
-<dataflow id="90" from="StgValue_70" to="empty_5" fromId="70" toId="10">
+<dataflow id="90" from="StgValue_70" to="empty_3" fromId="70" toId="10">
 </dataflow>
-<dataflow id="91" from="StgValue_73" to="empty_5" fromId="73" toId="10">
+<dataflow id="91" from="StgValue_73" to="empty_3" fromId="73" toId="10">
 </dataflow>
-<dataflow id="92" from="StgValue_73" to="empty_5" fromId="73" toId="10">
+<dataflow id="92" from="StgValue_73" to="empty_3" fromId="73" toId="10">
 </dataflow>
-<dataflow id="93" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="93" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
-<dataflow id="94" from="p_str" to="empty_5" fromId="63" toId="10">
+<dataflow id="94" from="p_str" to="empty_3" fromId="63" toId="10">
 </dataflow>
 <dataflow id="96" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="95" toId="11">
 </dataflow>

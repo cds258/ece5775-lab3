@@ -7,10 +7,10 @@
 source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'cds258' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Tue Sep 27 22:38:21 EDT 2022
+INFO: [HLS 200-10] For user 'cds258' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Tue Sep 27 22:52:53 EDT 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
 INFO: [HLS 200-10] In directory '/home/cds258/ece5775/labs/lab3/ecelinux'
-Sourcing Tcl script 'run_unroll.tcl'
+Sourcing Tcl script 'run_pipeline.tcl'
 INFO: [HLS 200-10] Opening and resetting project '/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj'.
 INFO: [HLS 200-10] Adding design file 'digitrec.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'digitrec_test.cpp' to the project
@@ -21,86 +21,75 @@ INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'digitrec.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5250 ; free virtual = 28414
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5251 ; free virtual = 28415
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4403 ; free virtual = 28374
+INFO: [XFORM 203-603] Inlining function 'update_knn' into 'digitrec' (digitrec.cpp:68).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 1179.582 ; gain = 527.219 ; free physical = 5233 ; free virtual = 28398
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
 WARNING: [SYNCHK 200-23] digitrec.cpp:97: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4396 ; free virtual = 28368
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5225 ; free virtual = 28390
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L1800' (digitrec.cpp:63) in function 'digitrec' for pipelining.
 INFO: [HLS 200-489] Unrolling loop 'L10' (digitrec.cpp:64) in function 'digitrec' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (digitrec.cpp:96) in function 'digitrec' completely with a factor of 49.
+INFO: [HLS 200-489] Unrolling loop 'INSERT_LOOP' (digitrec.cpp:106) in function 'digitrec' completely with a factor of 3.
 INFO: [XFORM 203-102] Partitioning array 'training_data.V' in dimension 1 automatically.
 INFO: [XFORM 203-101] Partitioning array 'knn_set.V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.0' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.1' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.2' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.3' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.4' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.5' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.6' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.7' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.8' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set.V.9' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.0' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.1' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.2' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.3' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.4' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.5' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.6' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.7' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.8' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V.9' (digitrec.cpp:55) in dimension 1 completely.
 INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[0].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[1].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[2].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[3].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[4].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[5].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[6].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[7].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[8].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[9].V' (digitrec.cpp:55) completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[0].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[1].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[2].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[3].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[4].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[5].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[6].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[7].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[8].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'knn_set[9].V' (digitrec.cpp:55) in dimension 1 completely.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4366 ; free virtual = 28338
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4352 ; free virtual = 28325
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (digitrec.cpp:63:44) to (digitrec.cpp:63:37) in function 'digitrec'... converting 61 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'digitrec' (digitrec.cpp:58:7)...950 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:01:02 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5191 ; free virtual = 28358
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:51 ; elapsed = 00:01:08 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5174 ; free virtual = 28341
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'update_knn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 52.03 seconds; current allocated memory: 170.800 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 171.033 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'digitrec' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L1800'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 171.790 MB.
+INFO: [HLS 200-111]  Elapsed time: 69.53 seconds; current allocated memory: 181.678 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 173.145 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.91 seconds; current allocated memory: 188.265 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 173.390 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 188.753 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 173.524 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'update_knn' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'dut_mux_32_6_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_mux_42_6_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'update_knn'.
-INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 174.008 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.49 seconds; current allocated memory: 188.905 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'digitrec' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -114,11 +103,9 @@ INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_6' to 'digitre
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_7' to 'digitrec_trainingibs' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_8' to 'digitrec_trainingjbC' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_9' to 'digitrec_trainingkbM' due to the length limit 20
-WARNING: [RTGEN 206-101] RTL name 'dut_mux_42_6_1_1' is changed to 'dut_mux_42_6_1_1_x' due to conflict.
 INFO: [RTGEN 206-100] Generating core module 'dut_mux_305_6_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_mux_42_6_1_1_x': 30 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'digitrec'.
-INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 177.512 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.66 seconds; current allocated memory: 200.167 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -126,9 +113,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fi
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111]  Elapsed time: 1.58 seconds; current allocated memory: 182.594 MB.
+INFO: [HLS 200-111]  Elapsed time: 8.33 seconds; current allocated memory: 229.309 MB.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 144.93 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 126.30 MHz
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingbkb_rom' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingcud_rom' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingdEe_rom' using auto ROMs.
@@ -139,8 +126,8 @@ INFO: [RTMG 210-279] Implementing memory 'digitrec_traininghbi_rom' using auto R
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingibs_rom' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingjbC_rom' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingkbM_rom' using auto ROMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1234.711 ; gain = 592.219 ; free physical = 4320 ; free virtual = 28304
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:13 ; elapsed = 00:01:38 . Memory (MB): peak = 1179.934 ; gain = 527.570 ; free physical = 5080 ; free virtual = 28279
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 65.85 seconds; peak allocated memory: 182.594 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Tue Sep 27 22:39:26 2022...
+INFO: [HLS 200-112] Total elapsed time: 98.28 seconds; peak allocated memory: 229.309 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue Sep 27 22:54:30 2022...
