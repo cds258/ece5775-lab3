@@ -24683,14 +24683,13 @@ void dut(
 {
 
   digit input;
-  bit4_t output;
+  bit32_t output;
 
 
 
 
   bit32_t input_lo = strm_in.read();
   bit32_t input_hi = strm_in.read();
-
 
 
 
@@ -24706,8 +24705,7 @@ void dut(
 
 
 
-  strm_out.write( output(3,0) );
-
+  strm_out.write( output(31,0) );
 }
 
 
@@ -24741,7 +24739,7 @@ bit4_t digitrec( digit input )
 
   return knn_vote( knn_set );
 }
-# 91 "digitrec.cpp"
+# 89 "digitrec.cpp"
 void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[3] )
 {_ssdm_SpecArrayDimSize(min_distances, 3);
 
@@ -24768,7 +24766,7 @@ void update_knn( digit test_inst, digit train_inst, bit6_t min_distances[3] )
   }
 
 }
-# 131 "digitrec.cpp"
+# 129 "digitrec.cpp"
 bit4_t knn_vote( bit6_t knn_set[10][3] )
 {_ssdm_SpecArrayDimSize(knn_set, 10);
 

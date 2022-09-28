@@ -94,10 +94,10 @@
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="49" op_2_bw="48">
 <![CDATA[
-:9  %output_V = call fastcc i4 @digitrec(i49 %p_Result_s)
+:9  %op_V_assign = call fastcc i4 @digitrec(i49 %p_Result_s)
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 </state>
 
@@ -142,7 +142,7 @@
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !85
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !87
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -157,7 +157,7 @@
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_out_V_V), !map !89
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_out_V_V), !map !91
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -187,10 +187,10 @@
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="49" op_2_bw="48">
 <![CDATA[
-:9  %output_V = call fastcc i4 @digitrec(i49 %p_Result_s)
+:9  %op_V_assign = call fastcc i4 @digitrec(i49 %p_Result_s)
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 
 <operation id="15" st_id="3" stage="1" lat="1">
@@ -202,10 +202,10 @@
 
 <Node id="15" bw="32" op_0_bw="4">
 <![CDATA[
-:10  %tmp_V_2 = zext i4 %output_V to i32
+:10  %output_V = zext i4 %op_V_assign to i32
 
 ]]></Node>
-<StgValue><ssdm name="tmp_V_2"/></StgValue>
+<StgValue><ssdm name="output_V"/></StgValue>
 </operation>
 
 <operation id="16" st_id="3" stage="1" lat="1">
@@ -217,10 +217,10 @@
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-:11  call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %strm_out_V_V, i32 %tmp_V_2)
+:11  call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %strm_out_V_V, i32 %output_V)
 
 ]]></Node>
-<StgValue><ssdm name="write_ln42"/></StgValue>
+<StgValue><ssdm name="write_ln41"/></StgValue>
 </operation>
 
 <operation id="17" st_id="3" stage="1" lat="1">
@@ -235,7 +235,7 @@
 :12  ret void
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln44"/></StgValue>
+<StgValue><ssdm name="ret_ln42"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -272,11 +272,11 @@
 </dataflow>
 <dataflow id="32" from="tmp_V" to="p_Result_s" fromId="4" toId="7">
 </dataflow>
-<dataflow id="34" from="digitrec" to="output_V" fromId="33" toId="8">
+<dataflow id="34" from="digitrec" to="op_V_assign" fromId="33" toId="8">
 </dataflow>
-<dataflow id="35" from="p_Result_s" to="output_V" fromId="7" toId="8">
+<dataflow id="35" from="p_Result_s" to="op_V_assign" fromId="7" toId="8">
 </dataflow>
-<dataflow id="36" from="training_data_V" to="output_V" fromId="22" toId="8">
+<dataflow id="36" from="training_data_V" to="op_V_assign" fromId="22" toId="8">
 </dataflow>
 <dataflow id="38" from="_ssdm_op_SpecInterface" to="empty" fromId="37" toId="9">
 </dataflow>
@@ -358,19 +358,19 @@
 </dataflow>
 <dataflow id="96" from="dut_str" to="spectopmodule_ln0" fromId="95" toId="13">
 </dataflow>
-<dataflow id="97" from="digitrec" to="output_V" fromId="33" toId="14">
+<dataflow id="97" from="digitrec" to="op_V_assign" fromId="33" toId="14">
 </dataflow>
-<dataflow id="98" from="p_Result_s" to="output_V" fromId="7" toId="14">
+<dataflow id="98" from="p_Result_s" to="op_V_assign" fromId="7" toId="14">
 </dataflow>
-<dataflow id="99" from="training_data_V" to="output_V" fromId="22" toId="14">
+<dataflow id="99" from="training_data_V" to="op_V_assign" fromId="22" toId="14">
 </dataflow>
-<dataflow id="100" from="output_V" to="tmp_V_2" fromId="14" toId="15">
+<dataflow id="100" from="op_V_assign" to="output_V" fromId="14" toId="15">
 </dataflow>
-<dataflow id="102" from="_ssdm_op_Write.ap_fifo.volatile.i32P" to="write_ln42" fromId="101" toId="16">
+<dataflow id="102" from="_ssdm_op_Write.ap_fifo.volatile.i32P" to="write_ln41" fromId="101" toId="16">
 </dataflow>
-<dataflow id="103" from="strm_out_V_V" to="write_ln42" fromId="21" toId="16">
+<dataflow id="103" from="strm_out_V_V" to="write_ln41" fromId="21" toId="16">
 </dataflow>
-<dataflow id="104" from="tmp_V_2" to="write_ln42" fromId="15" toId="16">
+<dataflow id="104" from="output_V" to="write_ln41" fromId="15" toId="16">
 </dataflow>
 </dataflows>
 

@@ -177,7 +177,7 @@
 						<name>trunc_ln215</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>31</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -192,7 +192,7 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>31</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -225,7 +225,7 @@
 						<name>p_Result_s</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>31</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -240,7 +240,7 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>31</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -272,10 +272,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>output_V</name>
+						<name>op_V_assign</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>36</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -290,12 +290,12 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>36</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>output.V</originalName>
+						<originalName></originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -322,10 +322,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>tmp_V_2</name>
+						<name>output_V</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>42</lineNumber>
+						<lineNumber>35</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -340,12 +340,12 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>42</second>
+										<second>35</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>tmp.V</originalName>
+						<originalName>output.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -370,10 +370,10 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>strm_out_V_V_write_ln42</name>
+						<name>strm_out_V_V_write_ln41</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>42</lineNumber>
+						<lineNumber>41</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -388,7 +388,7 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>42</second>
+										<second>41</second>
 									</item>
 								</second>
 							</item>
@@ -420,10 +420,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>_ln44</name>
+						<name>_ln42</name>
 						<fileName>digitrec.cpp</fileName>
 						<fileDirectory>/home/cds258/ece5775/labs/lab3/ecelinux</fileDirectory>
-						<lineNumber>44</lineNumber>
+						<lineNumber>42</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -438,7 +438,7 @@
 											<first>digitrec.cpp</first>
 											<second>dut</second>
 										</first>
-										<second>44</second>
+										<second>42</second>
 									</item>
 								</second>
 							</item>
@@ -904,19 +904,19 @@
 		<count>3</count>
 		<item_version>0</item_version>
 		<item class_id="46" tracking_level="0" version="0">
+			<first>output_V_fu_86</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>15</item>
+			</second>
+		</item>
+		<item>
 			<first>p_Result_s_fu_78</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>13</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_V_2_fu_86</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>15</item>
 			</second>
 		</item>
 		<item>
@@ -954,7 +954,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln42_write_fu_60</first>
+			<first>write_ln41_write_fu_60</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

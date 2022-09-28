@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'digitrec'" level="0">
-<item name = "Date">Tue Sep 27 17:09:39 2022
+<item name = "Date">Tue Sep 27 22:03:39 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">digitrec.prj</item>
@@ -89,8 +89,8 @@
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln321_fu_345_p2">+, 0, 0, 15, 6, 6</column>
 <column name="add_ln544_fu_545_p2">+, 0, 0, 15, 6, 6</column>
-<column name="add_ln66_fu_371_p2">+, 0, 0, 21, 15, 11</column>
-<column name="add_ln68_fu_389_p2">+, 0, 0, 21, 15, 15</column>
+<column name="add_ln64_fu_371_p2">+, 0, 0, 21, 15, 11</column>
+<column name="add_ln66_fu_389_p2">+, 0, 0, 21, 15, 15</column>
 <column name="add_ln887_fu_475_p2">+, 0, 0, 15, 6, 6</column>
 <column name="dist_V_fu_453_p2">+, 0, 0, 15, 6, 6</column>
 <column name="distance_sum_fu_584_p2">+, 0, 0, 15, 8, 8</column>
@@ -105,18 +105,18 @@
 <column name="sub_ln321_fu_323_p2">-, 0, 0, 15, 6, 6</column>
 <column name="sub_ln544_fu_519_p2">-, 0, 0, 15, 6, 6</column>
 <column name="sub_ln887_fu_411_p2">-, 0, 0, 15, 6, 6</column>
-<column name="icmp_ln108_fu_459_p2">icmp, 0, 0, 8, 2, 2</column>
-<column name="icmp_ln141_fu_495_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln150_fu_529_p2">icmp, 0, 0, 8, 2, 2</column>
-<column name="icmp_ln156_fu_559_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="icmp_ln60_fu_299_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="icmp_ln61_fu_329_p2">icmp, 0, 0, 8, 2, 2</column>
-<column name="icmp_ln65_fu_355_p2">icmp, 0, 0, 13, 11, 9</column>
-<column name="icmp_ln66_fu_377_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln106_fu_459_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln139_fu_495_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln148_fu_529_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln154_fu_559_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln58_fu_299_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="icmp_ln59_fu_329_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln63_fu_355_p2">icmp, 0, 0, 13, 11, 9</column>
+<column name="icmp_ln64_fu_377_p2">icmp, 0, 0, 9, 4, 4</column>
 <column name="icmp_ln887_fu_485_p2">icmp, 0, 0, 11, 6, 6</column>
-<column name="icmp_ln98_fu_430_p2">icmp, 0, 0, 11, 6, 5</column>
-<column name="select_ln156_1_fu_572_p3">select, 0, 0, 32, 1, 32</column>
-<column name="select_ln156_fu_565_p3">select, 0, 0, 32, 1, 32</column>
+<column name="icmp_ln96_fu_430_p2">icmp, 0, 0, 11, 6, 5</column>
+<column name="select_ln154_1_fu_572_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln154_fu_565_p3">select, 0, 0, 32, 1, 32</column>
 <column name="ret_V_fu_421_p2">xor, 0, 0, 49, 49, 49</column>
 </table>
 </item>
@@ -145,7 +145,7 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln66_reg_629">15, 0, 15, 0</column>
+<column name="add_ln64_reg_629">15, 0, 15, 0</column>
 <column name="ap_CS_fsm">12, 0, 12, 0</column>
 <column name="ap_return_preg">4, 0, 4, 0</column>
 <column name="bvh_d_index_reg_194">6, 0, 6, 0</column>
@@ -173,8 +173,8 @@
 <column name="sub_ln544_reg_699">6, 0, 6, 0</column>
 <column name="sub_ln887_reg_647">6, 0, 6, 0</column>
 <column name="val_assign_reg_241">32, 0, 32, 0</column>
-<column name="zext_ln158_reg_686">4, 0, 32, 28</column>
-<column name="zext_ln66_reg_624">11, 0, 15, 4</column>
+<column name="zext_ln156_reg_686">4, 0, 32, 28</column>
+<column name="zext_ln64_reg_624">11, 0, 15, 4</column>
 </table>
 </item>
 </section>

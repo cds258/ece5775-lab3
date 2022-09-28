@@ -85,7 +85,7 @@
               <name>knn_set_V</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>55</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -100,7 +100,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>57</second>
+                      <second>55</second>
                     </item>
                   </second>
                 </item>
@@ -130,10 +130,10 @@
             <Obj>
               <type>0</type>
               <id>6</id>
-              <name>_ln60</name>
+              <name>_ln58</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -148,7 +148,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>60</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -215,10 +215,10 @@
             <Obj>
               <type>0</type>
               <id>9</id>
-              <name>icmp_ln60</name>
+              <name>icmp_ln58</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -233,13 +233,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>60</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln60_fu_299_p2</rtlName>
+              <rtlName>icmp_ln58_fu_299_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -267,7 +267,7 @@
               <name>i</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -282,7 +282,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>60</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -313,10 +313,10 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>_ln60</name>
+              <name>_ln58</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>58</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -331,7 +331,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>60</second>
+                      <second>58</second>
                     </item>
                   </second>
                 </item>
@@ -366,7 +366,7 @@
               <name>zext_ln321</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -381,7 +381,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -414,7 +414,7 @@
               <name>tmp_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -429,7 +429,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -464,7 +464,7 @@
               <name>sub_ln321</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -479,7 +479,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -510,10 +510,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>_ln61</name>
+              <name>_ln59</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -528,7 +528,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>61</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -595,10 +595,10 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>icmp_ln61</name>
+              <name>icmp_ln59</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -613,13 +613,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>61</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln61_fu_329_p2</rtlName>
+              <rtlName>icmp_ln59_fu_329_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -647,7 +647,7 @@
               <name>k</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -662,7 +662,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>61</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -693,10 +693,10 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>_ln61</name>
+              <name>_ln59</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -711,7 +711,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>61</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -746,7 +746,7 @@
               <name>zext_ln321_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -761,7 +761,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -794,7 +794,7 @@
               <name>add_ln321</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -809,7 +809,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -843,7 +843,7 @@
               <name>sext_ln321</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -858,7 +858,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -891,7 +891,7 @@
               <name>knn_set_V_addr</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -906,7 +906,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -938,10 +938,10 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>knn_set_V_addr_write_ln63</name>
+              <name>knn_set_V_addr_write_ln61</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>63</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -956,7 +956,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>63</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -987,10 +987,10 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>_ln61</name>
+              <name>_ln59</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>59</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1005,7 +1005,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>61</second>
+                      <second>59</second>
                     </item>
                   </second>
                 </item>
@@ -1069,10 +1069,10 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>_ln65</name>
+              <name>_ln63</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>63</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1087,7 +1087,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>65</second>
+                      <second>63</second>
                     </item>
                   </second>
                 </item>
@@ -1154,10 +1154,10 @@
             <Obj>
               <type>0</type>
               <id>37</id>
-              <name>icmp_ln65</name>
+              <name>icmp_ln63</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>63</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1172,13 +1172,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>65</second>
+                      <second>63</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln65_fu_355_p2</rtlName>
+              <rtlName>icmp_ln63_fu_355_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1206,7 +1206,7 @@
               <name>i_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>63</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1221,7 +1221,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>65</second>
+                      <second>63</second>
                     </item>
                   </second>
                 </item>
@@ -1252,10 +1252,10 @@
             <Obj>
               <type>0</type>
               <id>40</id>
-              <name>_ln65</name>
+              <name>_ln63</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>63</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1270,7 +1270,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>65</second>
+                      <second>63</second>
                     </item>
                   </second>
                 </item>
@@ -1302,10 +1302,10 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>zext_ln66</name>
+              <name>zext_ln64</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1320,13 +1320,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln66_fu_367_p1</rtlName>
+              <rtlName>zext_ln64_fu_367_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -1350,10 +1350,10 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>_ln66</name>
+              <name>_ln64</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1368,7 +1368,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
@@ -1438,7 +1438,7 @@
               <name>phi_mul</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1453,7 +1453,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
@@ -1486,10 +1486,10 @@
             <Obj>
               <type>0</type>
               <id>49</id>
-              <name>add_ln66</name>
+              <name>add_ln64</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1504,13 +1504,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln66_fu_371_p2</rtlName>
+              <rtlName>add_ln64_fu_371_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -1535,10 +1535,10 @@
             <Obj>
               <type>0</type>
               <id>50</id>
-              <name>icmp_ln66</name>
+              <name>icmp_ln64</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1553,13 +1553,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln66_fu_377_p2</rtlName>
+              <rtlName>icmp_ln64_fu_377_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1587,7 +1587,7 @@
               <name>j</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1602,7 +1602,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
@@ -1633,10 +1633,10 @@
             <Obj>
               <type>0</type>
               <id>53</id>
-              <name>_ln66</name>
+              <name>_ln64</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>66</lineNumber>
+              <lineNumber>64</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1651,7 +1651,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>66</second>
+                      <second>64</second>
                     </item>
                   </second>
                 </item>
@@ -1683,10 +1683,10 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>zext_ln68</name>
+              <name>zext_ln66</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1701,13 +1701,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln68_fu_399_p1</rtlName>
+              <rtlName>zext_ln66_fu_399_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -1731,10 +1731,10 @@
             <Obj>
               <type>0</type>
               <id>57</id>
-              <name>add_ln68</name>
+              <name>add_ln66</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1749,13 +1749,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln68_fu_389_p2</rtlName>
+              <rtlName>add_ln66_fu_389_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>15</bitwidth>
@@ -1780,10 +1780,10 @@
             <Obj>
               <type>0</type>
               <id>58</id>
-              <name>zext_ln68_1</name>
+              <name>zext_ln66_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1798,13 +1798,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln68_1_fu_394_p1</rtlName>
+              <rtlName>zext_ln66_1_fu_394_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1831,7 +1831,7 @@
               <name>training_data_V_addr</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1846,7 +1846,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -1881,7 +1881,7 @@
               <name>tmp_3</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1896,14 +1896,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -1938,7 +1938,7 @@
               <name>sub_ln887</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1953,14 +1953,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -1994,7 +1994,7 @@
               <name>training_instance_V</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2009,7 +2009,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -2039,10 +2039,10 @@
             <Obj>
               <type>0</type>
               <id>63</id>
-              <name>zext_ln68_2</name>
+              <name>zext_ln66_2</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2057,13 +2057,13 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln68_2_fu_417_p1</rtlName>
+              <rtlName>zext_ln66_2_fu_417_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>49</bitwidth>
@@ -2090,7 +2090,7 @@
               <name>ret_V</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>94</lineNumber>
+              <lineNumber>92</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2105,14 +2105,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>94</second>
+                      <second>92</second>
                     </item>
                   </second>
                 </item>
@@ -2143,10 +2143,10 @@
             <Obj>
               <type>0</type>
               <id>65</id>
-              <name>_ln98</name>
+              <name>_ln96</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>98</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2161,14 +2161,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>98</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -2272,10 +2272,10 @@
             <Obj>
               <type>0</type>
               <id>69</id>
-              <name>zext_ln103</name>
+              <name>zext_ln101</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>103</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2290,20 +2290,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>103</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln103_fu_426_p1</rtlName>
+              <rtlName>zext_ln101_fu_426_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2327,10 +2327,10 @@
             <Obj>
               <type>0</type>
               <id>70</id>
-              <name>icmp_ln98</name>
+              <name>icmp_ln96</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>98</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2345,20 +2345,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>98</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln98_fu_430_p2</rtlName>
+              <rtlName>icmp_ln96_fu_430_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2386,7 +2386,7 @@
               <name>i_3</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>98</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2401,14 +2401,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>98</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -2439,10 +2439,10 @@
             <Obj>
               <type>0</type>
               <id>73</id>
-              <name>_ln98</name>
+              <name>_ln96</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>98</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2457,14 +2457,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>98</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -2499,7 +2499,7 @@
               <name>p_Result_s</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>99</lineNumber>
+              <lineNumber>97</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2514,14 +2514,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>99</second>
+                      <second>97</second>
                     </item>
                   </second>
                 </item>
@@ -2556,7 +2556,7 @@
               <name>zext_ln700</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>99</lineNumber>
+              <lineNumber>97</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2571,14 +2571,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>99</second>
+                      <second>97</second>
                     </item>
                   </second>
                 </item>
@@ -2611,7 +2611,7 @@
               <name>dist_V</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>99</lineNumber>
+              <lineNumber>97</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2626,14 +2626,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>99</second>
+                      <second>97</second>
                     </item>
                   </second>
                 </item>
@@ -2664,10 +2664,10 @@
             <Obj>
               <type>0</type>
               <id>78</id>
-              <name>_ln98</name>
+              <name>_ln96</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>98</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2682,14 +2682,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>98</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -2719,10 +2719,10 @@
             <Obj>
               <type>0</type>
               <id>80</id>
-              <name>_ln108</name>
+              <name>_ln106</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>108</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2737,14 +2737,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>108</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
@@ -2848,10 +2848,10 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>icmp_ln108</name>
+              <name>icmp_ln106</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>108</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2866,20 +2866,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>108</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln108_fu_459_p2</rtlName>
+              <rtlName>icmp_ln106_fu_459_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2907,7 +2907,7 @@
               <name>i_4</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>108</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2922,14 +2922,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>108</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
@@ -2960,10 +2960,10 @@
             <Obj>
               <type>0</type>
               <id>87</id>
-              <name>_ln108</name>
+              <name>_ln106</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>108</lineNumber>
+              <lineNumber>106</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2978,14 +2978,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>108</second>
+                      <second>106</second>
                     </item>
                   </second>
                 </item>
@@ -3020,7 +3020,7 @@
               <name>zext_ln887</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3035,14 +3035,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3075,7 +3075,7 @@
               <name>add_ln887</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3090,14 +3090,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3131,7 +3131,7 @@
               <name>sext_ln887</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3146,14 +3146,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3186,7 +3186,7 @@
               <name>knn_set_V_addr_2</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3201,14 +3201,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3243,7 +3243,7 @@
               <name>temp_V</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3258,14 +3258,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3298,7 +3298,7 @@
               <name>icmp_ln887</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3313,14 +3313,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3351,10 +3351,10 @@
             <Obj>
               <type>0</type>
               <id>96</id>
-              <name>_ln109</name>
+              <name>_ln107</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>109</lineNumber>
+              <lineNumber>107</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3369,14 +3369,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>109</second>
+                      <second>107</second>
                     </item>
                   </second>
                 </item>
@@ -3408,10 +3408,10 @@
             <Obj>
               <type>0</type>
               <id>98</id>
-              <name>knn_set_V_addr_2_write_ln111</name>
+              <name>knn_set_V_addr_2_write_ln109</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>111</lineNumber>
+              <lineNumber>109</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3426,14 +3426,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>111</second>
+                      <second>109</second>
                     </item>
                   </second>
                 </item>
@@ -3465,10 +3465,10 @@
             <Obj>
               <type>0</type>
               <id>99</id>
-              <name>_ln113</name>
+              <name>_ln111</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>113</lineNumber>
+              <lineNumber>111</lineNumber>
               <contextFuncName>update_knn</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3483,14 +3483,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>70</second>
+                      <second>68</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>update_knn</second>
                       </first>
-                      <second>113</second>
+                      <second>111</second>
                     </item>
                   </second>
                 </item>
@@ -3625,10 +3625,10 @@
             <Obj>
               <type>0</type>
               <id>107</id>
-              <name>_ln65</name>
+              <name>_ln63</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>65</lineNumber>
+              <lineNumber>63</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3643,7 +3643,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>65</second>
+                      <second>63</second>
                     </item>
                   </second>
                 </item>
@@ -3673,10 +3673,10 @@
             <Obj>
               <type>0</type>
               <id>109</id>
-              <name>_ln158</name>
+              <name>_ln156</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>158</lineNumber>
+              <lineNumber>156</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3691,14 +3691,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>158</second>
+                      <second>156</second>
                     </item>
                   </second>
                 </item>
@@ -3731,7 +3731,7 @@
               <name>val_assign</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>156</lineNumber>
+              <lineNumber>154</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3746,14 +3746,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>156</second>
+                      <second>154</second>
                     </item>
                   </second>
                 </item>
@@ -3789,7 +3789,7 @@
               <name>min_sum_0_i</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>156</lineNumber>
+              <lineNumber>154</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3804,14 +3804,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>156</second>
+                      <second>154</second>
                     </item>
                   </second>
                 </item>
@@ -3881,10 +3881,10 @@
             <Obj>
               <type>0</type>
               <id>114</id>
-              <name>zext_ln158</name>
+              <name>zext_ln156</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>158</lineNumber>
+              <lineNumber>156</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3899,20 +3899,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>158</second>
+                      <second>156</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln158_fu_491_p1</rtlName>
+              <rtlName>zext_ln156_fu_491_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3936,10 +3936,10 @@
             <Obj>
               <type>0</type>
               <id>115</id>
-              <name>icmp_ln141</name>
+              <name>icmp_ln139</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>141</lineNumber>
+              <lineNumber>139</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3954,20 +3954,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>141</second>
+                      <second>139</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln141_fu_495_p2</rtlName>
+              <rtlName>icmp_ln139_fu_495_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3995,7 +3995,7 @@
               <name>i_2</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>141</lineNumber>
+              <lineNumber>139</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4010,14 +4010,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>141</second>
+                      <second>139</second>
                     </item>
                   </second>
                 </item>
@@ -4048,10 +4048,10 @@
             <Obj>
               <type>0</type>
               <id>118</id>
-              <name>_ln141</name>
+              <name>_ln139</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>141</lineNumber>
+              <lineNumber>139</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4066,14 +4066,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>141</second>
+                      <second>139</second>
                     </item>
                   </second>
                 </item>
@@ -4108,7 +4108,7 @@
               <name>zext_ln544</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4123,14 +4123,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4163,7 +4163,7 @@
               <name>tmp_2</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4178,14 +4178,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4220,7 +4220,7 @@
               <name>sub_ln544</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4235,14 +4235,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4273,10 +4273,10 @@
             <Obj>
               <type>0</type>
               <id>125</id>
-              <name>_ln150</name>
+              <name>_ln148</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>150</lineNumber>
+              <lineNumber>148</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4291,14 +4291,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>150</second>
+                      <second>148</second>
                     </item>
                   </second>
                 </item>
@@ -4402,10 +4402,10 @@
             <Obj>
               <type>0</type>
               <id>129</id>
-              <name>icmp_ln150</name>
+              <name>icmp_ln148</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>150</lineNumber>
+              <lineNumber>148</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4420,20 +4420,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>150</second>
+                      <second>148</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln150_fu_529_p2</rtlName>
+              <rtlName>icmp_ln148_fu_529_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4461,7 +4461,7 @@
               <name>j_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>150</lineNumber>
+              <lineNumber>148</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4476,14 +4476,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>150</second>
+                      <second>148</second>
                     </item>
                   </second>
                 </item>
@@ -4514,10 +4514,10 @@
             <Obj>
               <type>0</type>
               <id>132</id>
-              <name>_ln150</name>
+              <name>_ln148</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>150</lineNumber>
+              <lineNumber>148</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4532,14 +4532,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>150</second>
+                      <second>148</second>
                     </item>
                   </second>
                 </item>
@@ -4574,7 +4574,7 @@
               <name>zext_ln544_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4589,14 +4589,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4629,7 +4629,7 @@
               <name>add_ln544</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4644,14 +4644,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4685,7 +4685,7 @@
               <name>sext_ln544</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4700,14 +4700,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4740,7 +4740,7 @@
               <name>knn_set_V_addr_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4755,14 +4755,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4797,7 +4797,7 @@
               <name>knn_set_V_load</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4812,14 +4812,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
@@ -4849,10 +4849,10 @@
             <Obj>
               <type>0</type>
               <id>140</id>
-              <name>zext_ln151</name>
+              <name>zext_ln149</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>151</lineNumber>
+              <lineNumber>149</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4867,20 +4867,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>151</second>
+                      <second>149</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln151_fu_580_p1</rtlName>
+              <rtlName>zext_ln149_fu_580_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -4907,7 +4907,7 @@
               <name>distance_sum</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>152</lineNumber>
+              <lineNumber>150</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4922,14 +4922,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>152</second>
+                      <second>150</second>
                     </item>
                   </second>
                 </item>
@@ -4960,10 +4960,10 @@
             <Obj>
               <type>0</type>
               <id>142</id>
-              <name>_ln150</name>
+              <name>_ln148</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>150</lineNumber>
+              <lineNumber>148</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4978,14 +4978,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>150</second>
+                      <second>148</second>
                     </item>
                   </second>
                 </item>
@@ -5015,10 +5015,10 @@
             <Obj>
               <type>0</type>
               <id>144</id>
-              <name>zext_ln157</name>
+              <name>zext_ln155</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>157</lineNumber>
+              <lineNumber>155</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5033,20 +5033,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>157</second>
+                      <second>155</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln157_fu_555_p1</rtlName>
+              <rtlName>zext_ln155_fu_555_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5070,10 +5070,10 @@
             <Obj>
               <type>0</type>
               <id>145</id>
-              <name>icmp_ln156</name>
+              <name>icmp_ln154</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>156</lineNumber>
+              <lineNumber>154</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5088,20 +5088,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>156</second>
+                      <second>154</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln156_fu_559_p2</rtlName>
+              <rtlName>icmp_ln154_fu_559_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5126,10 +5126,10 @@
             <Obj>
               <type>0</type>
               <id>146</id>
-              <name>select_ln156</name>
+              <name>select_ln154</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>156</lineNumber>
+              <lineNumber>154</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5144,20 +5144,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>156</second>
+                      <second>154</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln156_fu_565_p3</rtlName>
+              <rtlName>select_ln154_fu_565_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5183,10 +5183,10 @@
             <Obj>
               <type>0</type>
               <id>147</id>
-              <name>select_ln156_1</name>
+              <name>select_ln154_1</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>156</lineNumber>
+              <lineNumber>154</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5201,20 +5201,20 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>156</second>
+                      <second>154</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>select_ln156_1_fu_572_p3</rtlName>
+              <rtlName>select_ln154_1_fu_572_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5240,10 +5240,10 @@
             <Obj>
               <type>0</type>
               <id>149</id>
-              <name>_ln141</name>
+              <name>_ln139</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>141</lineNumber>
+              <lineNumber>139</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5258,14 +5258,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>141</second>
+                      <second>139</second>
                     </item>
                   </second>
                 </item>
@@ -5298,7 +5298,7 @@
               <name>trunc_ln301</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>162</lineNumber>
+              <lineNumber>160</lineNumber>
               <contextFuncName>knn_vote</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5313,14 +5313,14 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                     <item>
                       <first>
                         <first>digitrec.cpp</first>
                         <second>knn_vote</second>
                       </first>
-                      <second>162</second>
+                      <second>160</second>
                     </item>
                   </second>
                 </item>
@@ -5350,10 +5350,10 @@
             <Obj>
               <type>0</type>
               <id>152</id>
-              <name>_ln75</name>
+              <name>_ln73</name>
               <fileName>digitrec.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>75</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>digitrec</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -5368,7 +5368,7 @@
                         <first>digitrec.cpp</first>
                         <second>digitrec</second>
                       </first>
-                      <second>75</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -10014,7 +10014,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln66_fu_371_p2 ( + ) </first>
+          <first>add_ln64_fu_371_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10037,7 +10037,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln68_fu_389_p2 ( + ) </first>
+          <first>add_ln66_fu_389_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10244,7 +10244,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln108_fu_459_p2 ( icmp ) </first>
+          <first>icmp_ln106_fu_459_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10267,7 +10267,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln141_fu_495_p2 ( icmp ) </first>
+          <first>icmp_ln139_fu_495_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10290,7 +10290,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln150_fu_529_p2 ( icmp ) </first>
+          <first>icmp_ln148_fu_529_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10313,7 +10313,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln156_fu_559_p2 ( icmp ) </first>
+          <first>icmp_ln154_fu_559_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10336,7 +10336,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln60_fu_299_p2 ( icmp ) </first>
+          <first>icmp_ln58_fu_299_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10359,7 +10359,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln61_fu_329_p2 ( icmp ) </first>
+          <first>icmp_ln59_fu_329_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10382,7 +10382,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln65_fu_355_p2 ( icmp ) </first>
+          <first>icmp_ln63_fu_355_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10405,7 +10405,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln66_fu_377_p2 ( icmp ) </first>
+          <first>icmp_ln64_fu_377_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10451,7 +10451,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln98_fu_430_p2 ( icmp ) </first>
+          <first>icmp_ln96_fu_430_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -10566,7 +10566,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln156_1_fu_572_p3 ( select ) </first>
+          <first>select_ln154_1_fu_572_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -10593,7 +10593,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln156_fu_565_p3 ( select ) </first>
+          <first>select_ln154_fu_565_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -11216,7 +11216,7 @@
         <count>30</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln66_reg_629</first>
+          <first>add_ln64_reg_629</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -11748,7 +11748,7 @@
           </second>
         </item>
         <item>
-          <first>zext_ln158_reg_686</first>
+          <first>zext_ln156_reg_686</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -11767,7 +11767,7 @@
           </second>
         </item>
         <item>
-          <first>zext_ln66_reg_624</first>
+          <first>zext_ln64_reg_624</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -11814,7 +11814,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln66_fu_371_p2 ( + ) </first>
+          <first>add_ln64_fu_371_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11822,7 +11822,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln68_fu_389_p2 ( + ) </first>
+          <first>add_ln66_fu_389_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11894,7 +11894,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln108_fu_459_p2 ( icmp ) </first>
+          <first>icmp_ln106_fu_459_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11902,7 +11902,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln141_fu_495_p2 ( icmp ) </first>
+          <first>icmp_ln139_fu_495_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11910,7 +11910,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln150_fu_529_p2 ( icmp ) </first>
+          <first>icmp_ln148_fu_529_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11918,7 +11918,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln156_fu_559_p2 ( icmp ) </first>
+          <first>icmp_ln154_fu_559_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11926,7 +11926,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln60_fu_299_p2 ( icmp ) </first>
+          <first>icmp_ln58_fu_299_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11934,7 +11934,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln61_fu_329_p2 ( icmp ) </first>
+          <first>icmp_ln59_fu_329_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11942,7 +11942,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln65_fu_355_p2 ( icmp ) </first>
+          <first>icmp_ln63_fu_355_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11950,7 +11950,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln66_fu_377_p2 ( icmp ) </first>
+          <first>icmp_ln64_fu_377_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -11966,7 +11966,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln98_fu_430_p2 ( icmp ) </first>
+          <first>icmp_ln96_fu_430_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -12006,7 +12006,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln156_1_fu_572_p3 ( select ) </first>
+          <first>select_ln154_1_fu_572_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -12014,7 +12014,7 @@
           </second>
         </item>
         <item>
-          <first>select_ln156_fu_565_p3 ( select ) </first>
+          <first>select_ln154_fu_565_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13652,7 +13652,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln66_fu_371</first>
+        <first>add_ln64_fu_371</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13660,7 +13660,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln68_fu_389</first>
+        <first>add_ln66_fu_389</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13772,7 +13772,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln108_fu_459</first>
+        <first>icmp_ln106_fu_459</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13780,7 +13780,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln141_fu_495</first>
+        <first>icmp_ln139_fu_495</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13788,7 +13788,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln150_fu_529</first>
+        <first>icmp_ln148_fu_529</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13796,7 +13796,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln156_fu_559</first>
+        <first>icmp_ln154_fu_559</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13804,7 +13804,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln60_fu_299</first>
+        <first>icmp_ln58_fu_299</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13812,7 +13812,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln61_fu_329</first>
+        <first>icmp_ln59_fu_329</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13820,7 +13820,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln65_fu_355</first>
+        <first>icmp_ln63_fu_355</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13828,7 +13828,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln66_fu_377</first>
+        <first>icmp_ln64_fu_377</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13844,7 +13844,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln98_fu_430</first>
+        <first>icmp_ln96_fu_430</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -13996,7 +13996,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln156_1_fu_572</first>
+        <first>select_ln154_1_fu_572</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14004,7 +14004,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln156_fu_565</first>
+        <first>select_ln154_fu_565</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14108,7 +14108,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln103_fu_426</first>
+        <first>zext_ln101_fu_426</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14116,7 +14116,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln151_fu_580</first>
+        <first>zext_ln149_fu_580</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14124,7 +14124,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln157_fu_555</first>
+        <first>zext_ln155_fu_555</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14132,7 +14132,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln158_fu_491</first>
+        <first>zext_ln156_fu_491</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14172,7 +14172,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln66_fu_367</first>
+        <first>zext_ln64_fu_367</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14180,7 +14180,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln68_1_fu_394</first>
+        <first>zext_ln66_1_fu_394</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14188,7 +14188,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln68_2_fu_417</first>
+        <first>zext_ln66_2_fu_417</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14196,7 +14196,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln68_fu_399</first>
+        <first>zext_ln66_fu_399</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14592,7 +14592,7 @@
       <count>38</count>
       <item_version>0</item_version>
       <item>
-        <first>add_ln66_reg_629</first>
+        <first>add_ln64_reg_629</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14824,7 +14824,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln156_1_reg_722</first>
+        <first>select_ln154_1_reg_722</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14832,7 +14832,7 @@
         </second>
       </item>
       <item>
-        <first>select_ln156_reg_717</first>
+        <first>select_ln154_reg_717</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14880,7 +14880,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln158_reg_686</first>
+        <first>zext_ln156_reg_686</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -14888,7 +14888,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln66_reg_624</first>
+        <first>zext_ln64_reg_624</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

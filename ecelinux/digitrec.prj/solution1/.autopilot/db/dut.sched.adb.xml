@@ -94,10 +94,10 @@
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="49" op_2_bw="48">
 <![CDATA[
-:9  %output_V = call fastcc i4 @digitrec(i49 %p_Result_s)
+:9  %op_V_assign = call fastcc i4 @digitrec(i49 %p_Result_s)
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 </state>
 
@@ -142,7 +142,7 @@
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !85
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !87
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -157,7 +157,7 @@
 
 <Node id="8" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_out_V_V), !map !89
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_out_V_V), !map !91
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -187,10 +187,10 @@
 
 <Node id="14" bw="4" op_0_bw="4" op_1_bw="49" op_2_bw="48">
 <![CDATA[
-:9  %output_V = call fastcc i4 @digitrec(i49 %p_Result_s)
+:9  %op_V_assign = call fastcc i4 @digitrec(i49 %p_Result_s)
 
 ]]></Node>
-<StgValue><ssdm name="output_V"/></StgValue>
+<StgValue><ssdm name="op_V_assign"/></StgValue>
 </operation>
 
 <operation id="15" st_id="3" stage="1" lat="1">
@@ -202,10 +202,10 @@
 
 <Node id="15" bw="32" op_0_bw="4">
 <![CDATA[
-:10  %tmp_V_2 = zext i4 %output_V to i32
+:10  %output_V = zext i4 %op_V_assign to i32
 
 ]]></Node>
-<StgValue><ssdm name="tmp_V_2"/></StgValue>
+<StgValue><ssdm name="output_V"/></StgValue>
 </operation>
 
 <operation id="16" st_id="3" stage="1" lat="1">
@@ -217,10 +217,10 @@
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-:11  call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %strm_out_V_V, i32 %tmp_V_2)
+:11  call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %strm_out_V_V, i32 %output_V)
 
 ]]></Node>
-<StgValue><ssdm name="write_ln42"/></StgValue>
+<StgValue><ssdm name="write_ln41"/></StgValue>
 </operation>
 
 <operation id="17" st_id="3" stage="1" lat="1">
@@ -235,7 +235,7 @@
 :12  ret void
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln44"/></StgValue>
+<StgValue><ssdm name="ret_ln42"/></StgValue>
 </operation>
 </state>
 </state_list>

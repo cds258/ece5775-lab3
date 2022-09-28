@@ -20,12 +20,28 @@ set_property parent.project_path /home/cds258/ece5775/labs/lab3/ecelinux/zedboar
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
-add_files -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
-set_property used_in_implementation false [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
 add_files -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
 set_property used_in_implementation false [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
+add_files -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
+set_property used_in_implementation false [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
 add_files -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
 set_property used_in_implementation false [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
+read_ip -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc]
+set_property is_locked true [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci]
+
+read_ip -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.xci
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc]
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048_ooc.xdc]
+set_property is_locked true [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.xci]
+
+read_ip -quiet /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.xci
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
+set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512_ooc.xdc]
+set_property is_locked true [get_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.xci]
+
 add_files /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd
 set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
