@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'digitrec'
 ================================================================
-* Date:           Tue Sep 27 22:03:37 2022
+* Date:           Tue Sep 27 22:39:13 2022
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        digitrec.prj
@@ -20,17 +20,17 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  | 10.00 ns | 5.518 ns |   1.25 ns  |
+    |ap_clk  | 10.00 ns | 6.900 ns |   1.25 ns  |
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
-    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  1065733|  1065733| 10.657 ms | 10.657 ms |  1065733|  1065733|   none  |
-    +---------+---------+-----------+-----------+---------+---------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   102733|   102733| 1.027 ms | 1.027 ms |  102733|  102733|   none  |
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
@@ -41,14 +41,11 @@
         |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1              |       50|       50|         5|          -|          -|    10|    no    |
-        | + Loop 1.1           |        3|        3|         1|          -|          -|     3|    no    |
-        |- L1800               |  1065600|  1065600|       592|          -|          -|  1800|    no    |
-        | + L10                |      590|      590|        59|          -|          -|    10|    no    |
-        |  ++ L10.1            |       49|       49|         1|          -|          -|    49|    no    |
-        |  ++ INSERT_LOOP      |        6|        6|         2|          -|          -|     3|    no    |
-        |- DIGIT_LOOP          |       80|       80|         8|          -|          -|    10|    no    |
-        | + DISTANCE_SUM_LOOP  |        6|        6|         2|          -|          -|     3|    no    |
+        |- Loop 1              |       80|       80|         8|          -|          -|    10|    no    |
+        | + Loop 1.1           |        6|        6|         2|          -|          -|     3|    no    |
+        |- L1800               |   102600|   102600|        57|          -|          -|  1800|    no    |
+        |- DIGIT_LOOP          |       50|       50|         5|          -|          -|    10|    no    |
+        | + DISTANCE_SUM_LOOP  |        3|        3|         1|          -|          -|     3|    no    |
         +----------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -77,175 +74,391 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 12
+* Number of FSM states : 9
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
-2 --> 3 4 
-3 --> 3 2 
-4 --> 5 10 
-5 --> 6 4 
+2 --> 3 5 
+3 --> 4 2 
+4 --> 3 
+5 --> 6 8 
 6 --> 7 
-7 --> 7 8 
-8 --> 9 5 
-9 --> 8 
-10 --> 11 
-11 --> 12 10 
-12 --> 11 
+7 --> 5 
+8 --> 9 
+9 --> 9 8 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.76>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%input_V_read = call i49 @_ssdm_op_Read.ap_auto.i49(i49 %input_V)"   --->   Operation 13 'read' 'input_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%knn_set_V = alloca [30 x i6], align 1" [digitrec.cpp:55]   --->   Operation 14 'alloca' 'knn_set_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_1 : Operation 15 [1/1] (1.76ns)   --->   "br label %.preheader15" [digitrec.cpp:58]   --->   Operation 15 'br' <Predicate = true> <Delay = 1.76>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%knn_set_0_0_V_0 = alloca i6"   --->   Operation 10 'alloca' 'knn_set_0_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%knn_set_0_1_V_0 = alloca i6"   --->   Operation 11 'alloca' 'knn_set_0_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%knn_set_0_2_V_0 = alloca i6"   --->   Operation 12 'alloca' 'knn_set_0_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%knn_set_1_0_V_0 = alloca i6"   --->   Operation 13 'alloca' 'knn_set_1_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%knn_set_1_1_V_0 = alloca i6"   --->   Operation 14 'alloca' 'knn_set_1_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%knn_set_1_2_V_0 = alloca i6"   --->   Operation 15 'alloca' 'knn_set_1_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%knn_set_2_0_V_0 = alloca i6"   --->   Operation 16 'alloca' 'knn_set_2_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%knn_set_2_1_V_0 = alloca i6"   --->   Operation 17 'alloca' 'knn_set_2_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%knn_set_2_2_V_0 = alloca i6"   --->   Operation 18 'alloca' 'knn_set_2_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%knn_set_3_0_V_0 = alloca i6"   --->   Operation 19 'alloca' 'knn_set_3_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%knn_set_3_1_V_0 = alloca i6"   --->   Operation 20 'alloca' 'knn_set_3_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%knn_set_3_2_V_0 = alloca i6"   --->   Operation 21 'alloca' 'knn_set_3_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%knn_set_4_0_V_0 = alloca i6"   --->   Operation 22 'alloca' 'knn_set_4_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%knn_set_4_1_V_0 = alloca i6"   --->   Operation 23 'alloca' 'knn_set_4_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%knn_set_4_2_V_0 = alloca i6"   --->   Operation 24 'alloca' 'knn_set_4_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%knn_set_5_0_V_0 = alloca i6"   --->   Operation 25 'alloca' 'knn_set_5_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%knn_set_5_1_V_0 = alloca i6"   --->   Operation 26 'alloca' 'knn_set_5_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%knn_set_5_2_V_0 = alloca i6"   --->   Operation 27 'alloca' 'knn_set_5_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%knn_set_6_0_V_0 = alloca i6"   --->   Operation 28 'alloca' 'knn_set_6_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%knn_set_6_1_V_0 = alloca i6"   --->   Operation 29 'alloca' 'knn_set_6_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%knn_set_6_2_V_0 = alloca i6"   --->   Operation 30 'alloca' 'knn_set_6_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%knn_set_7_0_V_0 = alloca i6"   --->   Operation 31 'alloca' 'knn_set_7_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%knn_set_7_1_V_0 = alloca i6"   --->   Operation 32 'alloca' 'knn_set_7_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%knn_set_7_2_V_0 = alloca i6"   --->   Operation 33 'alloca' 'knn_set_7_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%knn_set_8_0_V_0 = alloca i6"   --->   Operation 34 'alloca' 'knn_set_8_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%knn_set_8_1_V_0 = alloca i6"   --->   Operation 35 'alloca' 'knn_set_8_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%knn_set_8_2_V_0 = alloca i6"   --->   Operation 36 'alloca' 'knn_set_8_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%knn_set_9_0_V_0 = alloca i6"   --->   Operation 37 'alloca' 'knn_set_9_0_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%knn_set_9_1_V_0 = alloca i6"   --->   Operation 38 'alloca' 'knn_set_9_1_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%knn_set_9_2_V_0 = alloca i6"   --->   Operation 39 'alloca' 'knn_set_9_2_V_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%input_V_read = call i49 @_ssdm_op_Read.ap_auto.i49(i49 %input_V)" [digitrec.cpp:58]   --->   Operation 40 'read' 'input_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (1.76ns)   --->   "br label %.loopexit" [digitrec.cpp:58]   --->   Operation 41 'br' <Predicate = true> <Delay = 1.76>
 
-State 2 <SV = 1> <Delay = 1.82>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %.preheader15.preheader ], [ %i, %.preheader15.loopexit ]"   --->   Operation 16 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (1.30ns)   --->   "%icmp_ln58 = icmp eq i4 %i_0, -6" [digitrec.cpp:58]   --->   Operation 17 'icmp' 'icmp_ln58' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 18 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (1.73ns)   --->   "%i = add i4 %i_0, 1" [digitrec.cpp:58]   --->   Operation 19 'add' 'i' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %icmp_ln58, label %.preheader.preheader, label %.preheader14.preheader" [digitrec.cpp:58]   --->   Operation 20 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln321 = zext i4 %i_0 to i6" [digitrec.cpp:61]   --->   Operation 21 'zext' 'zext_ln321' <Predicate = (!icmp_ln58)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_1 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %i_0, i2 0)" [digitrec.cpp:61]   --->   Operation 22 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln58)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (1.82ns)   --->   "%sub_ln321 = sub i6 %tmp_1, %zext_ln321" [digitrec.cpp:61]   --->   Operation 23 'sub' 'sub_ln321' <Predicate = (!icmp_ln58)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 24 [1/1] (1.76ns)   --->   "br label %.preheader14" [digitrec.cpp:59]   --->   Operation 24 'br' <Predicate = (!icmp_ln58)> <Delay = 1.76>
-ST_2 : Operation 25 [1/1] (1.76ns)   --->   "br label %.preheader" [digitrec.cpp:63]   --->   Operation 25 'br' <Predicate = (icmp_ln58)> <Delay = 1.76>
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %0 ], [ %i, %.loopexit.loopexit ]"   --->   Operation 42 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%knn_set_0_0_V_0_lo = load i6* %knn_set_0_0_V_0"   --->   Operation 43 'load' 'knn_set_0_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%knn_set_0_1_V_0_lo = load i6* %knn_set_0_1_V_0"   --->   Operation 44 'load' 'knn_set_0_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%knn_set_0_2_V_0_lo = load i6* %knn_set_0_2_V_0"   --->   Operation 45 'load' 'knn_set_0_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%knn_set_1_0_V_0_lo = load i6* %knn_set_1_0_V_0"   --->   Operation 46 'load' 'knn_set_1_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%knn_set_1_1_V_0_lo = load i6* %knn_set_1_1_V_0"   --->   Operation 47 'load' 'knn_set_1_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%knn_set_1_2_V_0_lo = load i6* %knn_set_1_2_V_0"   --->   Operation 48 'load' 'knn_set_1_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%knn_set_2_0_V_0_lo = load i6* %knn_set_2_0_V_0"   --->   Operation 49 'load' 'knn_set_2_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%knn_set_2_1_V_0_lo = load i6* %knn_set_2_1_V_0"   --->   Operation 50 'load' 'knn_set_2_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%knn_set_2_2_V_0_lo = load i6* %knn_set_2_2_V_0"   --->   Operation 51 'load' 'knn_set_2_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%knn_set_3_0_V_0_lo = load i6* %knn_set_3_0_V_0"   --->   Operation 52 'load' 'knn_set_3_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%knn_set_3_1_V_0_lo = load i6* %knn_set_3_1_V_0"   --->   Operation 53 'load' 'knn_set_3_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%knn_set_3_2_V_0_lo = load i6* %knn_set_3_2_V_0"   --->   Operation 54 'load' 'knn_set_3_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%knn_set_4_0_V_0_lo = load i6* %knn_set_4_0_V_0"   --->   Operation 55 'load' 'knn_set_4_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%knn_set_4_1_V_0_lo = load i6* %knn_set_4_1_V_0"   --->   Operation 56 'load' 'knn_set_4_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%knn_set_4_2_V_0_lo = load i6* %knn_set_4_2_V_0"   --->   Operation 57 'load' 'knn_set_4_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%knn_set_5_0_V_0_lo = load i6* %knn_set_5_0_V_0"   --->   Operation 58 'load' 'knn_set_5_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%knn_set_5_1_V_0_lo = load i6* %knn_set_5_1_V_0"   --->   Operation 59 'load' 'knn_set_5_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%knn_set_5_2_V_0_lo = load i6* %knn_set_5_2_V_0"   --->   Operation 60 'load' 'knn_set_5_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%knn_set_6_0_V_0_lo = load i6* %knn_set_6_0_V_0"   --->   Operation 61 'load' 'knn_set_6_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%knn_set_6_1_V_0_lo = load i6* %knn_set_6_1_V_0"   --->   Operation 62 'load' 'knn_set_6_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%knn_set_6_2_V_0_lo = load i6* %knn_set_6_2_V_0"   --->   Operation 63 'load' 'knn_set_6_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%knn_set_7_0_V_0_lo = load i6* %knn_set_7_0_V_0"   --->   Operation 64 'load' 'knn_set_7_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%knn_set_7_1_V_0_lo = load i6* %knn_set_7_1_V_0"   --->   Operation 65 'load' 'knn_set_7_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%knn_set_7_2_V_0_lo = load i6* %knn_set_7_2_V_0"   --->   Operation 66 'load' 'knn_set_7_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%knn_set_8_0_V_0_lo = load i6* %knn_set_8_0_V_0"   --->   Operation 67 'load' 'knn_set_8_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%knn_set_8_1_V_0_lo = load i6* %knn_set_8_1_V_0"   --->   Operation 68 'load' 'knn_set_8_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%knn_set_8_2_V_0_lo = load i6* %knn_set_8_2_V_0"   --->   Operation 69 'load' 'knn_set_8_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%knn_set_9_0_V_0_lo = load i6* %knn_set_9_0_V_0"   --->   Operation 70 'load' 'knn_set_9_0_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%knn_set_9_1_V_0_lo = load i6* %knn_set_9_1_V_0"   --->   Operation 71 'load' 'knn_set_9_1_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%knn_set_9_2_V_0_lo = load i6* %knn_set_9_2_V_0"   --->   Operation 72 'load' 'knn_set_9_2_V_0_lo' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (1.30ns)   --->   "%icmp_ln58 = icmp eq i4 %i_0, -6" [digitrec.cpp:58]   --->   Operation 73 'icmp' 'icmp_ln58' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 74 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (1.73ns)   --->   "%i = add i4 %i_0, 1" [digitrec.cpp:58]   --->   Operation 75 'add' 'i' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "br i1 %icmp_ln58, label %.preheader.preheader, label %.preheader14.preheader" [digitrec.cpp:58]   --->   Operation 76 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (1.76ns)   --->   "br label %.preheader14" [digitrec.cpp:59]   --->   Operation 77 'br' <Predicate = (!icmp_ln58)> <Delay = 1.76>
+ST_2 : Operation 78 [1/1] (1.76ns)   --->   "br label %.preheader" [digitrec.cpp:63]   --->   Operation 78 'br' <Predicate = (icmp_ln58)> <Delay = 1.76>
 
-State 3 <SV = 2> <Delay = 4.14>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%k_0 = phi i2 [ %k, %0 ], [ 0, %.preheader14.preheader ]"   --->   Operation 26 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.95ns)   --->   "%icmp_ln59 = icmp eq i2 %k_0, -1" [digitrec.cpp:59]   --->   Operation 27 'icmp' 'icmp_ln59' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 28 'speclooptripcount' 'empty_5' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 29 [1/1] (1.56ns)   --->   "%k = add i2 %k_0, 1" [digitrec.cpp:59]   --->   Operation 29 'add' 'k' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %icmp_ln59, label %.preheader15.loopexit, label %0" [digitrec.cpp:59]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln321_1 = zext i2 %k_0 to i6" [digitrec.cpp:61]   --->   Operation 31 'zext' 'zext_ln321_1' <Predicate = (!icmp_ln59)> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (1.82ns)   --->   "%add_ln321 = add i6 %sub_ln321, %zext_ln321_1" [digitrec.cpp:61]   --->   Operation 32 'add' 'add_ln321' <Predicate = (!icmp_ln59)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%sext_ln321 = sext i6 %add_ln321 to i64" [digitrec.cpp:61]   --->   Operation 33 'sext' 'sext_ln321' <Predicate = (!icmp_ln59)> <Delay = 0.00>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%knn_set_V_addr = getelementptr [30 x i6]* %knn_set_V, i64 0, i64 %sext_ln321" [digitrec.cpp:61]   --->   Operation 34 'getelementptr' 'knn_set_V_addr' <Predicate = (!icmp_ln59)> <Delay = 0.00>
-ST_3 : Operation 35 [1/1] (2.32ns)   --->   "store i6 -14, i6* %knn_set_V_addr, align 1" [digitrec.cpp:61]   --->   Operation 35 'store' <Predicate = (!icmp_ln59)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "br label %.preheader14" [digitrec.cpp:59]   --->   Operation 36 'br' <Predicate = (!icmp_ln59)> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "br label %.preheader15"   --->   Operation 37 'br' <Predicate = (icmp_ln59)> <Delay = 0.00>
+State 3 <SV = 2> <Delay = 1.95>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%k_0 = phi i2 [ %k, %.preheader14.backedge ], [ 0, %.preheader14.preheader ]"   --->   Operation 79 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.95ns)   --->   "%icmp_ln59 = icmp eq i2 %k_0, -1" [digitrec.cpp:59]   --->   Operation 80 'icmp' 'icmp_ln59' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 81 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (1.56ns)   --->   "%k = add i2 %k_0, 1" [digitrec.cpp:59]   --->   Operation 82 'add' 'k' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br i1 %icmp_ln59, label %.loopexit.loopexit, label %1" [digitrec.cpp:59]   --->   Operation 83 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (1.36ns)   --->   "switch i4 %i_0, label %branch9 [
+    i4 0, label %branch0
+    i4 1, label %branch1
+    i4 2, label %branch2
+    i4 3, label %branch3
+    i4 4, label %branch4
+    i4 5, label %branch5
+    i4 6, label %branch6
+    i4 7, label %branch7
+    i4 -8, label %branch8
+  ]" [digitrec.cpp:61]   --->   Operation 84 'switch' <Predicate = (!icmp_ln59)> <Delay = 1.36>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%knn_set_8_0_V_0_lo_1 = load i6* %knn_set_8_0_V_0"   --->   Operation 85 'load' 'knn_set_8_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%knn_set_8_1_V_0_lo_1 = load i6* %knn_set_8_1_V_0"   --->   Operation 86 'load' 'knn_set_8_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%knn_set_8_2_V_0_lo_1 = load i6* %knn_set_8_2_V_0"   --->   Operation 87 'load' 'knn_set_8_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (1.95ns)   --->   "%knn_set_8_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_8_0_V_0_lo_1, i6 %knn_set_8_0_V_0_lo_1, i6 %knn_set_8_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 88 'mux' 'knn_set_8_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 89 [1/1] (1.95ns)   --->   "%knn_set_8_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_8_1_V_0_lo_1, i6 -14, i6 %knn_set_8_1_V_0_lo_1, i6 %knn_set_8_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 89 'mux' 'knn_set_8_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (1.95ns)   --->   "%knn_set_8_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_8_2_V_0_lo_1, i6 %knn_set_8_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 90 'mux' 'knn_set_8_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "store i6 %knn_set_8_2_V_4, i6* %knn_set_8_2_V_0" [digitrec.cpp:61]   --->   Operation 91 'store' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "store i6 %knn_set_8_1_V_4, i6* %knn_set_8_1_V_0" [digitrec.cpp:61]   --->   Operation 92 'store' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "store i6 %knn_set_8_0_V_4, i6* %knn_set_8_0_V_0" [digitrec.cpp:61]   --->   Operation 93 'store' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 94 'br' <Predicate = (!icmp_ln59 & i_0 == 8)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%knn_set_7_0_V_0_lo_1 = load i6* %knn_set_7_0_V_0"   --->   Operation 95 'load' 'knn_set_7_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%knn_set_7_1_V_0_lo_1 = load i6* %knn_set_7_1_V_0"   --->   Operation 96 'load' 'knn_set_7_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%knn_set_7_2_V_0_lo_1 = load i6* %knn_set_7_2_V_0"   --->   Operation 97 'load' 'knn_set_7_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (1.95ns)   --->   "%knn_set_7_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_7_0_V_0_lo_1, i6 %knn_set_7_0_V_0_lo_1, i6 %knn_set_7_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 98 'mux' 'knn_set_7_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 99 [1/1] (1.95ns)   --->   "%knn_set_7_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_7_1_V_0_lo_1, i6 -14, i6 %knn_set_7_1_V_0_lo_1, i6 %knn_set_7_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 99 'mux' 'knn_set_7_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (1.95ns)   --->   "%knn_set_7_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_7_2_V_0_lo_1, i6 %knn_set_7_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 100 'mux' 'knn_set_7_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "store i6 %knn_set_7_2_V_4, i6* %knn_set_7_2_V_0" [digitrec.cpp:61]   --->   Operation 101 'store' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "store i6 %knn_set_7_1_V_4, i6* %knn_set_7_1_V_0" [digitrec.cpp:61]   --->   Operation 102 'store' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "store i6 %knn_set_7_0_V_4, i6* %knn_set_7_0_V_0" [digitrec.cpp:61]   --->   Operation 103 'store' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 104 'br' <Predicate = (!icmp_ln59 & i_0 == 7)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%knn_set_6_0_V_0_lo_1 = load i6* %knn_set_6_0_V_0"   --->   Operation 105 'load' 'knn_set_6_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%knn_set_6_1_V_0_lo_1 = load i6* %knn_set_6_1_V_0"   --->   Operation 106 'load' 'knn_set_6_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%knn_set_6_2_V_0_lo_1 = load i6* %knn_set_6_2_V_0"   --->   Operation 107 'load' 'knn_set_6_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (1.95ns)   --->   "%knn_set_6_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_6_0_V_0_lo_1, i6 %knn_set_6_0_V_0_lo_1, i6 %knn_set_6_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 108 'mux' 'knn_set_6_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 109 [1/1] (1.95ns)   --->   "%knn_set_6_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_6_1_V_0_lo_1, i6 -14, i6 %knn_set_6_1_V_0_lo_1, i6 %knn_set_6_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 109 'mux' 'knn_set_6_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 110 [1/1] (1.95ns)   --->   "%knn_set_6_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_6_2_V_0_lo_1, i6 %knn_set_6_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 110 'mux' 'knn_set_6_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "store i6 %knn_set_6_2_V_4, i6* %knn_set_6_2_V_0" [digitrec.cpp:61]   --->   Operation 111 'store' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "store i6 %knn_set_6_1_V_4, i6* %knn_set_6_1_V_0" [digitrec.cpp:61]   --->   Operation 112 'store' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "store i6 %knn_set_6_0_V_4, i6* %knn_set_6_0_V_0" [digitrec.cpp:61]   --->   Operation 113 'store' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 114 'br' <Predicate = (!icmp_ln59 & i_0 == 6)> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%knn_set_5_0_V_0_lo_1 = load i6* %knn_set_5_0_V_0"   --->   Operation 115 'load' 'knn_set_5_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%knn_set_5_1_V_0_lo_1 = load i6* %knn_set_5_1_V_0"   --->   Operation 116 'load' 'knn_set_5_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%knn_set_5_2_V_0_lo_1 = load i6* %knn_set_5_2_V_0"   --->   Operation 117 'load' 'knn_set_5_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (1.95ns)   --->   "%knn_set_5_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_5_0_V_0_lo_1, i6 %knn_set_5_0_V_0_lo_1, i6 %knn_set_5_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 118 'mux' 'knn_set_5_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [1/1] (1.95ns)   --->   "%knn_set_5_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_5_1_V_0_lo_1, i6 -14, i6 %knn_set_5_1_V_0_lo_1, i6 %knn_set_5_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 119 'mux' 'knn_set_5_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 120 [1/1] (1.95ns)   --->   "%knn_set_5_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_5_2_V_0_lo_1, i6 %knn_set_5_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 120 'mux' 'knn_set_5_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "store i6 %knn_set_5_2_V_4, i6* %knn_set_5_2_V_0" [digitrec.cpp:61]   --->   Operation 121 'store' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "store i6 %knn_set_5_1_V_4, i6* %knn_set_5_1_V_0" [digitrec.cpp:61]   --->   Operation 122 'store' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "store i6 %knn_set_5_0_V_4, i6* %knn_set_5_0_V_0" [digitrec.cpp:61]   --->   Operation 123 'store' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 124 'br' <Predicate = (!icmp_ln59 & i_0 == 5)> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%knn_set_4_0_V_0_lo_1 = load i6* %knn_set_4_0_V_0"   --->   Operation 125 'load' 'knn_set_4_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%knn_set_4_1_V_0_lo_1 = load i6* %knn_set_4_1_V_0"   --->   Operation 126 'load' 'knn_set_4_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%knn_set_4_2_V_0_lo_1 = load i6* %knn_set_4_2_V_0"   --->   Operation 127 'load' 'knn_set_4_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] (1.95ns)   --->   "%knn_set_4_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_4_0_V_0_lo_1, i6 %knn_set_4_0_V_0_lo_1, i6 %knn_set_4_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 128 'mux' 'knn_set_4_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 129 [1/1] (1.95ns)   --->   "%knn_set_4_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_4_1_V_0_lo_1, i6 -14, i6 %knn_set_4_1_V_0_lo_1, i6 %knn_set_4_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 129 'mux' 'knn_set_4_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 130 [1/1] (1.95ns)   --->   "%knn_set_4_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_4_2_V_0_lo_1, i6 %knn_set_4_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 130 'mux' 'knn_set_4_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "store i6 %knn_set_4_2_V_4, i6* %knn_set_4_2_V_0" [digitrec.cpp:61]   --->   Operation 131 'store' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "store i6 %knn_set_4_1_V_4, i6* %knn_set_4_1_V_0" [digitrec.cpp:61]   --->   Operation 132 'store' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "store i6 %knn_set_4_0_V_4, i6* %knn_set_4_0_V_0" [digitrec.cpp:61]   --->   Operation 133 'store' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 134 'br' <Predicate = (!icmp_ln59 & i_0 == 4)> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%knn_set_3_0_V_0_lo_1 = load i6* %knn_set_3_0_V_0"   --->   Operation 135 'load' 'knn_set_3_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%knn_set_3_1_V_0_lo_1 = load i6* %knn_set_3_1_V_0"   --->   Operation 136 'load' 'knn_set_3_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%knn_set_3_2_V_0_lo_1 = load i6* %knn_set_3_2_V_0"   --->   Operation 137 'load' 'knn_set_3_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (1.95ns)   --->   "%knn_set_3_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_3_0_V_0_lo_1, i6 %knn_set_3_0_V_0_lo_1, i6 %knn_set_3_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 138 'mux' 'knn_set_3_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 139 [1/1] (1.95ns)   --->   "%knn_set_3_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_3_1_V_0_lo_1, i6 -14, i6 %knn_set_3_1_V_0_lo_1, i6 %knn_set_3_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 139 'mux' 'knn_set_3_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 140 [1/1] (1.95ns)   --->   "%knn_set_3_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_3_2_V_0_lo_1, i6 %knn_set_3_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 140 'mux' 'knn_set_3_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "store i6 %knn_set_3_2_V_4, i6* %knn_set_3_2_V_0" [digitrec.cpp:61]   --->   Operation 141 'store' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "store i6 %knn_set_3_1_V_4, i6* %knn_set_3_1_V_0" [digitrec.cpp:61]   --->   Operation 142 'store' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "store i6 %knn_set_3_0_V_4, i6* %knn_set_3_0_V_0" [digitrec.cpp:61]   --->   Operation 143 'store' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 144 'br' <Predicate = (!icmp_ln59 & i_0 == 3)> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%knn_set_2_0_V_0_lo_1 = load i6* %knn_set_2_0_V_0"   --->   Operation 145 'load' 'knn_set_2_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%knn_set_2_1_V_0_lo_1 = load i6* %knn_set_2_1_V_0"   --->   Operation 146 'load' 'knn_set_2_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (0.00ns)   --->   "%knn_set_2_2_V_0_lo_1 = load i6* %knn_set_2_2_V_0"   --->   Operation 147 'load' 'knn_set_2_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 148 [1/1] (1.95ns)   --->   "%knn_set_2_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_2_0_V_0_lo_1, i6 %knn_set_2_0_V_0_lo_1, i6 %knn_set_2_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 148 'mux' 'knn_set_2_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 149 [1/1] (1.95ns)   --->   "%knn_set_2_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_2_1_V_0_lo_1, i6 -14, i6 %knn_set_2_1_V_0_lo_1, i6 %knn_set_2_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 149 'mux' 'knn_set_2_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 150 [1/1] (1.95ns)   --->   "%knn_set_2_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_2_2_V_0_lo_1, i6 %knn_set_2_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 150 'mux' 'knn_set_2_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "store i6 %knn_set_2_2_V_4, i6* %knn_set_2_2_V_0" [digitrec.cpp:61]   --->   Operation 151 'store' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] (0.00ns)   --->   "store i6 %knn_set_2_1_V_4, i6* %knn_set_2_1_V_0" [digitrec.cpp:61]   --->   Operation 152 'store' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "store i6 %knn_set_2_0_V_4, i6* %knn_set_2_0_V_0" [digitrec.cpp:61]   --->   Operation 153 'store' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 154 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 154 'br' <Predicate = (!icmp_ln59 & i_0 == 2)> <Delay = 0.00>
+ST_3 : Operation 155 [1/1] (0.00ns)   --->   "%knn_set_1_0_V_0_lo_1 = load i6* %knn_set_1_0_V_0"   --->   Operation 155 'load' 'knn_set_1_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 156 [1/1] (0.00ns)   --->   "%knn_set_1_1_V_0_lo_1 = load i6* %knn_set_1_1_V_0"   --->   Operation 156 'load' 'knn_set_1_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 157 [1/1] (0.00ns)   --->   "%knn_set_1_2_V_0_lo_1 = load i6* %knn_set_1_2_V_0"   --->   Operation 157 'load' 'knn_set_1_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 158 [1/1] (1.95ns)   --->   "%knn_set_1_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_1_0_V_0_lo_1, i6 %knn_set_1_0_V_0_lo_1, i6 %knn_set_1_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 158 'mux' 'knn_set_1_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 159 [1/1] (1.95ns)   --->   "%knn_set_1_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_1_1_V_0_lo_1, i6 -14, i6 %knn_set_1_1_V_0_lo_1, i6 %knn_set_1_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 159 'mux' 'knn_set_1_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 160 [1/1] (1.95ns)   --->   "%knn_set_1_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_1_2_V_0_lo_1, i6 %knn_set_1_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 160 'mux' 'knn_set_1_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 161 [1/1] (0.00ns)   --->   "store i6 %knn_set_1_2_V_4, i6* %knn_set_1_2_V_0" [digitrec.cpp:61]   --->   Operation 161 'store' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 162 [1/1] (0.00ns)   --->   "store i6 %knn_set_1_1_V_4, i6* %knn_set_1_1_V_0" [digitrec.cpp:61]   --->   Operation 162 'store' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 163 [1/1] (0.00ns)   --->   "store i6 %knn_set_1_0_V_4, i6* %knn_set_1_0_V_0" [digitrec.cpp:61]   --->   Operation 163 'store' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 164 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 164 'br' <Predicate = (!icmp_ln59 & i_0 == 1)> <Delay = 0.00>
+ST_3 : Operation 165 [1/1] (0.00ns)   --->   "%knn_set_0_0_V_0_lo_1 = load i6* %knn_set_0_0_V_0"   --->   Operation 165 'load' 'knn_set_0_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 166 [1/1] (0.00ns)   --->   "%knn_set_0_1_V_0_lo_1 = load i6* %knn_set_0_1_V_0"   --->   Operation 166 'load' 'knn_set_0_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 167 [1/1] (0.00ns)   --->   "%knn_set_0_2_V_0_lo_1 = load i6* %knn_set_0_2_V_0"   --->   Operation 167 'load' 'knn_set_0_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 168 [1/1] (1.95ns)   --->   "%knn_set_0_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_0_0_V_0_lo_1, i6 %knn_set_0_0_V_0_lo_1, i6 %knn_set_0_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 168 'mux' 'knn_set_0_0_V_4' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 169 [1/1] (1.95ns)   --->   "%knn_set_0_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_0_1_V_0_lo_1, i6 -14, i6 %knn_set_0_1_V_0_lo_1, i6 %knn_set_0_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 169 'mux' 'knn_set_0_1_V_4' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 170 [1/1] (1.95ns)   --->   "%knn_set_0_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_0_2_V_0_lo_1, i6 %knn_set_0_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 170 'mux' 'knn_set_0_2_V_4' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 171 [1/1] (0.00ns)   --->   "store i6 %knn_set_0_2_V_4, i6* %knn_set_0_2_V_0" [digitrec.cpp:61]   --->   Operation 171 'store' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 172 [1/1] (0.00ns)   --->   "store i6 %knn_set_0_1_V_4, i6* %knn_set_0_1_V_0" [digitrec.cpp:61]   --->   Operation 172 'store' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 173 [1/1] (0.00ns)   --->   "store i6 %knn_set_0_0_V_4, i6* %knn_set_0_0_V_0" [digitrec.cpp:61]   --->   Operation 173 'store' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 174 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 174 'br' <Predicate = (!icmp_ln59 & i_0 == 0)> <Delay = 0.00>
+ST_3 : Operation 175 [1/1] (0.00ns)   --->   "%knn_set_9_0_V_0_lo_1 = load i6* %knn_set_9_0_V_0"   --->   Operation 175 'load' 'knn_set_9_0_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 176 [1/1] (0.00ns)   --->   "%knn_set_9_1_V_0_lo_1 = load i6* %knn_set_9_1_V_0"   --->   Operation 176 'load' 'knn_set_9_1_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 177 [1/1] (0.00ns)   --->   "%knn_set_9_2_V_0_lo_1 = load i6* %knn_set_9_2_V_0"   --->   Operation 177 'load' 'knn_set_9_2_V_0_lo_1' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 178 [1/1] (1.95ns)   --->   "%knn_set_9_0_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 -14, i6 %knn_set_9_0_V_0_lo_1, i6 %knn_set_9_0_V_0_lo_1, i6 %knn_set_9_0_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 178 'mux' 'knn_set_9_0_V_4' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 179 [1/1] (1.95ns)   --->   "%knn_set_9_1_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_9_1_V_0_lo_1, i6 -14, i6 %knn_set_9_1_V_0_lo_1, i6 %knn_set_9_1_V_0_lo_1, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 179 'mux' 'knn_set_9_1_V_4' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 180 [1/1] (1.95ns)   --->   "%knn_set_9_2_V_4 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 %knn_set_9_2_V_0_lo_1, i6 %knn_set_9_2_V_0_lo_1, i6 -14, i6 -14, i2 %k_0)" [digitrec.cpp:59]   --->   Operation 180 'mux' 'knn_set_9_2_V_4' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 181 [1/1] (0.00ns)   --->   "store i6 %knn_set_9_2_V_4, i6* %knn_set_9_2_V_0" [digitrec.cpp:61]   --->   Operation 181 'store' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 182 [1/1] (0.00ns)   --->   "store i6 %knn_set_9_1_V_4, i6* %knn_set_9_1_V_0" [digitrec.cpp:61]   --->   Operation 182 'store' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 183 [1/1] (0.00ns)   --->   "store i6 %knn_set_9_0_V_4, i6* %knn_set_9_0_V_0" [digitrec.cpp:61]   --->   Operation 183 'store' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 184 [1/1] (0.00ns)   --->   "br label %.preheader14.backedge" [digitrec.cpp:61]   --->   Operation 184 'br' <Predicate = (!icmp_ln59 & i_0 != 0 & i_0 != 1 & i_0 != 2 & i_0 != 3 & i_0 != 4 & i_0 != 5 & i_0 != 6 & i_0 != 7 & i_0 != 8)> <Delay = 0.00>
+ST_3 : Operation 185 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 185 'br' <Predicate = (icmp_ln59)> <Delay = 0.00>
 
-State 4 <SV = 2> <Delay = 1.88>
-ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%i4_0 = phi i11 [ %i_1, %L1800_end ], [ 0, %.preheader.preheader ]"   --->   Operation 38 'phi' 'i4_0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 39 [1/1] (1.88ns)   --->   "%icmp_ln63 = icmp eq i11 %i4_0, -248" [digitrec.cpp:63]   --->   Operation 39 'icmp' 'icmp_ln63' <Predicate = true> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1800, i64 1800, i64 1800)"   --->   Operation 40 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 41 [1/1] (1.63ns)   --->   "%i_1 = add i11 %i4_0, 1" [digitrec.cpp:63]   --->   Operation 41 'add' 'i_1' <Predicate = true> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 42 [1/1] (0.00ns)   --->   "br i1 %icmp_ln63, label %.preheader3.preheader, label %L1800_begin" [digitrec.cpp:63]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str) nounwind" [digitrec.cpp:63]   --->   Operation 43 'specloopname' <Predicate = (!icmp_ln63)> <Delay = 0.00>
-ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str)" [digitrec.cpp:63]   --->   Operation 44 'specregionbegin' 'tmp' <Predicate = (!icmp_ln63)> <Delay = 0.00>
-ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln64 = zext i11 %i4_0 to i15" [digitrec.cpp:64]   --->   Operation 45 'zext' 'zext_ln64' <Predicate = (!icmp_ln63)> <Delay = 0.00>
-ST_4 : Operation 46 [1/1] (1.76ns)   --->   "br label %update_knn.exit" [digitrec.cpp:64]   --->   Operation 46 'br' <Predicate = (!icmp_ln63)> <Delay = 1.76>
-ST_4 : Operation 47 [1/1] (1.76ns)   --->   "br label %.preheader3" [digitrec.cpp:156->digitrec.cpp:73]   --->   Operation 47 'br' <Predicate = (icmp_ln63)> <Delay = 1.76>
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 186 [1/1] (0.00ns)   --->   "br label %.preheader14"   --->   Operation 186 'br' <Predicate = true> <Delay = 0.00>
 
-State 5 <SV = 3> <Delay = 5.19>
-ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%j_0 = phi i4 [ 0, %L1800_begin ], [ %j, %update_knn.exit.loopexit ]"   --->   Operation 48 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%phi_mul = phi i15 [ 0, %L1800_begin ], [ %add_ln64, %update_knn.exit.loopexit ]" [digitrec.cpp:64]   --->   Operation 49 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 50 [1/1] (1.94ns)   --->   "%add_ln64 = add i15 %phi_mul, 1800" [digitrec.cpp:64]   --->   Operation 50 'add' 'add_ln64' <Predicate = true> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 51 [1/1] (1.30ns)   --->   "%icmp_ln64 = icmp eq i4 %j_0, -6" [digitrec.cpp:64]   --->   Operation 51 'icmp' 'icmp_ln64' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 52 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 53 [1/1] (1.73ns)   --->   "%j = add i4 %j_0, 1" [digitrec.cpp:64]   --->   Operation 53 'add' 'j' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 54 [1/1] (0.00ns)   --->   "br i1 %icmp_ln64, label %L1800_end, label %1" [digitrec.cpp:64]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 55 [1/1] (1.94ns)   --->   "%add_ln66 = add i15 %phi_mul, %zext_ln64" [digitrec.cpp:66]   --->   Operation 55 'add' 'add_ln66' <Predicate = (!icmp_ln64)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln66_1 = zext i15 %add_ln66 to i64" [digitrec.cpp:66]   --->   Operation 56 'zext' 'zext_ln66_1' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%training_data_V_addr = getelementptr [18000 x i48]* @training_data_V, i64 0, i64 %zext_ln66_1" [digitrec.cpp:66]   --->   Operation 57 'getelementptr' 'training_data_V_addr' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_5 : Operation 58 [2/2] (3.25ns)   --->   "%training_instance_V = load i48* %training_data_V_addr, align 8" [digitrec.cpp:66]   --->   Operation 58 'load' 'training_instance_V' <Predicate = (!icmp_ln64)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 48> <Depth = 18000> <ROM>
-ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str, i32 %tmp)" [digitrec.cpp:70]   --->   Operation 59 'specregionend' 'empty_10' <Predicate = (icmp_ln64)> <Delay = 0.00>
-ST_5 : Operation 60 [1/1] (0.00ns)   --->   "br label %.preheader" [digitrec.cpp:63]   --->   Operation 60 'br' <Predicate = (icmp_ln64)> <Delay = 0.00>
+State 5 <SV = 2> <Delay = 3.25>
+ST_5 : Operation 187 [1/1] (0.00ns)   --->   "%knn_set_9_2_V_3 = phi i6 [ %knn_set_9_2_V, %2 ], [ %knn_set_9_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 187 'phi' 'knn_set_9_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "%knn_set_9_1_V_3 = phi i6 [ %knn_set_9_1_V, %2 ], [ %knn_set_9_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 188 'phi' 'knn_set_9_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (0.00ns)   --->   "%knn_set_9_0_V_3 = phi i6 [ %knn_set_9_0_V, %2 ], [ %knn_set_9_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 189 'phi' 'knn_set_9_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 190 [1/1] (0.00ns)   --->   "%knn_set_8_2_V_3 = phi i6 [ %knn_set_8_2_V, %2 ], [ %knn_set_8_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 190 'phi' 'knn_set_8_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 191 [1/1] (0.00ns)   --->   "%knn_set_8_1_V_3 = phi i6 [ %knn_set_8_1_V, %2 ], [ %knn_set_8_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 191 'phi' 'knn_set_8_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 192 [1/1] (0.00ns)   --->   "%knn_set_8_0_V_3 = phi i6 [ %knn_set_8_0_V, %2 ], [ %knn_set_8_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 192 'phi' 'knn_set_8_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 193 [1/1] (0.00ns)   --->   "%knn_set_7_2_V_3 = phi i6 [ %knn_set_7_2_V, %2 ], [ %knn_set_7_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 193 'phi' 'knn_set_7_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 194 [1/1] (0.00ns)   --->   "%knn_set_7_1_V_3 = phi i6 [ %knn_set_7_1_V, %2 ], [ %knn_set_7_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 194 'phi' 'knn_set_7_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 195 [1/1] (0.00ns)   --->   "%knn_set_7_0_V_3 = phi i6 [ %knn_set_7_0_V, %2 ], [ %knn_set_7_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 195 'phi' 'knn_set_7_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 196 [1/1] (0.00ns)   --->   "%knn_set_6_2_V_3 = phi i6 [ %knn_set_6_2_V, %2 ], [ %knn_set_6_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 196 'phi' 'knn_set_6_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "%knn_set_6_1_V_3 = phi i6 [ %knn_set_6_1_V, %2 ], [ %knn_set_6_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 197 'phi' 'knn_set_6_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (0.00ns)   --->   "%knn_set_6_0_V_3 = phi i6 [ %knn_set_6_0_V, %2 ], [ %knn_set_6_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 198 'phi' 'knn_set_6_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 199 [1/1] (0.00ns)   --->   "%knn_set_5_2_V_3 = phi i6 [ %knn_set_5_2_V, %2 ], [ %knn_set_5_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 199 'phi' 'knn_set_5_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 200 [1/1] (0.00ns)   --->   "%knn_set_5_1_V_3 = phi i6 [ %knn_set_5_1_V, %2 ], [ %knn_set_5_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 200 'phi' 'knn_set_5_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 201 [1/1] (0.00ns)   --->   "%knn_set_5_0_V_3 = phi i6 [ %knn_set_5_0_V, %2 ], [ %knn_set_5_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 201 'phi' 'knn_set_5_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 202 [1/1] (0.00ns)   --->   "%knn_set_4_2_V_3 = phi i6 [ %knn_set_4_2_V, %2 ], [ %knn_set_4_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 202 'phi' 'knn_set_4_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 203 [1/1] (0.00ns)   --->   "%knn_set_4_1_V_3 = phi i6 [ %knn_set_4_1_V, %2 ], [ %knn_set_4_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 203 'phi' 'knn_set_4_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 204 [1/1] (0.00ns)   --->   "%knn_set_4_0_V_3 = phi i6 [ %knn_set_4_0_V, %2 ], [ %knn_set_4_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 204 'phi' 'knn_set_4_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 205 [1/1] (0.00ns)   --->   "%knn_set_3_2_V_3 = phi i6 [ %knn_set_3_2_V, %2 ], [ %knn_set_3_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 205 'phi' 'knn_set_3_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 206 [1/1] (0.00ns)   --->   "%knn_set_3_1_V_3 = phi i6 [ %knn_set_3_1_V, %2 ], [ %knn_set_3_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 206 'phi' 'knn_set_3_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 207 [1/1] (0.00ns)   --->   "%knn_set_3_0_V_3 = phi i6 [ %knn_set_3_0_V, %2 ], [ %knn_set_3_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 207 'phi' 'knn_set_3_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 208 [1/1] (0.00ns)   --->   "%knn_set_2_2_V_3 = phi i6 [ %knn_set_2_2_V, %2 ], [ %knn_set_2_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 208 'phi' 'knn_set_2_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 209 [1/1] (0.00ns)   --->   "%knn_set_2_1_V_3 = phi i6 [ %knn_set_2_1_V, %2 ], [ %knn_set_2_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 209 'phi' 'knn_set_2_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 210 [1/1] (0.00ns)   --->   "%knn_set_2_0_V_3 = phi i6 [ %knn_set_2_0_V, %2 ], [ %knn_set_2_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 210 'phi' 'knn_set_2_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 211 [1/1] (0.00ns)   --->   "%knn_set_1_2_V_3 = phi i6 [ %knn_set_1_2_V, %2 ], [ %knn_set_1_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 211 'phi' 'knn_set_1_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 212 [1/1] (0.00ns)   --->   "%knn_set_1_1_V_3 = phi i6 [ %knn_set_1_1_V, %2 ], [ %knn_set_1_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 212 'phi' 'knn_set_1_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 213 [1/1] (0.00ns)   --->   "%knn_set_1_0_V_3 = phi i6 [ %knn_set_1_0_V, %2 ], [ %knn_set_1_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 213 'phi' 'knn_set_1_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 214 [1/1] (0.00ns)   --->   "%knn_set_0_2_V_3 = phi i6 [ %knn_set_0_2_V, %2 ], [ %knn_set_0_2_V_0_lo, %.preheader.preheader ]"   --->   Operation 214 'phi' 'knn_set_0_2_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 215 [1/1] (0.00ns)   --->   "%knn_set_0_1_V_3 = phi i6 [ %knn_set_0_1_V, %2 ], [ %knn_set_0_1_V_0_lo, %.preheader.preheader ]"   --->   Operation 215 'phi' 'knn_set_0_1_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 216 [1/1] (0.00ns)   --->   "%knn_set_0_0_V_3 = phi i6 [ %knn_set_0_0_V, %2 ], [ %knn_set_0_0_V_0_lo, %.preheader.preheader ]"   --->   Operation 216 'phi' 'knn_set_0_0_V_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 217 [1/1] (0.00ns)   --->   "%i4_0 = phi i11 [ %i_2, %2 ], [ 0, %.preheader.preheader ]"   --->   Operation 217 'phi' 'i4_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 218 [1/1] (1.88ns)   --->   "%icmp_ln63 = icmp eq i11 %i4_0, -248" [digitrec.cpp:63]   --->   Operation 218 'icmp' 'icmp_ln63' <Predicate = true> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 219 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1800, i64 1800, i64 1800)"   --->   Operation 219 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 220 [1/1] (1.63ns)   --->   "%i_2 = add i11 %i4_0, 1" [digitrec.cpp:63]   --->   Operation 220 'add' 'i_2' <Predicate = true> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 221 [1/1] (0.00ns)   --->   "br i1 %icmp_ln63, label %.preheader43.preheader, label %2" [digitrec.cpp:63]   --->   Operation 221 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 222 [1/1] (0.00ns)   --->   "%zext_ln66 = zext i11 %i4_0 to i64" [digitrec.cpp:66]   --->   Operation 222 'zext' 'zext_ln66' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 223 [1/1] (0.00ns)   --->   "%training_data_V_0_ad = getelementptr [1800 x i46]* @training_data_V_0, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 223 'getelementptr' 'training_data_V_0_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 224 [2/2] (3.25ns)   --->   "%training_data_V_0_lo = load i46* %training_data_V_0_ad, align 8" [digitrec.cpp:66]   --->   Operation 224 'load' 'training_data_V_0_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 225 [1/1] (0.00ns)   --->   "%training_data_V_1_ad = getelementptr [1800 x i46]* @training_data_V_1, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 225 'getelementptr' 'training_data_V_1_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 226 [2/2] (3.25ns)   --->   "%training_data_V_1_lo = load i46* %training_data_V_1_ad, align 8" [digitrec.cpp:66]   --->   Operation 226 'load' 'training_data_V_1_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 227 [1/1] (0.00ns)   --->   "%training_data_V_2_ad = getelementptr [1800 x i47]* @training_data_V_2, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 227 'getelementptr' 'training_data_V_2_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 228 [2/2] (3.25ns)   --->   "%training_data_V_2_lo = load i47* %training_data_V_2_ad, align 8" [digitrec.cpp:66]   --->   Operation 228 'load' 'training_data_V_2_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 229 [1/1] (0.00ns)   --->   "%training_data_V_3_ad = getelementptr [1800 x i47]* @training_data_V_3, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 229 'getelementptr' 'training_data_V_3_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 230 [2/2] (3.25ns)   --->   "%training_data_V_3_lo = load i47* %training_data_V_3_ad, align 8" [digitrec.cpp:66]   --->   Operation 230 'load' 'training_data_V_3_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 231 [1/1] (0.00ns)   --->   "%training_data_V_4_ad = getelementptr [1800 x i46]* @training_data_V_4, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 231 'getelementptr' 'training_data_V_4_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 232 [2/2] (3.25ns)   --->   "%training_data_V_4_lo = load i46* %training_data_V_4_ad, align 8" [digitrec.cpp:66]   --->   Operation 232 'load' 'training_data_V_4_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 233 [1/1] (0.00ns)   --->   "%training_data_V_5_ad = getelementptr [1800 x i45]* @training_data_V_5, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 233 'getelementptr' 'training_data_V_5_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 234 [2/2] (3.25ns)   --->   "%training_data_V_5_lo = load i45* %training_data_V_5_ad, align 8" [digitrec.cpp:66]   --->   Operation 234 'load' 'training_data_V_5_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 235 [1/1] (0.00ns)   --->   "%training_data_V_6_ad = getelementptr [1800 x i48]* @training_data_V_6, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 235 'getelementptr' 'training_data_V_6_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 236 [2/2] (3.25ns)   --->   "%training_data_V_6_lo = load i48* %training_data_V_6_ad, align 8" [digitrec.cpp:66]   --->   Operation 236 'load' 'training_data_V_6_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 237 [1/1] (0.00ns)   --->   "%training_data_V_7_ad = getelementptr [1800 x i42]* @training_data_V_7, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 237 'getelementptr' 'training_data_V_7_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 238 [2/2] (3.25ns)   --->   "%training_data_V_7_lo = load i42* %training_data_V_7_ad, align 8" [digitrec.cpp:66]   --->   Operation 238 'load' 'training_data_V_7_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 239 [1/1] (0.00ns)   --->   "%training_data_V_8_ad = getelementptr [1800 x i45]* @training_data_V_8, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 239 'getelementptr' 'training_data_V_8_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 240 [2/2] (3.25ns)   --->   "%training_data_V_8_lo = load i45* %training_data_V_8_ad, align 8" [digitrec.cpp:66]   --->   Operation 240 'load' 'training_data_V_8_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 241 [1/1] (0.00ns)   --->   "%training_data_V_9_ad = getelementptr [1800 x i41]* @training_data_V_9, i64 0, i64 %zext_ln66" [digitrec.cpp:66]   --->   Operation 241 'getelementptr' 'training_data_V_9_ad' <Predicate = (!icmp_ln63)> <Delay = 0.00>
+ST_5 : Operation 242 [2/2] (3.25ns)   --->   "%training_data_V_9_lo = load i41* %training_data_V_9_ad, align 8" [digitrec.cpp:66]   --->   Operation 242 'load' 'training_data_V_9_lo' <Predicate = (!icmp_ln63)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_5 : Operation 243 [1/1] (1.76ns)   --->   "br label %.preheader43" [digitrec.cpp:156->digitrec.cpp:73]   --->   Operation 243 'br' <Predicate = (icmp_ln63)> <Delay = 1.76>
 
-State 6 <SV = 4> <Delay = 4.28>
-ST_6 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind" [digitrec.cpp:64]   --->   Operation 61 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln66 = zext i4 %j_0 to i6" [digitrec.cpp:66]   --->   Operation 62 'zext' 'zext_ln66' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_3 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %j_0, i2 0)" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 63 'bitconcatenate' 'tmp_3' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 64 [1/1] (1.82ns)   --->   "%sub_ln887 = sub i6 %tmp_3, %zext_ln66" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 64 'sub' 'sub_ln887' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 65 [1/2] (3.25ns)   --->   "%training_instance_V = load i48* %training_data_V_addr, align 8" [digitrec.cpp:66]   --->   Operation 65 'load' 'training_instance_V' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 48> <Depth = 18000> <ROM>
-ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln66_2 = zext i48 %training_instance_V to i49" [digitrec.cpp:66]   --->   Operation 66 'zext' 'zext_ln66_2' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 67 [1/1] (1.02ns)   --->   "%ret_V = xor i49 %zext_ln66_2, %input_V_read" [digitrec.cpp:92->digitrec.cpp:68]   --->   Operation 67 'xor' 'ret_V' <Predicate = true> <Delay = 1.02> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 68 [1/1] (1.76ns)   --->   "br label %2" [digitrec.cpp:96->digitrec.cpp:68]   --->   Operation 68 'br' <Predicate = true> <Delay = 1.76>
+State 6 <SV = 3> <Delay = 6.33>
+ST_6 : Operation 244 [1/2] (3.25ns)   --->   "%training_data_V_0_lo = load i46* %training_data_V_0_ad, align 8" [digitrec.cpp:66]   --->   Operation 244 'load' 'training_data_V_0_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 245 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i46 %training_data_V_0_lo to i48" [digitrec.cpp:68]   --->   Operation 245 'zext' 'zext_ln68' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 246 [2/2] (3.07ns)   --->   "%call_ret1 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68, i6 %knn_set_0_0_V_3, i6 %knn_set_0_1_V_3, i6 %knn_set_0_2_V_3)" [digitrec.cpp:68]   --->   Operation 246 'call' 'call_ret1' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 247 [1/2] (3.25ns)   --->   "%training_data_V_1_lo = load i46* %training_data_V_1_ad, align 8" [digitrec.cpp:66]   --->   Operation 247 'load' 'training_data_V_1_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 248 [1/1] (0.00ns)   --->   "%zext_ln68_1 = zext i46 %training_data_V_1_lo to i48" [digitrec.cpp:68]   --->   Operation 248 'zext' 'zext_ln68_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 249 [2/2] (3.07ns)   --->   "%call_ret2 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_1, i6 %knn_set_1_0_V_3, i6 %knn_set_1_1_V_3, i6 %knn_set_1_2_V_3)" [digitrec.cpp:68]   --->   Operation 249 'call' 'call_ret2' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 250 [1/2] (3.25ns)   --->   "%training_data_V_2_lo = load i47* %training_data_V_2_ad, align 8" [digitrec.cpp:66]   --->   Operation 250 'load' 'training_data_V_2_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 251 [1/1] (0.00ns)   --->   "%zext_ln68_2 = zext i47 %training_data_V_2_lo to i48" [digitrec.cpp:68]   --->   Operation 251 'zext' 'zext_ln68_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 252 [2/2] (3.07ns)   --->   "%call_ret3 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_2, i6 %knn_set_2_0_V_3, i6 %knn_set_2_1_V_3, i6 %knn_set_2_2_V_3)" [digitrec.cpp:68]   --->   Operation 252 'call' 'call_ret3' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 253 [1/2] (3.25ns)   --->   "%training_data_V_3_lo = load i47* %training_data_V_3_ad, align 8" [digitrec.cpp:66]   --->   Operation 253 'load' 'training_data_V_3_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 254 [1/1] (0.00ns)   --->   "%zext_ln68_3 = zext i47 %training_data_V_3_lo to i48" [digitrec.cpp:68]   --->   Operation 254 'zext' 'zext_ln68_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 255 [2/2] (3.07ns)   --->   "%call_ret4 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_3, i6 %knn_set_3_0_V_3, i6 %knn_set_3_1_V_3, i6 %knn_set_3_2_V_3)" [digitrec.cpp:68]   --->   Operation 255 'call' 'call_ret4' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 256 [1/2] (3.25ns)   --->   "%training_data_V_4_lo = load i46* %training_data_V_4_ad, align 8" [digitrec.cpp:66]   --->   Operation 256 'load' 'training_data_V_4_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 257 [1/1] (0.00ns)   --->   "%zext_ln68_4 = zext i46 %training_data_V_4_lo to i48" [digitrec.cpp:68]   --->   Operation 257 'zext' 'zext_ln68_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 258 [2/2] (3.07ns)   --->   "%call_ret5 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_4, i6 %knn_set_4_0_V_3, i6 %knn_set_4_1_V_3, i6 %knn_set_4_2_V_3)" [digitrec.cpp:68]   --->   Operation 258 'call' 'call_ret5' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 259 [1/2] (3.25ns)   --->   "%training_data_V_5_lo = load i45* %training_data_V_5_ad, align 8" [digitrec.cpp:66]   --->   Operation 259 'load' 'training_data_V_5_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 260 [1/1] (0.00ns)   --->   "%zext_ln68_5 = zext i45 %training_data_V_5_lo to i48" [digitrec.cpp:68]   --->   Operation 260 'zext' 'zext_ln68_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 261 [2/2] (3.07ns)   --->   "%call_ret6 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_5, i6 %knn_set_5_0_V_3, i6 %knn_set_5_1_V_3, i6 %knn_set_5_2_V_3)" [digitrec.cpp:68]   --->   Operation 261 'call' 'call_ret6' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 262 [1/2] (3.25ns)   --->   "%training_data_V_6_lo = load i48* %training_data_V_6_ad, align 8" [digitrec.cpp:66]   --->   Operation 262 'load' 'training_data_V_6_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 263 [2/2] (3.07ns)   --->   "%call_ret7 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %training_data_V_6_lo, i6 %knn_set_6_0_V_3, i6 %knn_set_6_1_V_3, i6 %knn_set_6_2_V_3)" [digitrec.cpp:68]   --->   Operation 263 'call' 'call_ret7' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 264 [1/2] (3.25ns)   --->   "%training_data_V_7_lo = load i42* %training_data_V_7_ad, align 8" [digitrec.cpp:66]   --->   Operation 264 'load' 'training_data_V_7_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 265 [1/1] (0.00ns)   --->   "%zext_ln68_6 = zext i42 %training_data_V_7_lo to i48" [digitrec.cpp:68]   --->   Operation 265 'zext' 'zext_ln68_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 266 [2/2] (3.07ns)   --->   "%call_ret8 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_6, i6 %knn_set_7_0_V_3, i6 %knn_set_7_1_V_3, i6 %knn_set_7_2_V_3)" [digitrec.cpp:68]   --->   Operation 266 'call' 'call_ret8' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 267 [1/2] (3.25ns)   --->   "%training_data_V_8_lo = load i45* %training_data_V_8_ad, align 8" [digitrec.cpp:66]   --->   Operation 267 'load' 'training_data_V_8_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 268 [1/1] (0.00ns)   --->   "%zext_ln68_7 = zext i45 %training_data_V_8_lo to i48" [digitrec.cpp:68]   --->   Operation 268 'zext' 'zext_ln68_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 269 [2/2] (3.07ns)   --->   "%call_ret9 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_7, i6 %knn_set_8_0_V_3, i6 %knn_set_8_1_V_3, i6 %knn_set_8_2_V_3)" [digitrec.cpp:68]   --->   Operation 269 'call' 'call_ret9' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 270 [1/2] (3.25ns)   --->   "%training_data_V_9_lo = load i41* %training_data_V_9_ad, align 8" [digitrec.cpp:66]   --->   Operation 270 'load' 'training_data_V_9_lo' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 41> <Depth = 1800> <ROM>
+ST_6 : Operation 271 [1/1] (0.00ns)   --->   "%zext_ln68_8 = zext i41 %training_data_V_9_lo to i48" [digitrec.cpp:68]   --->   Operation 271 'zext' 'zext_ln68_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 272 [2/2] (3.07ns)   --->   "%call_ret = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_8, i6 %knn_set_9_0_V_3, i6 %knn_set_9_1_V_3, i6 %knn_set_9_2_V_3)" [digitrec.cpp:68]   --->   Operation 272 'call' 'call_ret' <Predicate = true> <Delay = 3.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 7 <SV = 5> <Delay = 1.82>
-ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%curr_distance_V = phi i6 [ 0, %1 ], [ %dist_V, %3 ]"   --->   Operation 69 'phi' 'curr_distance_V' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%bvh_d_index = phi i6 [ 0, %1 ], [ %i_3, %3 ]"   --->   Operation 70 'phi' 'bvh_d_index' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln101 = zext i6 %bvh_d_index to i32" [digitrec.cpp:101->digitrec.cpp:68]   --->   Operation 71 'zext' 'zext_ln101' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 72 [1/1] (1.42ns)   --->   "%icmp_ln96 = icmp eq i6 %bvh_d_index, -15" [digitrec.cpp:96->digitrec.cpp:68]   --->   Operation 72 'icmp' 'icmp_ln96' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 49, i64 49, i64 49)"   --->   Operation 73 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 74 [1/1] (1.82ns)   --->   "%i_3 = add i6 %bvh_d_index, 1" [digitrec.cpp:96->digitrec.cpp:68]   --->   Operation 74 'add' 'i_3' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 75 [1/1] (0.00ns)   --->   "br i1 %icmp_ln96, label %.preheader.i.preheader, label %3" [digitrec.cpp:96->digitrec.cpp:68]   --->   Operation 75 'br' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 76 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i49.i32(i49 %ret_V, i32 %zext_ln101)" [digitrec.cpp:97->digitrec.cpp:68]   --->   Operation 76 'bitselect' 'p_Result_s' <Predicate = (!icmp_ln96)> <Delay = 0.00>
-ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln700 = zext i1 %p_Result_s to i6" [digitrec.cpp:97->digitrec.cpp:68]   --->   Operation 77 'zext' 'zext_ln700' <Predicate = (!icmp_ln96)> <Delay = 0.00>
-ST_7 : Operation 78 [1/1] (1.82ns)   --->   "%dist_V = add i6 %zext_ln700, %curr_distance_V" [digitrec.cpp:97->digitrec.cpp:68]   --->   Operation 78 'add' 'dist_V' <Predicate = (!icmp_ln96)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 79 [1/1] (0.00ns)   --->   "br label %2" [digitrec.cpp:96->digitrec.cpp:68]   --->   Operation 79 'br' <Predicate = (!icmp_ln96)> <Delay = 0.00>
-ST_7 : Operation 80 [1/1] (1.76ns)   --->   "br label %.preheader.i" [digitrec.cpp:106->digitrec.cpp:68]   --->   Operation 80 'br' <Predicate = (icmp_ln96)> <Delay = 1.76>
+State 7 <SV = 4> <Delay = 0.00>
+ST_7 : Operation 273 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str2) nounwind" [digitrec.cpp:63]   --->   Operation 273 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 274 [1/2] (0.00ns)   --->   "%call_ret1 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68, i6 %knn_set_0_0_V_3, i6 %knn_set_0_1_V_3, i6 %knn_set_0_2_V_3)" [digitrec.cpp:68]   --->   Operation 274 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 275 [1/1] (0.00ns)   --->   "%knn_set_0_0_V = extractvalue { i6, i6, i6 } %call_ret1, 0" [digitrec.cpp:68]   --->   Operation 275 'extractvalue' 'knn_set_0_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 276 [1/1] (0.00ns)   --->   "%knn_set_0_1_V = extractvalue { i6, i6, i6 } %call_ret1, 1" [digitrec.cpp:68]   --->   Operation 276 'extractvalue' 'knn_set_0_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 277 [1/1] (0.00ns)   --->   "%knn_set_0_2_V = extractvalue { i6, i6, i6 } %call_ret1, 2" [digitrec.cpp:68]   --->   Operation 277 'extractvalue' 'knn_set_0_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 278 [1/2] (0.00ns)   --->   "%call_ret2 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_1, i6 %knn_set_1_0_V_3, i6 %knn_set_1_1_V_3, i6 %knn_set_1_2_V_3)" [digitrec.cpp:68]   --->   Operation 278 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 279 [1/1] (0.00ns)   --->   "%knn_set_1_0_V = extractvalue { i6, i6, i6 } %call_ret2, 0" [digitrec.cpp:68]   --->   Operation 279 'extractvalue' 'knn_set_1_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 280 [1/1] (0.00ns)   --->   "%knn_set_1_1_V = extractvalue { i6, i6, i6 } %call_ret2, 1" [digitrec.cpp:68]   --->   Operation 280 'extractvalue' 'knn_set_1_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 281 [1/1] (0.00ns)   --->   "%knn_set_1_2_V = extractvalue { i6, i6, i6 } %call_ret2, 2" [digitrec.cpp:68]   --->   Operation 281 'extractvalue' 'knn_set_1_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 282 [1/2] (0.00ns)   --->   "%call_ret3 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_2, i6 %knn_set_2_0_V_3, i6 %knn_set_2_1_V_3, i6 %knn_set_2_2_V_3)" [digitrec.cpp:68]   --->   Operation 282 'call' 'call_ret3' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 283 [1/1] (0.00ns)   --->   "%knn_set_2_0_V = extractvalue { i6, i6, i6 } %call_ret3, 0" [digitrec.cpp:68]   --->   Operation 283 'extractvalue' 'knn_set_2_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 284 [1/1] (0.00ns)   --->   "%knn_set_2_1_V = extractvalue { i6, i6, i6 } %call_ret3, 1" [digitrec.cpp:68]   --->   Operation 284 'extractvalue' 'knn_set_2_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 285 [1/1] (0.00ns)   --->   "%knn_set_2_2_V = extractvalue { i6, i6, i6 } %call_ret3, 2" [digitrec.cpp:68]   --->   Operation 285 'extractvalue' 'knn_set_2_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 286 [1/2] (0.00ns)   --->   "%call_ret4 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_3, i6 %knn_set_3_0_V_3, i6 %knn_set_3_1_V_3, i6 %knn_set_3_2_V_3)" [digitrec.cpp:68]   --->   Operation 286 'call' 'call_ret4' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 287 [1/1] (0.00ns)   --->   "%knn_set_3_0_V = extractvalue { i6, i6, i6 } %call_ret4, 0" [digitrec.cpp:68]   --->   Operation 287 'extractvalue' 'knn_set_3_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 288 [1/1] (0.00ns)   --->   "%knn_set_3_1_V = extractvalue { i6, i6, i6 } %call_ret4, 1" [digitrec.cpp:68]   --->   Operation 288 'extractvalue' 'knn_set_3_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 289 [1/1] (0.00ns)   --->   "%knn_set_3_2_V = extractvalue { i6, i6, i6 } %call_ret4, 2" [digitrec.cpp:68]   --->   Operation 289 'extractvalue' 'knn_set_3_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 290 [1/2] (0.00ns)   --->   "%call_ret5 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_4, i6 %knn_set_4_0_V_3, i6 %knn_set_4_1_V_3, i6 %knn_set_4_2_V_3)" [digitrec.cpp:68]   --->   Operation 290 'call' 'call_ret5' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 291 [1/1] (0.00ns)   --->   "%knn_set_4_0_V = extractvalue { i6, i6, i6 } %call_ret5, 0" [digitrec.cpp:68]   --->   Operation 291 'extractvalue' 'knn_set_4_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 292 [1/1] (0.00ns)   --->   "%knn_set_4_1_V = extractvalue { i6, i6, i6 } %call_ret5, 1" [digitrec.cpp:68]   --->   Operation 292 'extractvalue' 'knn_set_4_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 293 [1/1] (0.00ns)   --->   "%knn_set_4_2_V = extractvalue { i6, i6, i6 } %call_ret5, 2" [digitrec.cpp:68]   --->   Operation 293 'extractvalue' 'knn_set_4_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 294 [1/2] (0.00ns)   --->   "%call_ret6 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_5, i6 %knn_set_5_0_V_3, i6 %knn_set_5_1_V_3, i6 %knn_set_5_2_V_3)" [digitrec.cpp:68]   --->   Operation 294 'call' 'call_ret6' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 295 [1/1] (0.00ns)   --->   "%knn_set_5_0_V = extractvalue { i6, i6, i6 } %call_ret6, 0" [digitrec.cpp:68]   --->   Operation 295 'extractvalue' 'knn_set_5_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 296 [1/1] (0.00ns)   --->   "%knn_set_5_1_V = extractvalue { i6, i6, i6 } %call_ret6, 1" [digitrec.cpp:68]   --->   Operation 296 'extractvalue' 'knn_set_5_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 297 [1/1] (0.00ns)   --->   "%knn_set_5_2_V = extractvalue { i6, i6, i6 } %call_ret6, 2" [digitrec.cpp:68]   --->   Operation 297 'extractvalue' 'knn_set_5_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 298 [1/2] (0.00ns)   --->   "%call_ret7 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %training_data_V_6_lo, i6 %knn_set_6_0_V_3, i6 %knn_set_6_1_V_3, i6 %knn_set_6_2_V_3)" [digitrec.cpp:68]   --->   Operation 298 'call' 'call_ret7' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 299 [1/1] (0.00ns)   --->   "%knn_set_6_0_V = extractvalue { i6, i6, i6 } %call_ret7, 0" [digitrec.cpp:68]   --->   Operation 299 'extractvalue' 'knn_set_6_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 300 [1/1] (0.00ns)   --->   "%knn_set_6_1_V = extractvalue { i6, i6, i6 } %call_ret7, 1" [digitrec.cpp:68]   --->   Operation 300 'extractvalue' 'knn_set_6_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 301 [1/1] (0.00ns)   --->   "%knn_set_6_2_V = extractvalue { i6, i6, i6 } %call_ret7, 2" [digitrec.cpp:68]   --->   Operation 301 'extractvalue' 'knn_set_6_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 302 [1/2] (0.00ns)   --->   "%call_ret8 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_6, i6 %knn_set_7_0_V_3, i6 %knn_set_7_1_V_3, i6 %knn_set_7_2_V_3)" [digitrec.cpp:68]   --->   Operation 302 'call' 'call_ret8' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 303 [1/1] (0.00ns)   --->   "%knn_set_7_0_V = extractvalue { i6, i6, i6 } %call_ret8, 0" [digitrec.cpp:68]   --->   Operation 303 'extractvalue' 'knn_set_7_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 304 [1/1] (0.00ns)   --->   "%knn_set_7_1_V = extractvalue { i6, i6, i6 } %call_ret8, 1" [digitrec.cpp:68]   --->   Operation 304 'extractvalue' 'knn_set_7_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 305 [1/1] (0.00ns)   --->   "%knn_set_7_2_V = extractvalue { i6, i6, i6 } %call_ret8, 2" [digitrec.cpp:68]   --->   Operation 305 'extractvalue' 'knn_set_7_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 306 [1/2] (0.00ns)   --->   "%call_ret9 = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_7, i6 %knn_set_8_0_V_3, i6 %knn_set_8_1_V_3, i6 %knn_set_8_2_V_3)" [digitrec.cpp:68]   --->   Operation 306 'call' 'call_ret9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 307 [1/1] (0.00ns)   --->   "%knn_set_8_0_V = extractvalue { i6, i6, i6 } %call_ret9, 0" [digitrec.cpp:68]   --->   Operation 307 'extractvalue' 'knn_set_8_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 308 [1/1] (0.00ns)   --->   "%knn_set_8_1_V = extractvalue { i6, i6, i6 } %call_ret9, 1" [digitrec.cpp:68]   --->   Operation 308 'extractvalue' 'knn_set_8_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 309 [1/1] (0.00ns)   --->   "%knn_set_8_2_V = extractvalue { i6, i6, i6 } %call_ret9, 2" [digitrec.cpp:68]   --->   Operation 309 'extractvalue' 'knn_set_8_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 310 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i6, i6, i6 } @update_knn(i49 %input_V_read, i48 %zext_ln68_8, i6 %knn_set_9_0_V_3, i6 %knn_set_9_1_V_3, i6 %knn_set_9_2_V_3)" [digitrec.cpp:68]   --->   Operation 310 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 311 [1/1] (0.00ns)   --->   "%knn_set_9_0_V = extractvalue { i6, i6, i6 } %call_ret, 0" [digitrec.cpp:68]   --->   Operation 311 'extractvalue' 'knn_set_9_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 312 [1/1] (0.00ns)   --->   "%knn_set_9_1_V = extractvalue { i6, i6, i6 } %call_ret, 1" [digitrec.cpp:68]   --->   Operation 312 'extractvalue' 'knn_set_9_1_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 313 [1/1] (0.00ns)   --->   "%knn_set_9_2_V = extractvalue { i6, i6, i6 } %call_ret, 2" [digitrec.cpp:68]   --->   Operation 313 'extractvalue' 'knn_set_9_2_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 314 [1/1] (0.00ns)   --->   "br label %.preheader" [digitrec.cpp:63]   --->   Operation 314 'br' <Predicate = true> <Delay = 0.00>
 
-State 8 <SV = 6> <Delay = 4.14>
-ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%p_016_0_i = phi i6 [ %curr_distance_V, %.preheader.i.preheader ], [ %p_016_0_i_be, %.preheader.i.backedge ]"   --->   Operation 81 'phi' 'p_016_0_i' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%i1_0_i = phi i2 [ 0, %.preheader.i.preheader ], [ %i_4, %.preheader.i.backedge ]"   --->   Operation 82 'phi' 'i1_0_i' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 83 [1/1] (0.95ns)   --->   "%icmp_ln106 = icmp eq i2 %i1_0_i, -1" [digitrec.cpp:106->digitrec.cpp:68]   --->   Operation 83 'icmp' 'icmp_ln106' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 84 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 85 [1/1] (1.56ns)   --->   "%i_4 = add i2 %i1_0_i, 1" [digitrec.cpp:106->digitrec.cpp:68]   --->   Operation 85 'add' 'i_4' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 86 [1/1] (0.00ns)   --->   "br i1 %icmp_ln106, label %update_knn.exit.loopexit, label %4" [digitrec.cpp:106->digitrec.cpp:68]   --->   Operation 86 'br' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln887 = zext i2 %i1_0_i to i6" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 87 'zext' 'zext_ln887' <Predicate = (!icmp_ln106)> <Delay = 0.00>
-ST_8 : Operation 88 [1/1] (1.82ns)   --->   "%add_ln887 = add i6 %sub_ln887, %zext_ln887" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 88 'add' 'add_ln887' <Predicate = (!icmp_ln106)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%sext_ln887 = sext i6 %add_ln887 to i64" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 89 'sext' 'sext_ln887' <Predicate = (!icmp_ln106)> <Delay = 0.00>
-ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%knn_set_V_addr_2 = getelementptr [30 x i6]* %knn_set_V, i64 0, i64 %sext_ln887" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 90 'getelementptr' 'knn_set_V_addr_2' <Predicate = (!icmp_ln106)> <Delay = 0.00>
-ST_8 : Operation 91 [2/2] (2.32ns)   --->   "%temp_V = load i6* %knn_set_V_addr_2, align 1" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 91 'load' 'temp_V' <Predicate = (!icmp_ln106)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_8 : Operation 92 [1/1] (0.00ns)   --->   "br label %update_knn.exit"   --->   Operation 92 'br' <Predicate = (icmp_ln106)> <Delay = 0.00>
+State 8 <SV = 3> <Delay = 1.78>
+ST_8 : Operation 315 [1/1] (0.00ns)   --->   "%val_assign = phi i32 [ %select_ln154, %DIGIT_LOOP_end ], [ 0, %.preheader43.preheader ]" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 315 'phi' 'val_assign' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 316 [1/1] (0.00ns)   --->   "%min_sum_0_i = phi i32 [ %select_ln154_1, %DIGIT_LOOP_end ], [ 150, %.preheader43.preheader ]" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 316 'phi' 'min_sum_0_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 317 [1/1] (0.00ns)   --->   "%result = phi i4 [ %i_3, %DIGIT_LOOP_end ], [ 0, %.preheader43.preheader ]"   --->   Operation 317 'phi' 'result' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 318 [1/1] (0.00ns)   --->   "%zext_ln156 = zext i4 %result to i32" [digitrec.cpp:156->digitrec.cpp:73]   --->   Operation 318 'zext' 'zext_ln156' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 319 [1/1] (1.30ns)   --->   "%icmp_ln139 = icmp eq i4 %result, -6" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 319 'icmp' 'icmp_ln139' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 320 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 320 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 321 [1/1] (1.73ns)   --->   "%i_3 = add i4 %result, 1" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 321 'add' 'i_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 322 [1/1] (0.00ns)   --->   "br i1 %icmp_ln139, label %knn_vote.exit, label %DIGIT_LOOP_begin" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 322 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 323 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str5) nounwind" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 323 'specloopname' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 324 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str5)" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 324 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 325 [1/1] (0.00ns)   --->   "%zext_ln544 = zext i4 %result to i5" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 325 'zext' 'zext_ln544' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 326 [1/1] (0.00ns)   --->   "%trunc_ln544 = trunc i4 %result to i3" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 326 'trunc' 'trunc_ln544' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 327 [1/1] (0.00ns)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %trunc_ln544, i2 0)" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 327 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 328 [1/1] (1.78ns)   --->   "%sub_ln544 = sub i5 %shl_ln, %zext_ln544" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 328 'sub' 'sub_ln544' <Predicate = (!icmp_ln139)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 329 [1/1] (1.76ns)   --->   "br label %3" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 329 'br' <Predicate = (!icmp_ln139)> <Delay = 1.76>
+ST_8 : Operation 330 [1/1] (0.00ns)   --->   "%trunc_ln301 = trunc i32 %val_assign to i4" [digitrec.cpp:160->digitrec.cpp:73]   --->   Operation 330 'trunc' 'trunc_ln301' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_8 : Operation 331 [1/1] (0.00ns)   --->   "ret i4 %trunc_ln301" [digitrec.cpp:73]   --->   Operation 331 'ret' <Predicate = (icmp_ln139)> <Delay = 0.00>
 
-State 9 <SV = 7> <Delay = 5.51>
-ST_9 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str2) nounwind" [digitrec.cpp:106->digitrec.cpp:68]   --->   Operation 93 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 94 [1/2] (2.32ns)   --->   "%temp_V = load i6* %knn_set_V_addr_2, align 1" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 94 'load' 'temp_V' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_9 : Operation 95 [1/1] (1.42ns)   --->   "%icmp_ln887 = icmp ult i6 %p_016_0_i, %temp_V" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 95 'icmp' 'icmp_ln887' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 96 [1/1] (1.76ns)   --->   "br i1 %icmp_ln887, label %5, label %.preheader.i.backedge" [digitrec.cpp:107->digitrec.cpp:68]   --->   Operation 96 'br' <Predicate = true> <Delay = 1.76>
-ST_9 : Operation 97 [1/1] (2.32ns)   --->   "store i6 %p_016_0_i, i6* %knn_set_V_addr_2, align 1" [digitrec.cpp:109->digitrec.cpp:68]   --->   Operation 97 'store' <Predicate = (icmp_ln887)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_9 : Operation 98 [1/1] (1.76ns)   --->   "br label %.preheader.i.backedge" [digitrec.cpp:111->digitrec.cpp:68]   --->   Operation 98 'br' <Predicate = (icmp_ln887)> <Delay = 1.76>
-ST_9 : Operation 99 [1/1] (0.00ns)   --->   "%p_016_0_i_be = phi i6 [ %temp_V, %5 ], [ %p_016_0_i, %4 ]"   --->   Operation 99 'phi' 'p_016_0_i_be' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 100 [1/1] (0.00ns)   --->   "br label %.preheader.i"   --->   Operation 100 'br' <Predicate = true> <Delay = 0.00>
-
-State 10 <SV = 3> <Delay = 1.82>
-ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%val_assign = phi i32 [ %select_ln154, %DIGIT_LOOP_end ], [ 0, %.preheader3.preheader ]" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 101 'phi' 'val_assign' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%min_sum_0_i = phi i32 [ %select_ln154_1, %DIGIT_LOOP_end ], [ 150, %.preheader3.preheader ]" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 102 'phi' 'min_sum_0_i' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 103 [1/1] (0.00ns)   --->   "%result = phi i4 [ %i_2, %DIGIT_LOOP_end ], [ 0, %.preheader3.preheader ]"   --->   Operation 103 'phi' 'result' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 104 [1/1] (0.00ns)   --->   "%zext_ln156 = zext i4 %result to i32" [digitrec.cpp:156->digitrec.cpp:73]   --->   Operation 104 'zext' 'zext_ln156' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 105 [1/1] (1.30ns)   --->   "%icmp_ln139 = icmp eq i4 %result, -6" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 105 'icmp' 'icmp_ln139' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 106 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 106 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 107 [1/1] (1.73ns)   --->   "%i_2 = add i4 %result, 1" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 107 'add' 'i_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 108 [1/1] (0.00ns)   --->   "br i1 %icmp_ln139, label %knn_vote.exit, label %DIGIT_LOOP_begin" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 108 'br' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str3) nounwind" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 109 'specloopname' <Predicate = (!icmp_ln139)> <Delay = 0.00>
-ST_10 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str3)" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 110 'specregionbegin' 'tmp_i' <Predicate = (!icmp_ln139)> <Delay = 0.00>
-ST_10 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln544 = zext i4 %result to i6" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 111 'zext' 'zext_ln544' <Predicate = (!icmp_ln139)> <Delay = 0.00>
-ST_10 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_2 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %result, i2 0)" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 112 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln139)> <Delay = 0.00>
-ST_10 : Operation 113 [1/1] (1.82ns)   --->   "%sub_ln544 = sub i6 %tmp_2, %zext_ln544" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 113 'sub' 'sub_ln544' <Predicate = (!icmp_ln139)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 114 [1/1] (1.76ns)   --->   "br label %6" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 114 'br' <Predicate = (!icmp_ln139)> <Delay = 1.76>
-ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln301 = trunc i32 %val_assign to i4" [digitrec.cpp:160->digitrec.cpp:73]   --->   Operation 115 'trunc' 'trunc_ln301' <Predicate = (icmp_ln139)> <Delay = 0.00>
-ST_10 : Operation 116 [1/1] (0.00ns)   --->   "ret i4 %trunc_ln301" [digitrec.cpp:73]   --->   Operation 116 'ret' <Predicate = (icmp_ln139)> <Delay = 0.00>
-
-State 11 <SV = 4> <Delay = 4.14>
-ST_11 : Operation 117 [1/1] (0.00ns)   --->   "%min_sum = phi i8 [ 0, %DIGIT_LOOP_begin ], [ %distance_sum, %7 ]"   --->   Operation 117 'phi' 'min_sum' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 118 [1/1] (0.00ns)   --->   "%j_0_i = phi i2 [ 0, %DIGIT_LOOP_begin ], [ %j_1, %7 ]"   --->   Operation 118 'phi' 'j_0_i' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 119 [1/1] (0.95ns)   --->   "%icmp_ln148 = icmp eq i2 %j_0_i, -1" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 119 'icmp' 'icmp_ln148' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 120 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 120 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 121 [1/1] (1.56ns)   --->   "%j_1 = add i2 %j_0_i, 1" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 121 'add' 'j_1' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 122 [1/1] (0.00ns)   --->   "br i1 %icmp_ln148, label %DIGIT_LOOP_end, label %7" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 122 'br' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 123 [1/1] (0.00ns)   --->   "%zext_ln544_1 = zext i2 %j_0_i to i6" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 123 'zext' 'zext_ln544_1' <Predicate = (!icmp_ln148)> <Delay = 0.00>
-ST_11 : Operation 124 [1/1] (1.82ns)   --->   "%add_ln544 = add i6 %sub_ln544, %zext_ln544_1" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 124 'add' 'add_ln544' <Predicate = (!icmp_ln148)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 125 [1/1] (0.00ns)   --->   "%sext_ln544 = sext i6 %add_ln544 to i64" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 125 'sext' 'sext_ln544' <Predicate = (!icmp_ln148)> <Delay = 0.00>
-ST_11 : Operation 126 [1/1] (0.00ns)   --->   "%knn_set_V_addr_1 = getelementptr [30 x i6]* %knn_set_V, i64 0, i64 %sext_ln544" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 126 'getelementptr' 'knn_set_V_addr_1' <Predicate = (!icmp_ln148)> <Delay = 0.00>
-ST_11 : Operation 127 [2/2] (2.32ns)   --->   "%knn_set_V_load = load i6* %knn_set_V_addr_1, align 1" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 127 'load' 'knn_set_V_load' <Predicate = (!icmp_ln148)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_11 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln155 = zext i8 %min_sum to i32" [digitrec.cpp:155->digitrec.cpp:73]   --->   Operation 128 'zext' 'zext_ln155' <Predicate = (icmp_ln148)> <Delay = 0.00>
-ST_11 : Operation 129 [1/1] (2.47ns)   --->   "%icmp_ln154 = icmp slt i32 %zext_ln155, %min_sum_0_i" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 129 'icmp' 'icmp_ln154' <Predicate = (icmp_ln148)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 130 [1/1] (0.69ns)   --->   "%select_ln154 = select i1 %icmp_ln154, i32 %zext_ln156, i32 %val_assign" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 130 'select' 'select_ln154' <Predicate = (icmp_ln148)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 131 [1/1] (0.69ns)   --->   "%select_ln154_1 = select i1 %icmp_ln154, i32 %zext_ln155, i32 %min_sum_0_i" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 131 'select' 'select_ln154_1' <Predicate = (icmp_ln148)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 132 [1/1] (0.00ns)   --->   "%empty_13 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str3, i32 %tmp_i)" [digitrec.cpp:158->digitrec.cpp:73]   --->   Operation 132 'specregionend' 'empty_13' <Predicate = (icmp_ln148)> <Delay = 0.00>
-ST_11 : Operation 133 [1/1] (0.00ns)   --->   "br label %.preheader3" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 133 'br' <Predicate = (icmp_ln148)> <Delay = 0.00>
-
-State 12 <SV = 5> <Delay = 4.23>
-ST_12 : Operation 134 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str4) nounwind" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 134 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 135 [1/2] (2.32ns)   --->   "%knn_set_V_load = load i6* %knn_set_V_addr_1, align 1" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 135 'load' 'knn_set_V_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 30> <RAM>
-ST_12 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln149 = zext i6 %knn_set_V_load to i8" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 136 'zext' 'zext_ln149' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 137 [1/1] (1.91ns)   --->   "%distance_sum = add i8 %min_sum, %zext_ln149" [digitrec.cpp:150->digitrec.cpp:73]   --->   Operation 137 'add' 'distance_sum' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 138 [1/1] (0.00ns)   --->   "br label %6" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 138 'br' <Predicate = true> <Delay = 0.00>
+State 9 <SV = 4> <Delay = 6.90>
+ST_9 : Operation 332 [1/1] (0.00ns)   --->   "%min_sum = phi i8 [ 0, %DIGIT_LOOP_begin ], [ %distance_sum, %4 ]"   --->   Operation 332 'phi' 'min_sum' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 333 [1/1] (0.00ns)   --->   "%j_0_i = phi i2 [ 0, %DIGIT_LOOP_begin ], [ %j, %4 ]"   --->   Operation 333 'phi' 'j_0_i' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 334 [1/1] (0.95ns)   --->   "%icmp_ln148 = icmp eq i2 %j_0_i, -1" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 334 'icmp' 'icmp_ln148' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 335 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 335 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 336 [1/1] (1.56ns)   --->   "%j = add i2 %j_0_i, 1" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 336 'add' 'j' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 337 [1/1] (0.00ns)   --->   "br i1 %icmp_ln148, label %DIGIT_LOOP_end, label %4" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 337 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 338 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str6) nounwind" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 338 'specloopname' <Predicate = (!icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 339 [1/1] (0.00ns)   --->   "%zext_ln544_1 = zext i2 %j_0_i to i5" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 339 'zext' 'zext_ln544_1' <Predicate = (!icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 340 [1/1] (1.78ns)   --->   "%add_ln544 = add i5 %sub_ln544, %zext_ln544_1" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 340 'add' 'add_ln544' <Predicate = (!icmp_ln148)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 341 [1/1] (3.20ns)   --->   "%tmp = call i6 @_ssdm_op_Mux.ap_auto.30i6.i5(i6 %knn_set_0_0_V_3, i6 %knn_set_0_1_V_3, i6 %knn_set_0_2_V_3, i6 %knn_set_1_0_V_3, i6 %knn_set_1_1_V_3, i6 %knn_set_1_2_V_3, i6 %knn_set_2_0_V_3, i6 %knn_set_2_1_V_3, i6 %knn_set_2_2_V_3, i6 %knn_set_3_0_V_3, i6 %knn_set_3_1_V_3, i6 %knn_set_3_2_V_3, i6 %knn_set_4_0_V_3, i6 %knn_set_4_1_V_3, i6 %knn_set_4_2_V_3, i6 %knn_set_5_0_V_3, i6 %knn_set_5_1_V_3, i6 %knn_set_5_2_V_3, i6 %knn_set_6_0_V_3, i6 %knn_set_6_1_V_3, i6 %knn_set_6_2_V_3, i6 %knn_set_7_0_V_3, i6 %knn_set_7_1_V_3, i6 %knn_set_7_2_V_3, i6 %knn_set_8_0_V_3, i6 %knn_set_8_1_V_3, i6 %knn_set_8_2_V_3, i6 %knn_set_9_0_V_3, i6 %knn_set_9_1_V_3, i6 %knn_set_9_2_V_3, i5 %add_ln544)" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 341 'mux' 'tmp' <Predicate = (!icmp_ln148)> <Delay = 3.20> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 342 [1/1] (0.00ns)   --->   "%zext_ln149 = zext i6 %tmp to i8" [digitrec.cpp:149->digitrec.cpp:73]   --->   Operation 342 'zext' 'zext_ln149' <Predicate = (!icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 343 [1/1] (1.91ns)   --->   "%distance_sum = add i8 %zext_ln149, %min_sum" [digitrec.cpp:150->digitrec.cpp:73]   --->   Operation 343 'add' 'distance_sum' <Predicate = (!icmp_ln148)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 344 [1/1] (0.00ns)   --->   "br label %3" [digitrec.cpp:148->digitrec.cpp:73]   --->   Operation 344 'br' <Predicate = (!icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 345 [1/1] (0.00ns)   --->   "%zext_ln155 = zext i8 %min_sum to i32" [digitrec.cpp:155->digitrec.cpp:73]   --->   Operation 345 'zext' 'zext_ln155' <Predicate = (icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 346 [1/1] (2.47ns)   --->   "%icmp_ln154 = icmp slt i32 %zext_ln155, %min_sum_0_i" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 346 'icmp' 'icmp_ln154' <Predicate = (icmp_ln148)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 347 [1/1] (0.69ns)   --->   "%select_ln154 = select i1 %icmp_ln154, i32 %zext_ln156, i32 %val_assign" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 347 'select' 'select_ln154' <Predicate = (icmp_ln148)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 348 [1/1] (0.69ns)   --->   "%select_ln154_1 = select i1 %icmp_ln154, i32 %zext_ln155, i32 %min_sum_0_i" [digitrec.cpp:154->digitrec.cpp:73]   --->   Operation 348 'select' 'select_ln154_1' <Predicate = (icmp_ln148)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 349 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str5, i32 %tmp_i)" [digitrec.cpp:158->digitrec.cpp:73]   --->   Operation 349 'specregionend' 'empty_10' <Predicate = (icmp_ln148)> <Delay = 0.00>
+ST_9 : Operation 350 [1/1] (0.00ns)   --->   "br label %.preheader43" [digitrec.cpp:139->digitrec.cpp:73]   --->   Operation 350 'br' <Predicate = (icmp_ln148)> <Delay = 0.00>
 
 
 ============================================================
@@ -255,72 +468,45 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 1.77ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('i') with incoming values : ('i', digitrec.cpp:58) [8]  (1.77 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', digitrec.cpp:58) [55]  (1.77 ns)
 
- <State 2>: 1.83ns
+ <State 2>: 1.77ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:58) [8]  (0 ns)
-	'sub' operation ('sub_ln321', digitrec.cpp:61) [16]  (1.83 ns)
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', digitrec.cpp:59) [93]  (1.77 ns)
 
- <State 3>: 4.15ns
+ <State 3>: 1.96ns
 The critical path consists of the following:
-	'phi' operation ('k') with incoming values : ('k', digitrec.cpp:59) [19]  (0 ns)
-	'add' operation ('add_ln321', digitrec.cpp:61) [26]  (1.83 ns)
-	'getelementptr' operation ('knn_set_V_addr', digitrec.cpp:61) [28]  (0 ns)
-	'store' operation ('store_ln61', digitrec.cpp:61) of constant 50 on array 'knn_set.V', digitrec.cpp:55 [29]  (2.32 ns)
+	'phi' operation ('k') with incoming values : ('k', digitrec.cpp:59) [93]  (0 ns)
+	'mux' operation ('knn_set_4_0_V_4', digitrec.cpp:59) [148]  (1.96 ns)
 
- <State 4>: 1.88ns
+ <State 4>: 0ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:63) [36]  (0 ns)
-	'icmp' operation ('icmp_ln63', digitrec.cpp:63) [37]  (1.88 ns)
 
- <State 5>: 5.2ns
+ <State 5>: 3.25ns
 The critical path consists of the following:
-	'phi' operation ('phi_mul', digitrec.cpp:64) with incoming values : ('add_ln64', digitrec.cpp:64) [48]  (0 ns)
-	'add' operation ('add_ln66', digitrec.cpp:66) [57]  (1.94 ns)
-	'getelementptr' operation ('training_data_V_addr', digitrec.cpp:66) [59]  (0 ns)
-	'load' operation ('training_instance.V', digitrec.cpp:66) on array 'training_data_V' [62]  (3.25 ns)
+	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:63) [247]  (0 ns)
+	'getelementptr' operation ('training_data_V_0_ad', digitrec.cpp:66) [255]  (0 ns)
+	'load' operation ('training_data_V_0_lo', digitrec.cpp:66) on array 'training_data_V_0' [256]  (3.25 ns)
 
- <State 6>: 4.28ns
+ <State 6>: 6.33ns
 The critical path consists of the following:
-	'load' operation ('training_instance.V', digitrec.cpp:66) on array 'training_data_V' [62]  (3.25 ns)
-	'xor' operation ('ret.V', digitrec.cpp:92->digitrec.cpp:68) [64]  (1.03 ns)
+	'load' operation ('training_data_V_0_lo', digitrec.cpp:66) on array 'training_data_V_0' [256]  (3.25 ns)
+	'call' operation ('call_ret1', digitrec.cpp:68) to 'update_knn' [258]  (3.08 ns)
 
- <State 7>: 1.83ns
+ <State 7>: 0ns
 The critical path consists of the following:
-	'phi' operation ('dist.V') with incoming values : ('dist.V', digitrec.cpp:97->digitrec.cpp:68) [67]  (0 ns)
-	'add' operation ('dist.V', digitrec.cpp:97->digitrec.cpp:68) [77]  (1.83 ns)
 
- <State 8>: 4.15ns
+ <State 8>: 1.78ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:106->digitrec.cpp:68) [83]  (0 ns)
-	'add' operation ('add_ln887', digitrec.cpp:107->digitrec.cpp:68) [91]  (1.83 ns)
-	'getelementptr' operation ('knn_set_V_addr_2', digitrec.cpp:107->digitrec.cpp:68) [93]  (0 ns)
-	'load' operation ('temp.V', digitrec.cpp:107->digitrec.cpp:68) on array 'knn_set.V', digitrec.cpp:55 [94]  (2.32 ns)
+	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:139->digitrec.cpp:73) [330]  (0 ns)
+	'sub' operation ('sub_ln544', digitrec.cpp:149->digitrec.cpp:73) [342]  (1.78 ns)
 
- <State 9>: 5.52ns
+ <State 9>: 6.9ns
 The critical path consists of the following:
-	'load' operation ('temp.V', digitrec.cpp:107->digitrec.cpp:68) on array 'knn_set.V', digitrec.cpp:55 [94]  (2.32 ns)
-	'icmp' operation ('icmp_ln887', digitrec.cpp:107->digitrec.cpp:68) [95]  (1.43 ns)
-	multiplexor before 'phi' operation ('temp.V') with incoming values : ('dist.V', digitrec.cpp:97->digitrec.cpp:68) ('temp.V', digitrec.cpp:107->digitrec.cpp:68) [101]  (1.77 ns)
-	'phi' operation ('temp.V') with incoming values : ('dist.V', digitrec.cpp:97->digitrec.cpp:68) ('temp.V', digitrec.cpp:107->digitrec.cpp:68) [101]  (0 ns)
-
- <State 10>: 1.83ns
-The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', digitrec.cpp:139->digitrec.cpp:73) [113]  (0 ns)
-	'sub' operation ('sub_ln544', digitrec.cpp:149->digitrec.cpp:73) [124]  (1.83 ns)
-
- <State 11>: 4.15ns
-The critical path consists of the following:
-	'phi' operation ('j') with incoming values : ('j', digitrec.cpp:148->digitrec.cpp:73) [128]  (0 ns)
-	'add' operation ('add_ln544', digitrec.cpp:149->digitrec.cpp:73) [136]  (1.83 ns)
-	'getelementptr' operation ('knn_set_V_addr_1', digitrec.cpp:149->digitrec.cpp:73) [138]  (0 ns)
-	'load' operation ('knn_set_V_load', digitrec.cpp:149->digitrec.cpp:73) on array 'knn_set.V', digitrec.cpp:55 [139]  (2.32 ns)
-
- <State 12>: 4.24ns
-The critical path consists of the following:
-	'load' operation ('knn_set_V_load', digitrec.cpp:149->digitrec.cpp:73) on array 'knn_set.V', digitrec.cpp:55 [139]  (2.32 ns)
-	'add' operation ('distance_sum', digitrec.cpp:150->digitrec.cpp:73) [141]  (1.92 ns)
+	'phi' operation ('j') with incoming values : ('j', digitrec.cpp:148->digitrec.cpp:73) [346]  (0 ns)
+	'add' operation ('add_ln544', digitrec.cpp:149->digitrec.cpp:73) [354]  (1.78 ns)
+	'mux' operation ('tmp', digitrec.cpp:149->digitrec.cpp:73) [355]  (3.21 ns)
+	'add' operation ('distance_sum', digitrec.cpp:150->digitrec.cpp:73) [357]  (1.92 ns)
 
 
 ============================================================
@@ -340,9 +526,6 @@ N/A
 	State 7
 	State 8
 	State 9
-	State 10
-	State 11
-	State 12
 
 
 ============================================================

@@ -17,58 +17,43 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.518</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.900</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1065733</Best-caseLatency>
-<Average-caseLatency>1065733</Average-caseLatency>
-<Worst-caseLatency>1065733</Worst-caseLatency>
-<Best-caseRealTimeLatency>10.657 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>10.657 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>10.657 ms</Worst-caseRealTimeLatency>
-<Interval-min>1065733</Interval-min>
-<Interval-max>1065733</Interval-max>
+<Best-caseLatency>102733</Best-caseLatency>
+<Average-caseLatency>102733</Average-caseLatency>
+<Worst-caseLatency>102733</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.027 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.027 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.027 ms</Worst-caseRealTimeLatency>
+<Interval-min>102733</Interval-min>
+<Interval-max>102733</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <TripCount>10</TripCount>
-<Latency>50</Latency>
-<IterationLatency>5</IterationLatency>
+<Latency>80</Latency>
+<IterationLatency>8</IterationLatency>
 <Loop1.1>
 <TripCount>3</TripCount>
-<Latency>3</Latency>
-<IterationLatency>1</IterationLatency>
+<Latency>6</Latency>
+<IterationLatency>2</IterationLatency>
 </Loop1.1>
 </Loop1>
 <L1800>
 <TripCount>1800</TripCount>
-<Latency>1065600</Latency>
-<IterationLatency>592</IterationLatency>
-<L10>
-<TripCount>10</TripCount>
-<Latency>590</Latency>
-<IterationLatency>59</IterationLatency>
-<L10.1>
-<TripCount>49</TripCount>
-<Latency>49</Latency>
-<IterationLatency>1</IterationLatency>
-</L10.1>
-<INSERT_LOOP>
-<TripCount>3</TripCount>
-<Latency>6</Latency>
-<IterationLatency>2</IterationLatency>
-</INSERT_LOOP>
-</L10>
+<Latency>102600</Latency>
+<IterationLatency>57</IterationLatency>
 </L1800>
 <DIGIT_LOOP>
 <TripCount>10</TripCount>
-<Latency>80</Latency>
-<IterationLatency>8</IterationLatency>
+<Latency>50</Latency>
+<IterationLatency>5</IterationLatency>
 <DISTANCE_SUM_LOOP>
 <TripCount>3</TripCount>
-<Latency>6</Latency>
-<IterationLatency>2</IterationLatency>
+<Latency>3</Latency>
+<IterationLatency>1</IterationLatency>
 </DISTANCE_SUM_LOOP>
 </DIGIT_LOOP>
 </SummaryOfLoopLatency>
@@ -76,11 +61,11 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>96</BRAM_18K>
-<FF>291</FF>
-<LUT>727</LUT>
-<URAM>0</URAM>
+<BRAM_18K>56</BRAM_18K>
+<FF>1861</FF>
+<LUT>12390</LUT>
 <DSP48E>0</DSP48E>
+<URAM>0</URAM>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>

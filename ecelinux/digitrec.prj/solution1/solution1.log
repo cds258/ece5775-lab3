@@ -6,3 +6,100 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'digitrec.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4403 ; free virtual = 28374
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
+WARNING: [SYNCHK 200-23] digitrec.cpp:97: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4396 ; free virtual = 28368
+INFO: [HLS 200-489] Unrolling loop 'L10' (digitrec.cpp:64) in function 'digitrec' completely with a factor of 10.
+INFO: [XFORM 203-102] Partitioning array 'training_data.V' in dimension 1 automatically.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[0].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[1].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[2].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[3].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[4].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[5].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[6].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[7].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[8].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[9].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[0].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[1].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[2].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[3].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[4].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[5].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[6].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[7].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[8].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[9].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4366 ; free virtual = 28338
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4352 ; free virtual = 28325
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_knn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.03 seconds; current allocated memory: 170.800 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 171.033 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'digitrec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 171.790 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 173.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 173.390 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 173.524 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_knn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_32_6_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_42_6_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_knn'.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 174.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'digitrec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_0' to 'digitrec_trainingbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_1' to 'digitrec_trainingcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_2' to 'digitrec_trainingdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_3' to 'digitrec_trainingeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_4' to 'digitrec_trainingfYi' due to the length limit 20
+INFO: [SYN 201-210]

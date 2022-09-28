@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="dut,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=5.517500,HLS_SYN_LAT=1065735,HLS_SYN_TPT=none,HLS_SYN_MEM=96,HLS_SYN_DSP=0,HLS_SYN_FF=376,HLS_SYN_LUT=768,HLS_VERSION=2019_2_1}" *)
+(* CORE_GENERATION_INFO="dut,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.900000,HLS_SYN_LAT=102735,HLS_SYN_TPT=none,HLS_SYN_MEM=56,HLS_SYN_DSP=0,HLS_SYN_FF=1946,HLS_SYN_LUT=12431,HLS_VERSION=2019_2_1}" *)
 
 module dut (
         ap_clk,
@@ -53,34 +53,34 @@ reg    strm_in_V_V_blk_n;
 wire    ap_CS_fsm_state2;
 reg    strm_out_V_V_blk_n;
 wire    ap_CS_fsm_state3;
-reg   [31:0] tmp_V_reg_91;
+reg   [31:0] tmp_V_reg_105;
 reg    ap_block_state1;
-wire   [48:0] p_Result_s_fu_78_p3;
-reg   [48:0] p_Result_s_reg_96;
-wire    grp_digitrec_fu_67_ap_start;
-wire    grp_digitrec_fu_67_ap_done;
-wire    grp_digitrec_fu_67_ap_idle;
-wire    grp_digitrec_fu_67_ap_ready;
-wire   [3:0] grp_digitrec_fu_67_ap_return;
-reg    grp_digitrec_fu_67_ap_start_reg;
-wire   [16:0] trunc_ln215_fu_74_p1;
+wire   [48:0] p_Result_s_fu_92_p3;
+reg   [48:0] p_Result_s_reg_110;
+wire    grp_digitrec_fu_63_ap_start;
+wire    grp_digitrec_fu_63_ap_done;
+wire    grp_digitrec_fu_63_ap_idle;
+wire    grp_digitrec_fu_63_ap_ready;
+wire   [3:0] grp_digitrec_fu_63_ap_return;
+reg    grp_digitrec_fu_63_ap_start_reg;
+wire   [16:0] trunc_ln215_fu_88_p1;
 reg   [2:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 3'd1;
-#0 grp_digitrec_fu_67_ap_start_reg = 1'b0;
+#0 grp_digitrec_fu_63_ap_start_reg = 1'b0;
 end
 
-digitrec grp_digitrec_fu_67(
+digitrec grp_digitrec_fu_63(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_digitrec_fu_67_ap_start),
-    .ap_done(grp_digitrec_fu_67_ap_done),
-    .ap_idle(grp_digitrec_fu_67_ap_idle),
-    .ap_ready(grp_digitrec_fu_67_ap_ready),
-    .input_V(p_Result_s_reg_96),
-    .ap_return(grp_digitrec_fu_67_ap_return)
+    .ap_start(grp_digitrec_fu_63_ap_start),
+    .ap_done(grp_digitrec_fu_63_ap_done),
+    .ap_idle(grp_digitrec_fu_63_ap_idle),
+    .ap_ready(grp_digitrec_fu_63_ap_ready),
+    .input_V(p_Result_s_reg_110),
+    .ap_return(grp_digitrec_fu_63_ap_return)
 );
 
 always @ (posedge ap_clk) begin
@@ -93,30 +93,30 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_digitrec_fu_67_ap_start_reg <= 1'b0;
+        grp_digitrec_fu_63_ap_start_reg <= 1'b0;
     end else begin
         if (((strm_in_V_V_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-            grp_digitrec_fu_67_ap_start_reg <= 1'b1;
-        end else if ((grp_digitrec_fu_67_ap_ready == 1'b1)) begin
-            grp_digitrec_fu_67_ap_start_reg <= 1'b0;
+            grp_digitrec_fu_63_ap_start_reg <= 1'b1;
+        end else if ((grp_digitrec_fu_63_ap_ready == 1'b1)) begin
+            grp_digitrec_fu_63_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((strm_in_V_V_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        p_Result_s_reg_96 <= p_Result_s_fu_78_p3;
+        p_Result_s_reg_110 <= p_Result_s_fu_92_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_start == 1'b0) | (strm_in_V_V_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        tmp_V_reg_91 <= strm_in_V_V_dout;
+        tmp_V_reg_105 <= strm_in_V_V_dout;
     end
 end
 
 always @ (*) begin
-    if ((~((grp_digitrec_fu_67_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((grp_digitrec_fu_63_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -132,7 +132,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((grp_digitrec_fu_67_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((grp_digitrec_fu_63_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -164,7 +164,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((grp_digitrec_fu_67_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((grp_digitrec_fu_63_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
         strm_out_V_V_write = 1'b1;
     end else begin
         strm_out_V_V_write = 1'b0;
@@ -188,7 +188,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state3 : begin
-            if ((~((grp_digitrec_fu_67_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
+            if ((~((grp_digitrec_fu_63_ap_done == 1'b0) | (strm_out_V_V_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -210,12 +210,12 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (strm_in_V_V_empty_n == 1'b0));
 end
 
-assign grp_digitrec_fu_67_ap_start = grp_digitrec_fu_67_ap_start_reg;
+assign grp_digitrec_fu_63_ap_start = grp_digitrec_fu_63_ap_start_reg;
 
-assign p_Result_s_fu_78_p3 = {{trunc_ln215_fu_74_p1}, {tmp_V_reg_91}};
+assign p_Result_s_fu_92_p3 = {{trunc_ln215_fu_88_p1}, {tmp_V_reg_105}};
 
-assign strm_out_V_V_din = grp_digitrec_fu_67_ap_return;
+assign strm_out_V_V_din = grp_digitrec_fu_63_ap_return;
 
-assign trunc_ln215_fu_74_p1 = strm_in_V_V_dout[16:0];
+assign trunc_ln215_fu_88_p1 = strm_in_V_V_dout[16:0];
 
 endmodule //dut

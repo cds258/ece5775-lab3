@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'digitrec'" level="0">
-<item name = "Date">Tue Sep 27 22:03:38 2022
+<item name = "Date">Tue Sep 27 22:39:14 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">digitrec.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.518 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 6.900 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,25 +24,32 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1065733, 1065733, 10.657 ms, 10.657 ms, 1065733, 1065733, none</column>
+<column name="">102733, 102733, 1.027 ms, 1.027 ms, 102733, 102733, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_update_knn_fu_743">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_755">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_767">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_779">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_791">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_803">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_815">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_828">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_840">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
+<column name="grp_update_knn_fu_852">update_knn, 54, 54, 0.540 us, 0.540 us, 54, 54, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">50, 50, 5, -, -, 10, no</column>
-<column name=" + Loop 1.1">3, 3, 1, -, -, 3, no</column>
-<column name="- L1800">1065600, 1065600, 592, -, -, 1800, no</column>
-<column name=" + L10">590, 590, 59, -, -, 10, no</column>
-<column name="  ++ L10.1">49, 49, 1, -, -, 49, no</column>
-<column name="  ++ INSERT_LOOP">6, 6, 2, -, -, 3, no</column>
-<column name="- DIGIT_LOOP">80, 80, 8, -, -, 10, no</column>
-<column name=" + DISTANCE_SUM_LOOP">6, 6, 2, -, -, 3, no</column>
+<column name="- Loop 1">80, 80, 8, -, -, 10, no</column>
+<column name=" + Loop 1.1">6, 6, 2, -, -, 3, no</column>
+<column name="- L1800">102600, 102600, 57, -, -, 1800, no</column>
+<column name="- DIGIT_LOOP">50, 50, 5, -, -, 10, no</column>
+<column name=" + DISTANCE_SUM_LOOP">3, 3, 1, -, -, 3, no</column>
 </table>
 </item>
 </section>

@@ -37,21 +37,181 @@
          <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut//AESL_inst_dut_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut//AESL_inst_dut_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut//AESL_inst_dut_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/grp_digitrec_fu_67_activity">
-            <obj_property name="label">grp_digitrec_fu_67_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_digitrec_fu_63_activity">
+            <obj_property name="label">grp_digitrec_fu_63_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_digitrec_fu_67_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_digitrec_fu_67_activity</obj_property>
+            <obj_property name="ElementShortName">grp_digitrec_fu_63_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_digitrec_fu_63_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/grp_digitrec_fu_67_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/grp_digitrec_fu_67_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/grp_digitrec_fu_67_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_digitrec_fu_63_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_digitrec_fu_63_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_digitrec_fu_63_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/grp_update_knn_fu_743_activity">
+               <obj_property name="label">grp_update_knn_fu_743_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_743_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_743_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/grp_update_knn_fu_743_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/grp_update_knn_fu_743_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/grp_update_knn_fu_743_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/grp_update_knn_fu_755_activity">
+               <obj_property name="label">grp_update_knn_fu_755_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_755_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_755_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/grp_update_knn_fu_755_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/grp_update_knn_fu_755_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/grp_update_knn_fu_755_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/grp_update_knn_fu_767_activity">
+               <obj_property name="label">grp_update_knn_fu_767_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_767_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_767_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/grp_update_knn_fu_767_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/grp_update_knn_fu_767_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/grp_update_knn_fu_767_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/grp_update_knn_fu_779_activity">
+               <obj_property name="label">grp_update_knn_fu_779_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_779_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_779_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/grp_update_knn_fu_779_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/grp_update_knn_fu_779_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/grp_update_knn_fu_779_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/grp_update_knn_fu_791_activity">
+               <obj_property name="label">grp_update_knn_fu_791_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_791_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_791_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/grp_update_knn_fu_791_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/grp_update_knn_fu_791_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/grp_update_knn_fu_791_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/grp_update_knn_fu_803_activity">
+               <obj_property name="label">grp_update_knn_fu_803_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_803_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_803_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/grp_update_knn_fu_803_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/grp_update_knn_fu_803_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/grp_update_knn_fu_803_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/grp_update_knn_fu_815_activity">
+               <obj_property name="label">grp_update_knn_fu_815_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_815_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_815_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/grp_update_knn_fu_815_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/grp_update_knn_fu_815_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/grp_update_knn_fu_815_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/grp_update_knn_fu_828_activity">
+               <obj_property name="label">grp_update_knn_fu_828_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_828_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_828_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/grp_update_knn_fu_828_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/grp_update_knn_fu_828_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/grp_update_knn_fu_828_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/grp_update_knn_fu_840_activity">
+               <obj_property name="label">grp_update_knn_fu_840_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_840_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_840_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/grp_update_knn_fu_840_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/grp_update_knn_fu_840_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/grp_update_knn_fu_840_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/grp_update_knn_fu_852_activity">
+               <obj_property name="label">grp_update_knn_fu_852_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_update_knn_fu_852_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_update_knn_fu_852_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/grp_update_knn_fu_852_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/grp_update_knn_fu_852_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/grp_update_knn_fu_852_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -62,9 +222,9 @@
    <wvobject type="group" fp_name="AESL_inst_dut_group">
       <obj_property name="label">AESL_inst_dut</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/grp_digitrec_fu_67_activity">
-         <obj_property name="ElementShortName">grp_digitrec_fu_67_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_digitrec_fu_67_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_digitrec_fu_63_activity">
+         <obj_property name="ElementShortName">grp_digitrec_fu_63_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_digitrec_fu_63_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_dut_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -82,23 +242,263 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_digitrec_fu_67_group">
-         <obj_property name="label">grp_digitrec_fu_67</obj_property>
+      <wvobject type="group" fp_name="grp_digitrec_fu_63_group">
+         <obj_property name="label">grp_digitrec_fu_63</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="grp_digitrec_fu_67_Handshake_group">
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/grp_update_knn_fu_743_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_743_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_743_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/grp_update_knn_fu_755_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_755_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_755_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/grp_update_knn_fu_767_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_767_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_767_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/grp_update_knn_fu_779_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_779_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_779_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/grp_update_knn_fu_791_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_791_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_791_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/grp_update_knn_fu_803_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_803_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_803_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/grp_update_knn_fu_815_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_815_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_815_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/grp_update_knn_fu_828_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_828_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_828_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/grp_update_knn_fu_840_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_840_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_840_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/grp_update_knn_fu_852_activity">
+            <obj_property name="ElementShortName">grp_update_knn_fu_852_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_update_knn_fu_852_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_digitrec_fu_63_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/ap_start">
+            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_67/ap_done">
+            <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_743_group">
+            <obj_property name="label">grp_update_knn_fu_743</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_743_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_743/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_755_group">
+            <obj_property name="label">grp_update_knn_fu_755</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_755_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_755/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_767_group">
+            <obj_property name="label">grp_update_knn_fu_767</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_767_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_767/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_779_group">
+            <obj_property name="label">grp_update_knn_fu_779</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_779_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_779/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_791_group">
+            <obj_property name="label">grp_update_knn_fu_791</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_791_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_791/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_803_group">
+            <obj_property name="label">grp_update_knn_fu_803</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_803_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_803/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_815_group">
+            <obj_property name="label">grp_update_knn_fu_815</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_815_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_815/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_828_group">
+            <obj_property name="label">grp_update_knn_fu_828</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_828_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_828/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_840_group">
+            <obj_property name="label">grp_update_knn_fu_840</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_840_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_840/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_update_knn_fu_852_group">
+            <obj_property name="label">grp_update_knn_fu_852</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_update_knn_fu_852_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_dut_top/AESL_inst_dut/grp_digitrec_fu_63/grp_update_knn_fu_852/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>

@@ -6,9 +6,9 @@
 module digitrec_trainingbkb_rom (
 addr0, ce0, q0, clk);
 
-parameter DWIDTH = 48;
-parameter AWIDTH = 15;
-parameter MEM_SIZE = 18000;
+parameter DWIDTH = 46;
+parameter AWIDTH = 11;
+parameter MEM_SIZE = 1800;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -43,9 +43,9 @@ module digitrec_trainingbkb(
     ce0,
     q0);
 
-parameter DataWidth = 32'd48;
-parameter AddressRange = 32'd18000;
-parameter AddressWidth = 32'd15;
+parameter DataWidth = 32'd46;
+parameter AddressRange = 32'd1800;
+parameter AddressWidth = 32'd11;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

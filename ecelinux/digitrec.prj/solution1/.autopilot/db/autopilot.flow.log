@@ -1,8 +1,8 @@
-INFO-FLOW: Workspace /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1 opened at Tue Sep 27 22:02:52 EDT 2022
-Command   open_solution done; 0.23 sec.
+INFO-FLOW: Workspace /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1 opened at Tue Sep 27 22:38:22 EDT 2022
+Command   open_solution done; 0.24 sec.
 Execute   set_part xc7z020clg484-1 
 Execute     ap_part_info -name xc7z020clg484-1 -data single -quiet 
-Command     ap_part_info done; 7.04 sec.
+Command     ap_part_info done; 10.94 sec.
 Execute     ap_part_info -name xc7z020clg484-1 -data info 
 Execute     add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
 Execute       get_default_platform 
@@ -19,6 +19,7 @@ Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/co
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source done; 0.15 sec.
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
@@ -32,6 +33,7 @@ Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/co
 Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
 Execute             source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Command       import_lib done; 0.29 sec.
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
@@ -47,8 +49,8 @@ Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/co
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.18 sec.
-Command       ap_source done; 0.18 sec.
+Command         ap_source done; 0.2 sec.
+Command       ap_source done; 0.2 sec.
 Execute       ap_part_info -data single -name xc7z020-clg484-1 
 Execute       ap_part_info -name xc7z020-clg484-1 -data resources 
 Execute       ap_part_info -name xc7z020-clg484-1 -data info 
@@ -56,7 +58,7 @@ Execute       ap_part_info -name xc7z020-clg484-1 -data info
 Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
 Execute       ap_part_info -name xc7z020-clg484-1 -data info 
 Execute       config_chip_info -quiet -speed slow 
-Command     add_library done; 0.36 sec.
+Command     add_library done; 0.57 sec.
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
 Execute       open_platform DefaultPlatform 
@@ -74,10 +76,19 @@ Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/comm
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
 Execute     ap_part_info -name xc7z020-clg484-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 7.55 sec.
+Command   set_part done; 11.71 sec.
 Execute   create_clock -period 10 
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   set_directive_inline -off update_knn 
+INFO-FLOW: Setting directive 'INLINE' off=positionBoolean1 
+Execute   set_directive_array_partition -type complete -dim 1 digitrec knn_set 
+INFO-FLOW: Setting directive 'INLINE' off=positionBoolean1 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredknn_set complete=positionBoolean0type dim=1 
+Execute   set_directive_unroll digitrec/L10 
+INFO-FLOW: Setting directive 'INLINE' off=positionBoolean1 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredknn_set complete=positionBoolean0type dim=1 
+INFO-FLOW: Setting directive 'UNROLL' 
 Execute   csynth_design 
 Execute     get_config_compile -dump_cfg 
 Execute     get_config_compile -effort 
@@ -104,92 +115,119 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "digitrec.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp" 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E digitrec.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp
-Command       clang done; 2.27 sec.
+Command       clang done; 2.43 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.84 sec.
+Command       tidy_31 done; 2.75 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp"  -o "/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/useless.bc
-Command       clang done; 3.57 sec.
-INFO-FLOW: Done: GCC PP time: 8.7 seconds per iteration
+Command       clang done; 3.66 sec.
+INFO-FLOW: Done: GCC PP time: 8.8 seconds per iteration
+INFO-FLOW: Setting directive 'INLINE' off=positionBoolean1 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredknn_set complete=positionBoolean0type dim=1 
+INFO-FLOW: Setting directive 'UNROLL' 
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'INLINE' off=positionBoolean1 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredknn_set complete=positionBoolean0type dim=1 
+INFO-FLOW: Setting directive 'UNROLL' 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++98 -directive=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.14 sec.
+Command       tidy_31 done; 2.62 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++98 -directive=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.69 sec.
+Command       tidy_31 done; 3.17 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.digitrec.pp.0.cpp.diag.yml /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.digitrec.pp.0.cpp.out.log 2> /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.digitrec.pp.0.cpp.err.log 
-Command       ap_eval done; 3.1 sec.
+Command       ap_eval done; 2.97 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp std=gnu++98 
 Execute         ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/tidy-3.1.digitrec.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/tidy-3.1.digitrec.pp.0.cpp.out.log 2> /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/tidy-3.1.digitrec.pp.0.cpp.err.log 
-Command         ap_eval done; 3.54 sec.
+Command         ap_eval done; 3.49 sec.
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.digitrec.pp.0.cpp.out.log 2> /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.digitrec.pp.0.cpp.err.log 
-Command         ap_eval done; 2.22 sec.
-Command       tidy_31 done; 5.82 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 11.6 seconds per iteration
+Command         ap_eval done; 2.21 sec.
+Command       tidy_31 done; 5.76 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 11.9 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.23 sec.
+Command       tidy_31 done; 3.58 sec.
 Execute       ap_part_info -name xc7z020-clg484-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot" -I "/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.bc" 
 INFO-FLOW: exec /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot -I /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.bc
-Command       clang done; 3.5 sec.
+Command       clang done; 3.53 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.g.bc -hls-opt -except-internalize dut -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 5.04 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4447 ; free virtual = 28398
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4448 ; free virtual = 28398
+Command       llvm-ld done; 4.85 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4422 ; free virtual = 28392
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.pp.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.2 sec.
+Command         llvm-ld done; 1.16 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dut -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.0.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.12 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4429 ; free virtual = 28381
+Command         transform done; 0.13 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1169.711 ; gain = 527.219 ; free physical = 4403 ; free virtual = 28374
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.1.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
-Command         transform done; 0.12 sec.
+Command         transform done; 0.14 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 WARNING: [SYNCHK 200-23] digitrec.cpp:97: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1170.938 ; gain = 528.445 ; free physical = 4422 ; free virtual = 28374
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4396 ; free virtual = 28368
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.g.1.bc to /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.1.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-602] Inlining function 'update_knn' into 'digitrec' (digitrec.cpp:68) automatically.
+INFO: [HLS 200-489] Unrolling loop 'L10' (digitrec.cpp:64) in function 'digitrec' completely with a factor of 10.
+INFO: [XFORM 203-102] Partitioning array 'training_data.V' in dimension 1 automatically.
+INFO: [XFORM 203-101] Partitioning array 'knn_set.V' (digitrec.cpp:55) in dimension 1 completely.
 INFO: [XFORM 203-602] Inlining function 'knn_vote' into 'digitrec' (digitrec.cpp:73) automatically.
-Command         transform done; 0.2 sec.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[0].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[1].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[2].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[3].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[4].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[5].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[6].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[7].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[8].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'knn_set[9].V' (digitrec.cpp:55) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[0].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[1].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[2].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[3].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[4].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[5].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[6].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[7].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[8].V' (digitrec.cpp:55) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'knn_set[9].V' (digitrec.cpp:55) in dimension 1 completely.
+Command         transform done; 0.5 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1170.938 ; gain = 528.445 ; free physical = 4395 ; free virtual = 28348
+Command         transform done; 0.16 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4366 ; free virtual = 28338
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.2.bc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [HLS 200-472] Inferring partial write operation for 'knn_set.V' (digitrec.cpp:61:7)
-INFO: [HLS 200-472] Inferring partial write operation for 'knn_set.V' (digitrec.cpp:109:7)
-Command         transform done; 0.24 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1170.938 ; gain = 528.445 ; free physical = 4387 ; free virtual = 28341
+Command         transform done; 0.35 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1170.062 ; gain = 527.570 ; free physical = 4352 ; free virtual = 28325
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 2.2 sec.
-Command     elaborate done; 37.9 sec.
+Command       opt_and_import_c done; 2.69 sec.
+Command     elaborate done; 38.53 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -198,15 +236,23 @@ Execute       ap_set_top_model dut
 Execute       get_model_list dut -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model dut 
 Execute       preproc_iomode -model digitrec 
+Execute       preproc_iomode -model update_knn 
 Execute       get_model_list dut -filter all-wo-channel 
-INFO-FLOW: Model list for configure: digitrec dut
+INFO-FLOW: Model list for configure: update_knn digitrec dut
+INFO-FLOW: Configuring Module : update_knn ...
+Execute       set_default_model update_knn 
+Execute       apply_spec_resource_limit update_knn 
 INFO-FLOW: Configuring Module : digitrec ...
 Execute       set_default_model digitrec 
 Execute       apply_spec_resource_limit digitrec 
 INFO-FLOW: Configuring Module : dut ...
 Execute       set_default_model dut 
 Execute       apply_spec_resource_limit dut 
-INFO-FLOW: Model list for preprocess: digitrec dut
+INFO-FLOW: Model list for preprocess: update_knn digitrec dut
+INFO-FLOW: Preprocessing Module: update_knn ...
+Execute       set_default_model update_knn 
+Execute       cdfg_preprocess -model update_knn 
+Execute       rtl_gen_preprocess update_knn 
 INFO-FLOW: Preprocessing Module: digitrec ...
 Execute       set_default_model digitrec 
 Execute       cdfg_preprocess -model digitrec 
@@ -215,7 +261,30 @@ INFO-FLOW: Preprocessing Module: dut ...
 Execute       set_default_model dut 
 Execute       cdfg_preprocess -model dut 
 Execute       rtl_gen_preprocess dut 
-INFO-FLOW: Model list for synthesis: digitrec dut
+INFO-FLOW: Model list for synthesis: update_knn digitrec dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_knn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model update_knn 
+Execute       schedule -model update_knn 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.03 seconds; current allocated memory: 170.800 MB.
+Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.verbose.sched.rpt 
+Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.sched.adb -f 
+INFO-FLOW: Finish scheduling update_knn.
+Execute       set_default_model update_knn 
+Execute       bind -model update_knn 
+BIND OPTION: model=update_knn
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 171.033 MB.
+Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.verbose.bind.rpt 
+Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.bind.adb -f 
+INFO-FLOW: Finish binding update_knn.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'digitrec' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -223,10 +292,12 @@ Execute       set_default_model digitrec
 Execute       schedule -model digitrec 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 47.37 seconds; current allocated memory: 159.259 MB.
+Command       schedule done; 0.18 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 171.790 MB.
 Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.verbose.sched.rpt 
-Command       syn_report done; 0.11 sec.
+Command       syn_report done; 0.31 sec.
 Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.sched.adb -f 
+Command       db_write done; 0.3 sec.
 INFO-FLOW: Finish scheduling digitrec.
 Execute       set_default_model digitrec 
 Execute       bind -model digitrec 
@@ -236,11 +307,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 159.757 MB.
+Command       bind done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 173.145 MB.
 Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.verbose.bind.rpt 
-Command       syn_report done; 0.18 sec.
+Command       syn_report done; 0.74 sec.
 Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.bind.adb -f 
-Command       db_write done; 0.11 sec.
+Command       db_write done; 0.31 sec.
 INFO-FLOW: Finish binding digitrec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dut' 
@@ -250,7 +322,7 @@ Execute       schedule -model dut
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule done; 0.11 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 159.949 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 173.390 MB.
 Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.verbose.sched.rpt 
 Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.sched.adb -f 
 INFO-FLOW: Finish scheduling dut.
@@ -262,36 +334,70 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.13 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 160.036 MB.
+Command       bind done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 173.524 MB.
 Execute       syn_report -verbosereport -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.verbose.bind.rpt 
-Command       syn_report done; 0.13 sec.
+Command       syn_report done; 0.44 sec.
 Execute       db_write -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.bind.adb -f 
 INFO-FLOW: Finish binding dut.
 Execute       get_model_list dut -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess update_knn 
 Execute       rtl_gen_preprocess digitrec 
 Execute       rtl_gen_preprocess dut 
-INFO-FLOW: Model list for RTL generation: digitrec dut
+INFO-FLOW: Model list for RTL generation: update_knn digitrec dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_knn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model update_knn -vendor xilinx -mg_file /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_32_6_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_42_6_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_knn'.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 174.008 MB.
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl update_knn -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/systemc/update_knn -synmodules update_knn digitrec dut 
+Execute       gen_rtl update_knn -style xilinx -f -lang vhdl -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/vhdl/update_knn 
+Execute       gen_rtl update_knn -style xilinx -f -lang vlog -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/verilog/update_knn 
+Execute       syn_report -csynth -model update_knn -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/update_knn_csynth.rpt 
+Execute       syn_report -rtlxml -model update_knn -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/update_knn_csynth.xml 
+Execute       syn_report -verbosereport -model update_knn -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.verbose.rpt 
+Execute       db_write -model update_knn -f -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.adb 
+Execute       gen_tb_info update_knn -p /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'digitrec' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model digitrec -vendor xilinx -mg_file /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
-INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V' to 'digitrec_trainingbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_0' to 'digitrec_trainingbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_1' to 'digitrec_trainingcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_2' to 'digitrec_trainingdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_3' to 'digitrec_trainingeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_4' to 'digitrec_trainingfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_5' to 'digitrec_trainingg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_6' to 'digitrec_traininghbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_7' to 'digitrec_trainingibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_8' to 'digitrec_trainingjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'digitrec_training_data_V_9' to 'digitrec_trainingkbM' due to the length limit 20
+WARNING: [RTGEN 206-101] RTL name 'dut_mux_42_6_1_1' is changed to 'dut_mux_42_6_1_1_x' due to conflict.
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_305_6_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_42_6_1_1_x': 30 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'digitrec'.
-INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 160.747 MB.
+Command       create_rtl_model done; 0.33 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 177.512 MB.
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
-Execute       gen_rtl digitrec -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/systemc/digitrec -synmodules digitrec dut 
+Execute       gen_rtl digitrec -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/systemc/digitrec -synmodules update_knn digitrec dut 
 Execute       gen_rtl digitrec -style xilinx -f -lang vhdl -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/vhdl/digitrec 
 Execute       gen_rtl digitrec -style xilinx -f -lang vlog -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/verilog/digitrec 
 Execute       syn_report -csynth -model digitrec -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/digitrec_csynth.rpt 
+Command       syn_report done; 0.14 sec.
 Execute       syn_report -rtlxml -model digitrec -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/digitrec_csynth.xml 
 Execute       syn_report -verbosereport -model digitrec -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.verbose.rpt 
-Command       syn_report done; 0.21 sec.
+Command       syn_report done; 0.77 sec.
 Execute       db_write -model digitrec -f -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.adb 
-Command       db_write done; 0.18 sec.
+Command       db_write done; 0.39 sec.
 Execute       gen_tb_info digitrec -p /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
@@ -303,18 +409,20 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fi
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 162.917 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.58 seconds; current allocated memory: 182.594 MB.
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
-Execute       gen_rtl dut -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/systemc/dut -synmodules digitrec dut 
+Execute       gen_rtl dut -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/systemc/dut -synmodules update_knn digitrec dut 
 Execute       gen_rtl dut -istop -style xilinx -f -lang vhdl -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/vhdl/dut 
 Execute       gen_rtl dut -istop -style xilinx -f -lang vlog -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/verilog/dut 
 Execute       syn_report -csynth -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/dut_csynth.rpt 
 Execute       syn_report -rtlxml -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/syn/report/dut_csynth.xml 
 Execute       syn_report -verbosereport -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.verbose.rpt 
+Command       syn_report done; 0.46 sec.
 Execute       db_write -model dut -f -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.adb 
 Execute       gen_tb_info dut -p /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut 
 Execute       export_constraint_db -f -tool general -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.constraint.tcl 
 Execute       syn_report -designview -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.design.xml 
+Command       syn_report done; 0.18 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model dut -o /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.protoinst 
@@ -322,21 +430,67 @@ Execute       get_config_debug -directory
 Execute       sc_get_clocks dut 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain dut 
-INFO-FLOW: Model list for RTL component generation: digitrec dut
+INFO-FLOW: Model list for RTL component generation: update_knn digitrec dut
+INFO-FLOW: Handling components in module [update_knn] ... 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
+INFO-FLOW: Found component dut_mux_32_6_1_1.
+INFO-FLOW: Append model dut_mux_32_6_1_1
+INFO-FLOW: Found component dut_mux_42_6_1_1.
+INFO-FLOW: Append model dut_mux_42_6_1_1
 INFO-FLOW: Handling components in module [digitrec] ... 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
+INFO-FLOW: Found component dut_mux_42_6_1_1_x.
+INFO-FLOW: Append model dut_mux_42_6_1_1_x
+INFO-FLOW: Found component dut_mux_42_6_1_1_x.
+INFO-FLOW: Append model dut_mux_42_6_1_1_x
+INFO-FLOW: Found component dut_mux_42_6_1_1_x.
+INFO-FLOW: Append model dut_mux_42_6_1_1_x
+INFO-FLOW: Found component dut_mux_305_6_1_1.
+INFO-FLOW: Append model dut_mux_305_6_1_1
 INFO-FLOW: Found component digitrec_trainingbkb.
 INFO-FLOW: Append model digitrec_trainingbkb
-INFO-FLOW: Found component digitrec_knn_set_V.
-INFO-FLOW: Append model digitrec_knn_set_V
+INFO-FLOW: Found component digitrec_trainingcud.
+INFO-FLOW: Append model digitrec_trainingcud
+INFO-FLOW: Found component digitrec_trainingdEe.
+INFO-FLOW: Append model digitrec_trainingdEe
+INFO-FLOW: Found component digitrec_trainingeOg.
+INFO-FLOW: Append model digitrec_trainingeOg
+INFO-FLOW: Found component digitrec_trainingfYi.
+INFO-FLOW: Append model digitrec_trainingfYi
+INFO-FLOW: Found component digitrec_trainingg8j.
+INFO-FLOW: Append model digitrec_trainingg8j
+INFO-FLOW: Found component digitrec_traininghbi.
+INFO-FLOW: Append model digitrec_traininghbi
+INFO-FLOW: Found component digitrec_trainingibs.
+INFO-FLOW: Append model digitrec_trainingibs
+INFO-FLOW: Found component digitrec_trainingjbC.
+INFO-FLOW: Append model digitrec_trainingjbC
+INFO-FLOW: Found component digitrec_trainingkbM.
+INFO-FLOW: Append model digitrec_trainingkbM
 INFO-FLOW: Handling components in module [dut] ... 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO-FLOW: Append model update_knn
 INFO-FLOW: Append model digitrec
 INFO-FLOW: Append model dut
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: digitrec_trainingbkb digitrec_knn_set_V digitrec dut
+INFO-FLOW: All models in this session: dut_mux_32_6_1_1 dut_mux_42_6_1_1 dut_mux_42_6_1_1_x dut_mux_42_6_1_1_x dut_mux_42_6_1_1_x dut_mux_305_6_1_1 digitrec_trainingbkb digitrec_trainingcud digitrec_trainingdEe digitrec_trainingeOg digitrec_trainingfYi digitrec_trainingg8j digitrec_traininghbi digitrec_trainingibs digitrec_trainingjbC digitrec_trainingkbM update_knn digitrec dut
+INFO-FLOW: To file: write model dut_mux_32_6_1_1
+INFO-FLOW: To file: write model dut_mux_42_6_1_1
+INFO-FLOW: To file: write model dut_mux_42_6_1_1_x
+INFO-FLOW: To file: write model dut_mux_42_6_1_1_x
+INFO-FLOW: To file: write model dut_mux_42_6_1_1_x
+INFO-FLOW: To file: write model dut_mux_305_6_1_1
 INFO-FLOW: To file: write model digitrec_trainingbkb
-INFO-FLOW: To file: write model digitrec_knn_set_V
+INFO-FLOW: To file: write model digitrec_trainingcud
+INFO-FLOW: To file: write model digitrec_trainingdEe
+INFO-FLOW: To file: write model digitrec_trainingeOg
+INFO-FLOW: To file: write model digitrec_trainingfYi
+INFO-FLOW: To file: write model digitrec_trainingg8j
+INFO-FLOW: To file: write model digitrec_traininghbi
+INFO-FLOW: To file: write model digitrec_trainingibs
+INFO-FLOW: To file: write model digitrec_trainingjbC
+INFO-FLOW: To file: write model digitrec_trainingkbM
+INFO-FLOW: To file: write model update_knn
 INFO-FLOW: To file: write model digitrec
 INFO-FLOW: To file: write model dut
 INFO-FLOW: Finished generating RTL model list.
@@ -347,7 +501,7 @@ INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 Execute       syn_report -model dut -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 181.24 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 144.93 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
 INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
@@ -373,8 +527,8 @@ Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/co
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.13 sec.
-Command       ap_source done; 0.13 sec.
+Command         ap_source done; 0.15 sec.
+Command       ap_source done; 0.15 sec.
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -384,7 +538,20 @@ Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet
 Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingbkb_rom' using auto ROMs.
@@ -392,10 +559,70 @@ Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
-INFO: [RTMG 210-278] Implementing memory 'digitrec_knn_set_V_ram (RAM)' using distributed RAMs.
 Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
-Command       ap_source done; 1.47 sec.
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingcud_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingdEe_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingeOg_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingfYi_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingg8j_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_traininghbi_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingibs_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingjbC_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'digitrec_trainingkbM_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command       ap_source done; 2.36 sec.
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.compgen.tcl 
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
@@ -421,7 +648,7 @@ Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/co
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.12 sec.
+Command         ap_source done; 0.11 sec.
 Command       ap_source done; 0.12 sec.
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
@@ -434,10 +661,12 @@ Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/soluti
 INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
@@ -458,11 +687,12 @@ Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
-Command       ap_source done; 0.17 sec.
+Command       ap_source done; 0.16 sec.
 Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.compgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.compgen.tcl 
 Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
@@ -476,7 +706,7 @@ Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/soluti
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=4 #gSsdmPorts=6
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=19 #gSsdmPorts=6
 Execute       source /opt/xilinx/Xilinx_Vivado_vitis_2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
@@ -497,6 +727,7 @@ Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet
 Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
+Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/update_knn.tbgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/digitrec.tbgen.tcl 
 Execute       source /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/dut.tbgen.tcl 
 Execute       get_config_sdx -target 
@@ -506,9 +737,9 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/cds258/ece5775/labs/lab3/ecelinux/digitrec.prj/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:00:53 . Memory (MB): peak = 1170.938 ; gain = 528.445 ; free physical = 4359 ; free virtual = 28319
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1234.711 ; gain = 592.219 ; free physical = 4320 ; free virtual = 28304
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-Command     autosyn done; 6.28 sec.
-Command   csynth_design done; 44.21 sec.
+Command     autosyn done; 13.93 sec.
+Command   csynth_design done; 52.49 sec.
 Execute   cleanup_all 

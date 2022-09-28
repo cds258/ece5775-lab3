@@ -29,7 +29,7 @@ end;
 architecture behav of dut is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "dut,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=5.517500,HLS_SYN_LAT=1065735,HLS_SYN_TPT=none,HLS_SYN_MEM=96,HLS_SYN_DSP=0,HLS_SYN_FF=376,HLS_SYN_LUT=768,HLS_VERSION=2019_2_1}";
+    "dut,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.900000,HLS_SYN_LAT=102735,HLS_SYN_TPT=none,HLS_SYN_MEM=56,HLS_SYN_DSP=0,HLS_SYN_FF=1946,HLS_SYN_LUT=12431,HLS_VERSION=2019_2_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
@@ -51,17 +51,17 @@ architecture behav of dut is
     signal strm_out_V_V_blk_n : STD_LOGIC;
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal tmp_V_reg_91 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_V_reg_105 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_block_state1 : BOOLEAN;
-    signal p_Result_s_fu_78_p3 : STD_LOGIC_VECTOR (48 downto 0);
-    signal p_Result_s_reg_96 : STD_LOGIC_VECTOR (48 downto 0);
-    signal grp_digitrec_fu_67_ap_start : STD_LOGIC;
-    signal grp_digitrec_fu_67_ap_done : STD_LOGIC;
-    signal grp_digitrec_fu_67_ap_idle : STD_LOGIC;
-    signal grp_digitrec_fu_67_ap_ready : STD_LOGIC;
-    signal grp_digitrec_fu_67_ap_return : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_digitrec_fu_67_ap_start_reg : STD_LOGIC := '0';
-    signal trunc_ln215_fu_74_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal p_Result_s_fu_92_p3 : STD_LOGIC_VECTOR (48 downto 0);
+    signal p_Result_s_reg_110 : STD_LOGIC_VECTOR (48 downto 0);
+    signal grp_digitrec_fu_63_ap_start : STD_LOGIC;
+    signal grp_digitrec_fu_63_ap_done : STD_LOGIC;
+    signal grp_digitrec_fu_63_ap_idle : STD_LOGIC;
+    signal grp_digitrec_fu_63_ap_ready : STD_LOGIC;
+    signal grp_digitrec_fu_63_ap_return : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_digitrec_fu_63_ap_start_reg : STD_LOGIC := '0';
+    signal trunc_ln215_fu_88_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
 
     component digitrec IS
@@ -79,16 +79,16 @@ architecture behav of dut is
 
 
 begin
-    grp_digitrec_fu_67 : component digitrec
+    grp_digitrec_fu_63 : component digitrec
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_digitrec_fu_67_ap_start,
-        ap_done => grp_digitrec_fu_67_ap_done,
-        ap_idle => grp_digitrec_fu_67_ap_idle,
-        ap_ready => grp_digitrec_fu_67_ap_ready,
-        input_V => p_Result_s_reg_96,
-        ap_return => grp_digitrec_fu_67_ap_return);
+        ap_start => grp_digitrec_fu_63_ap_start,
+        ap_done => grp_digitrec_fu_63_ap_done,
+        ap_idle => grp_digitrec_fu_63_ap_idle,
+        ap_ready => grp_digitrec_fu_63_ap_ready,
+        input_V => p_Result_s_reg_110,
+        ap_return => grp_digitrec_fu_63_ap_return);
 
 
 
@@ -106,16 +106,16 @@ begin
     end process;
 
 
-    grp_digitrec_fu_67_ap_start_reg_assign_proc : process(ap_clk)
+    grp_digitrec_fu_63_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_digitrec_fu_67_ap_start_reg <= ap_const_logic_0;
+                grp_digitrec_fu_63_ap_start_reg <= ap_const_logic_0;
             else
                 if (((strm_in_V_V_empty_n = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    grp_digitrec_fu_67_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_digitrec_fu_67_ap_ready = ap_const_logic_1)) then 
-                    grp_digitrec_fu_67_ap_start_reg <= ap_const_logic_0;
+                    grp_digitrec_fu_63_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_digitrec_fu_63_ap_ready = ap_const_logic_1)) then 
+                    grp_digitrec_fu_63_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -125,7 +125,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((strm_in_V_V_empty_n = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                p_Result_s_reg_96 <= p_Result_s_fu_78_p3;
+                p_Result_s_reg_110 <= p_Result_s_fu_92_p3;
             end if;
         end if;
     end process;
@@ -133,12 +133,12 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_start = ap_const_logic_0) or (strm_in_V_V_empty_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
-                tmp_V_reg_91 <= strm_in_V_V_dout;
+                tmp_V_reg_105 <= strm_in_V_V_dout;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, strm_in_V_V_empty_n, strm_out_V_V_full_n, ap_CS_fsm_state2, ap_CS_fsm_state3, grp_digitrec_fu_67_ap_done)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, strm_in_V_V_empty_n, strm_out_V_V_full_n, ap_CS_fsm_state2, ap_CS_fsm_state3, grp_digitrec_fu_63_ap_done)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -154,7 +154,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 end if;
             when ap_ST_fsm_state3 => 
-                if ((not(((grp_digitrec_fu_67_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if ((not(((grp_digitrec_fu_63_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
@@ -173,9 +173,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_67_ap_done)
+    ap_done_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_63_ap_done)
     begin
-        if ((not(((grp_digitrec_fu_67_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if ((not(((grp_digitrec_fu_63_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -193,17 +193,17 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_67_ap_done)
+    ap_ready_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_63_ap_done)
     begin
-        if ((not(((grp_digitrec_fu_67_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if ((not(((grp_digitrec_fu_63_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_digitrec_fu_67_ap_start <= grp_digitrec_fu_67_ap_start_reg;
-    p_Result_s_fu_78_p3 <= (trunc_ln215_fu_74_p1 & tmp_V_reg_91);
+    grp_digitrec_fu_63_ap_start <= grp_digitrec_fu_63_ap_start_reg;
+    p_Result_s_fu_92_p3 <= (trunc_ln215_fu_88_p1 & tmp_V_reg_105);
 
     strm_in_V_V_blk_n_assign_proc : process(ap_start, ap_CS_fsm_state1, strm_in_V_V_empty_n, ap_CS_fsm_state2)
     begin
@@ -234,16 +234,16 @@ begin
         end if; 
     end process;
 
-    strm_out_V_V_din <= std_logic_vector(IEEE.numeric_std.resize(unsigned(grp_digitrec_fu_67_ap_return),32));
+    strm_out_V_V_din <= std_logic_vector(IEEE.numeric_std.resize(unsigned(grp_digitrec_fu_63_ap_return),32));
 
-    strm_out_V_V_write_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_67_ap_done)
+    strm_out_V_V_write_assign_proc : process(strm_out_V_V_full_n, ap_CS_fsm_state3, grp_digitrec_fu_63_ap_done)
     begin
-        if ((not(((grp_digitrec_fu_67_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if ((not(((grp_digitrec_fu_63_ap_done = ap_const_logic_0) or (strm_out_V_V_full_n = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
             strm_out_V_V_write <= ap_const_logic_1;
         else 
             strm_out_V_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
-    trunc_ln215_fu_74_p1 <= strm_in_V_V_dout(17 - 1 downto 0);
+    trunc_ln215_fu_88_p1 <= strm_in_V_V_dout(17 - 1 downto 0);
 end behav;

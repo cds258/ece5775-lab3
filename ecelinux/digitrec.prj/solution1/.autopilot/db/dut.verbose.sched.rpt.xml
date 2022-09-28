@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut'" level="0">
-<item name = "Date">Tue Sep 27 22:03:38 2022
+<item name = "Date">Tue Sep 27 22:39:15 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">digitrec.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.518 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 6.900 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1065735, 1065735, 10.657 ms, 10.657 ms, 1065735, 1065735, none</column>
+<column name="">102735, 102735, 1.027 ms, 1.027 ms, 102735, 102735, none</column>
 </table>
 </item>
 <item name = "Detail">

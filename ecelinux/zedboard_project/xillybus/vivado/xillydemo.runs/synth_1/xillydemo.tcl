@@ -62,10 +62,23 @@ read_verilog -library xil_defaultlib {
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/system.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/smbus.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/i2s_audio.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/update_knn.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_42_6_1_1_x.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_42_6_1_1.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_32_6_1_1.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_305_6_1_1.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingkbM.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingjbC.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingibs.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_traininghbi.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingg8j.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingfYi.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingeOg.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingdEe.v
+  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingcud.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_trainingbkb.v
-  /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fpga-design/digitrec_knn_set_V.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fifo_8x2048.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/xillybus/src/fifo_32x512.v
   /home/cds258/ece5775/labs/lab3/ecelinux/zedboard_project/vivado-essentials/system.v
